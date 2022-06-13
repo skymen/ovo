@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Notification</name>
+    <events>
+        <event-group description="" sid="664193936102864" title="Notification">
+            <sub-events>
+                <event-group description="" sid="295719443144517" title="Notification &gt; Updates">
+                    <sub-events>
+                        <event-block sid="984510323679056">
+                            <conditions>
+                                <condition id="21" name="On offline ready" sid="463107203018341" type="Browser" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="title" sid="232993443304031" static="0" type="text"></variable>
+                                <variable constant="0" name="desc" sid="239916995568323" static="0" type="text"></variable>
+                                <event-block sid="578260121600642">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="112845821410029" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;offlineready&quot;{###}&quot;text&quot;{###}&quot;Offline ready!&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="820626833987368" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="909437216047526" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;offlinereadydesc&quot;{###}&quot;text&quot;{###}&quot;You can now play the game offline!&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="967295246508584" type="System">
+                                            <param id="0" name="Variable">desc</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="964750894295849" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}desc</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="983090562478107">
+                            <conditions>
+                                <condition id="19" name="On update found" sid="764467136429042" type="Browser" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="title" sid="721748611986444" static="0" type="text"></variable>
+                                <variable constant="0" name="desc" sid="838847301237665" static="0" type="text"></variable>
+                                <event-block sid="455643181178506">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="796252427384052" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;updatefound&quot;{###}&quot;text&quot;{###}&quot;Update found!&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="174276026694077" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="590401647293682" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;updatefounddesc&quot;{###}&quot;text&quot;{###}&quot;A new update has been found, and is getting downloaded in background&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="935287110345683" type="System">
+                                            <param id="0" name="Variable">desc</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="254456138983520" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}desc</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="228889864686755">
+                            <conditions>
+                                <condition id="20" name="On update ready" sid="980331229154883" type="Browser" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="title" sid="495530890229953" static="0" type="text"></variable>
+                                <variable constant="0" name="desc" sid="812220671176891" static="0" type="text"></variable>
+                                <event-block sid="568235413691530">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="995423988930806" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;updateready&quot;{###}&quot;text&quot;{###}&quot;Update ready!&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="303310881867901" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="495112342270339" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;updatereadydesc&quot;{###}&quot;text&quot;{###}&quot;A new update has been downloaded! Reload or click here to load the new version.&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="683251464291553" type="System">
+                                            <param id="0" name="Variable">desc</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="975652226742164" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Clickable&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}desc{###}&quot;UpdateReady&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="240832970927803">
+                            <conditions>
+                                <condition id="0" name="On notification clicked" sid="340135006123545" type="Notifications">
+                                    <param id="0" name="ID">&quot;UpdateReady&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Reload" sid="225622502405290" type="Browser" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="766589814319976">
+                            <conditions>
+                                <condition id="0" name="On notification clicked" sid="709959805518754" type="Notifications">
+                                    <param id="0" name="ID">&quot;gpdr&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="8" name="Open URL in new window" sid="437175724445551" type="Browser">
+                                    <param id="0" name="URL">&quot;https://dedragames.com/#/agreement&quot;</param>
+                                    <param id="1" name="Tag">&quot;_blank&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="933377953764687">
+                            <conditions>
+                                <condition id="1" name="Did transition start" sid="216590106974714" type="LayoutTransitionV2" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="529169650009445" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Clear&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="813828376180890" title="Notification &gt; API">
+                    <sub-events>
+                        <variable constant="0" name="LastTitle" sid="189343501093671" static="1" type="text"></variable>
+                        <variable constant="0" name="LastContent" sid="580305689941129" static="1" type="text"></variable>
+                        <event-block sid="863753033157357">
+                            <conditions>
+                                <condition id="0" name="On function" sid="134355953833387" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Add simple notification" sid="596485239258313" type="Notifications">
+                                    <param id="0" name="Title">Function.Param(0)</param>
+                                    <param id="1" name="Text">Function.Param(1)</param>
+                                    <param id="2" name="Image">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="772595943669217">
+                            <conditions>
+                                <condition id="0" name="On function" sid="510404534419283" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Image&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="Title" sid="711395509202240" static="1" type="text"></variable>
+                                <variable constant="0" name="Content" sid="668549220564003" static="1" type="text"></variable>
+                                <variable constant="0" name="Image" sid="417769001419522" static="1" type="text"></variable>
+                                <event-block sid="529992627576131">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="907941738335058" type="System">
+                                            <param id="0" name="Variable">Title</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="994156823038939" type="System">
+                                            <param id="0" name="Variable">Content</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="860339141254544" type="System">
+                                            <param id="0" name="Variable">Image</param>
+                                            <param id="1" name="Value">Function.Param(2)</param>
+                                        </action>
+                                        <action id="2" name="Add simple notification" sid="436423451143321" type="Notifications">
+                                            <param id="0" name="Title">Title</param>
+                                            <param id="1" name="Text">Content</param>
+                                            <param id="2" name="Image">Image</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="271487200105526">
+                            <conditions>
+                                <condition id="0" name="On function" sid="461835123638216" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Light&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add advanced notification" sid="830294922465414" type="Notifications">
+                                    <param id="0" name="Title">Function.Param(0)</param>
+                                    <param id="1" name="Text">Function.Param(1)</param>
+                                    <param id="2" name="Image">Function.Param(2)</param>
+                                    <param id="3" name="Sticky">0</param>
+                                    <param id="4" name="Notification style">1</param>
+                                    <param id="5" name="Time">5000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="788177294983023">
+                            <conditions>
+                                <condition id="0" name="On function" sid="670672380963126" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Clickable&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Add clickable notification" sid="604795158123989" type="Notifications">
+                                    <param id="0" name="ID">Function.Param(2)</param>
+                                    <param id="1" name="Title">Function.Param(0)</param>
+                                    <param id="2" name="Text">Function.Param(1)</param>
+                                    <param id="3" name="Image">Function.Param(3)</param>
+                                    <param id="4" name="Sticky">0</param>
+                                    <param id="5" name="Notification style">1</param>
+                                    <param id="6" name="Time">20000</param>
+                                    <param id="7" name="Close on click">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="347835676438162">
+                            <conditions>
+                                <condition id="0" name="On function" sid="948573155466653" type="Function">
+                                    <param id="0" name="Name">&quot;Notification &gt; Clear&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Delete all notifications" sid="432867999033585" type="Notifications" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

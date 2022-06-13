@@ -1,0 +1,1359 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Common Menus</name>
+    <events>
+        <include>Main Menu</include>
+        <event-group description="" sid="302531167753173" title="End Card">
+            <sub-events>
+                <event-block sid="709127389402980">
+                    <conditions>
+                        <condition id="0" name="On function" sid="758587919888590" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; End&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Dialog" id="0" name="Open" sid="448032496261272" type="EndCardDialog">
+                            <param id="0" name="Target X">0</param>
+                            <param id="1" name="Target Y">0</param>
+                            <param id="2" name="Center">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="146027187906884" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="209727201401536">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="165705405148012" type="Collider">
+                                    <param id="0" name="Instance variable">Ghost</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="459345575056318">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="697345247586576" type="Collider">
+                                            <param id="0" name="Instance variable">Replaying</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="772203547329617" type="EndCardTimer">
+                                            <param id="0" name="Text">TimerText.Text</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="615154646507367">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="257934359768203" type="Globals">
+                                                    <param id="0" name="Instance variable">AdvancedMode</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="403696272321881" type="PlayerReplay">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Value">0</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="639446474707387" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">round(Collider.X * 100)/100</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="949837414376675" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">round(Collider.Y * 100)/100</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set at XY" sid="621961058753475" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">EndFlag.X</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set at XY" sid="454034521950889" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">EndFlag.Y</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="884202899385116" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Value">round(Collider.Angle*100)/100</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="795212320375246" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">Collider.State</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="259754123549251" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">Collider.AnimationFrame</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="770779046276800" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">5</param>
+                                                    <param id="2" name="Value">Collider.Side</param>
+                                                </action>
+                                                <action id="4" name="Set at XYZ" sid="633106613946569" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Z">1</param>
+                                                    <param id="3" name="Value">EndCardTimer.Text</param>
+                                                </action>
+                                                <action id="4" name="Set at XYZ" sid="693993370845458" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Z">1</param>
+                                                    <param id="3" name="Value">LayoutName</param>
+                                                </action>
+                                                <action id="14" name="Log" sid="458544939599424" type="Browser">
+                                                    <param id="0" name="Type">1</param>
+                                                    <param id="1" name="Message">&quot;Not replaying, end of level&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="536953458054288">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="329926866747076" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="371567591100624" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;Replaying, end of level&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="574992713258808">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="981822717828988" type="System">
+                                                    <param id="0" name="First value">PlayerReplay.At(PlayerReplay.Width-1,1,1)</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Second value">LayoutName</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="675530373324722" type="EndCardTimer">
+                                                    <param id="0" name="Text">&quot;|&quot; &amp; TimerText.Text &amp; &quot;|&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="680102265660463">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="592750067097760" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="410579586492146" type="EndCardTimer">
+                                                    <param id="0" name="Text">PlayerReplay.At(PlayerReplay.Width-1,0,1)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="161907250474873">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="525301166878135" type="System">
+                            <param id="0" name="First value">find(LayoutName, &quot;Level&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="169513857372481">
+                            <conditions>
+                                <condition id="0" name="On function" sid="952940984388581" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; Replay&quot;</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="999042921041768" type="Keyboard">
+                                    <param id="0" name="Key">82</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="712981394275815">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="317542631770457" type="Keyboard">
+                                            <param id="0" name="Key">17</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="552749489878396" type="Globals">
+                                            <param id="0" name="Instance variable">PerLevel</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="274503767365712" type="Globals">
+                                            <param id="0" name="Instance variable">InSection</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="527435541814437" type="System">
+                                            <param id="0" name="Layout">Level 1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="227260233995585">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="990475204881135" type="System" />
+                                        <condition id="2" name="Key is down" sid="792162639428200" type="Keyboard">
+                                            <param id="0" name="Key">17</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="199966970925087" type="Globals">
+                                            <param id="0" name="Instance variable">InSection</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="868495525724217" type="System">
+                                            <param id="0" name="Layout">&quot;Level &quot; &amp; Globals.StartSection</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="147240126713441">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="133571855606909" type="System" />
+                                        <condition id="2" name="Key is down" sid="221734676113925" type="Keyboard">
+                                            <param id="0" name="Key">17</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-45" name="Reset persisted objects" sid="589805634608540" type="System" />
+                                        <action disabled="1" id="17" name="Execute Javascript" sid="972275454114281" type="Browser">
+                                            <param id="0" name="Javascript">&quot;parent.cmgGameEvent(&quot;&quot;replay&quot;&quot;,&quot;&quot;&quot; &amp; int(tokenat(LayoutName, 1, &quot; &quot;)) &amp; &quot;&quot;&quot;)&quot;</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="442112124168438" type="Browser">
+                                            <param id="0" name="Javascript">&quot;WebSdkWrapper.replayLevel(&quot;&amp; int(tokenat(LayoutName, 1, &quot; &quot;)) &amp;&quot;)&quot;</param>
+                                        </action>
+                                        <action behavior="Dialog" id="1" name="Close" sid="971846159506900" type="EndCardDialog" />
+                                        <action id="-13" name="Set time scale" sid="191215297940802" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="463241098446547" type="System" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="689039611648109">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="838360495729270" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="17" name="Execute Javascript" sid="974232572268510" type="Browser">
+                                            <param id="0" name="Javascript">&quot;parent.cmgGameEvent(&quot;&quot;replay&quot;&quot;,&quot;&quot;&quot; &amp; int(tokenat(LayoutName, 1, &quot; &quot;)) &amp; &quot;&quot;&quot;)&quot;</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="978705794277951" type="Browser">
+                                            <param id="0" name="Javascript">&quot;WebSdkWrapper.replayLevel(&quot;&amp; int(tokenat(LayoutName, 1, &quot; &quot;)) &amp;&quot;)&quot;</param>
+                                        </action>
+                                        <action behavior="Dialog" id="1" name="Close" sid="134750538964283" type="EndCardDialog" />
+                                        <action id="-13" name="Set time scale" sid="276110713654038" type="System">
+                                            <param id="0" name="Time scale">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="617552514180430" type="System" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="226347249892819">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="859632681011826" type="ButtonTrigger">
+                                                    <param id="0" name="Instance variable">PersistAfterDeath</param>
+                                                </condition>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="457356909362241" type="Globals">
+                                                    <param id="0" name="Instance variable">EasyMode</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="222053043218322">
+                                                    <conditions>
+                                                        <condition behavior="Dialog" id="2" name="Is Dialog Opened" sid="446175701282203" type="EndCardDialog" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-45" name="Reset persisted objects" sid="992979311551848" type="System" />
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="849390939309567">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="317347617826600" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="675536112900555">
+                                                            <conditions>
+                                                                <condition id="2" name="Key is down" sid="640779014384891" type="Keyboard">
+                                                                    <param id="0" name="Key">82</param>
+                                                                </condition>
+                                                                <condition id="1" name="Compare parameter" sid="203105083234461" type="Function">
+                                                                    <param id="0" name="Index">0</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;1&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-13" name="Set boolean" sid="262468450122039" type="Globals">
+                                                                    <param id="0" name="Instance variable">hardReset</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="990487818797297">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="679383756139380" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-45" name="Reset persisted objects" sid="802433053930171" type="System" />
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="612836382817091" title="End Game">
+            <sub-events>
+                <event-block sid="293626678624596">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="522784042602369" type="System" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="765975451972328" type="Globals">
+                            <param id="0" name="Instance variable">EasyMode</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="324633872653584" type="System">
+                            <param id="0" name="Object">EndGameText</param>
+                            <param id="1" name="Expression">EndGameText.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="196741678100464" type="EndGameText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="409899824037429">
+                    <conditions>
+                        <condition id="0" name="On function" sid="943420265334402" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; EndGame&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="946848665594907" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyGameplayStop();&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="ID" sid="873328039958921" static="1" type="number">0</variable>
+                        <event-block sid="899205794266984">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="315854355272890" type="System">
+                                    <param id="0" name="Variable">ID</param>
+                                    <param id="1" name="Value">int(tokenat(LayoutName, 1, &quot; &quot;))</param>
+                                </action>
+                                <action behavior="Dialog" id="0" name="Open" sid="568255723791512" type="EndGameDialog">
+                                    <param id="0" name="Target X">0</param>
+                                    <param id="1" name="Target Y">0</param>
+                                    <param id="2" name="Center">1</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="796497247219891" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="283670882313126" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="686666836895303">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="223757763137903" type="EndGameScore">
+                                    <param id="0" name="Text">TR_ClockParser.MMSS(time - Globals.StartTime + (round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100) = 100))  &amp; &quot;:&quot; &amp; zeropad(round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100)% 100, 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="405095970679863">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="679677439621132" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Remove item" sid="753809230526805" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;LastLevel&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="222972121543207">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="182786535824295" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;besttime&quot; &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">time - Globals.StartTime</param>
+                                        </condition>
+                                        <condition id="3" inverted="1" name="Has item" sid="121716094544242" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;besttime&quot; &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="923112123588732" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;besttime&quot; &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                            <param id="1" name="Value">time - Globals.StartTime</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="886937511906526">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Save" sid="744114023522790" type="SyncStorage" />
+                                        <action id="0" name="Call function" sid="609193379410712" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="425761453351688">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="422504623314119" type="System">
+                                            <param id="0" name="First value">time - Globals.StartTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">30 * 60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="605411096496037" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">17</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="461442906920531">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="731569061079203" type="System">
+                                            <param id="0" name="First value">time - Globals.StartTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">20 * 60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="561508630375738" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">18</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="459011121532967">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="339265486027966" type="System">
+                                            <param id="0" name="First value">time - Globals.StartTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">15 * 60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="512760531207384" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">19</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="477870726137467">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="317486560332106" type="System">
+                                            <param id="0" name="First value">time - Globals.StartTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">12 * 60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="626741715000200" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">20</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="879870594361487">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="926281368122848" type="System">
+                                            <param id="0" name="First value">time - Globals.StartTime</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">10 * 60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="970875238999204" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">21</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="227026462503861">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="892841263991846" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="990009305072551" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;LastLevel&quot;</param>
+                                    <param id="1" name="Value">ID</param>
+                                </action>
+                                <action id="0" name="Set" sid="845235993766094" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;LastTime&quot;</param>
+                                    <param id="1" name="Value">time - Globals.StartTime</param>
+                                </action>
+                                <action id="1" name="Save" sid="672089999605577" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="285181653116836">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="124190166327472" type="Globals">
+                                    <param id="0" name="Instance variable">EasyMode</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="713035359215442" type="System">
+                                    <param id="0" name="Object">EndGameText</param>
+                                    <param id="1" name="Expression">EndGameText.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="329868443143761" type="EndGameText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="650548338318059">
+                    <conditions>
+                        <condition behavior="Dialog" id="2" name="Is Dialog Opened" sid="348900990616530" type="EndGameDialog" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="248282075447055" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="100397740958838">
+                    <conditions>
+                        <condition id="0" name="On function" sid="916832030247877" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; EndSection&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="320013173020406" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyGameplayStop();&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <variable constant="0" name="ID" sid="484376273891582" static="1" type="number">0</variable>
+                        <event-block sid="318061866619929">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="136534166858059" type="System">
+                                    <param id="0" name="Variable">ID</param>
+                                    <param id="1" name="Value">int(tokenat(LayoutName, 1, &quot; &quot;))</param>
+                                </action>
+                                <action behavior="Dialog" id="0" name="Open" sid="966649999999678" type="EndGameDialog">
+                                    <param id="0" name="Target X">0</param>
+                                    <param id="1" name="Target Y">0</param>
+                                    <param id="2" name="Center">1</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="644438251026165" type="System">
+                                    <param id="0" name="Seconds">0.01</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="963980019629255" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="674438848025793">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Set text" sid="216504206624453" type="EndGameScore">
+                                    <param id="0" name="Text">TR_ClockParser.MMSS(time - Globals.StartTime + (round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100) = 100))  &amp; &quot;:&quot; &amp; zeropad(round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100)% 100, 2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="675826073195189">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="971978611413270" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="154248911237079">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="225820692499716" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;section&quot;&amp;Globals.CurSection &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">time - Globals.StartTime</param>
+                                        </condition>
+                                        <condition id="3" inverted="1" name="Has item" sid="971394579318746" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;section&quot;&amp;Globals.CurSection &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="611662975464628" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;section&quot;&amp;Globals.CurSection &amp; (Globals.EasyMode ? &quot;&quot; : &quot;hard&quot;)</param>
+                                            <param id="1" name="Value">time - Globals.StartTime</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="325664025797929" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="809320547579340">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="332682531146518" type="Globals">
+                                    <param id="0" name="Instance variable">EasyMode</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="123828881883283" type="System">
+                                    <param id="0" name="Object">EndGameText</param>
+                                    <param id="1" name="Expression">EndGameText.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="787091234811848" type="EndGameText">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="149212780561182">
+                    <conditions>
+                        <condition id="0" name="On function" sid="791270415102331" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; Quit&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="123605872830357" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyGameplayStop();&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="237113626970291">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="660003922027194" type="Globals">
+                                    <param id="0" name="Instance variable">InSection</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="750371591667945" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; Back&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Level Menu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="842289969527789">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="246120446856333" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="959132430192777" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; Back&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="318038015938804">
+                    <conditions>
+                        <condition id="0" name="On function" sid="366440051444645" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; GiveUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="938907994260114" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyGameplayStop();&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="801215542845065">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="503042263728246" type="Globals">
+                                    <param id="0" name="Instance variable">PerLevel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="674792449388939" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; Back&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;Level Menu&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="245922569845796">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="617264826385075" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="708615277015887" type="Globals">
+                                    <param id="0" name="Instance variable">InSection</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Dialog" id="1" name="Close" sid="713645575164214" type="PauseDialog" />
+                                <action id="0" name="Call function" sid="805292929669738" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; EndSection&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="353345522023934">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="577988136034176" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Dialog" id="1" name="Close" sid="315067274619222" type="PauseDialog" />
+                                <action id="0" name="Call function" sid="387166345777490" type="Function">
+                                    <param id="0" name="Name">&quot;Menu &gt; EndGame&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="950881186405880" title="Timer">
+            <sub-events>
+                <event-block sid="488066008141850">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="663266422955971" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="521213949187200">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="919942977630328" type="Globals">
+                                    <param id="0" name="Instance variable">PerLevel</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="188795640237163" type="Globals">
+                                    <param id="0" name="Instance variable">hardReset</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="211589105552628" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="107076666420292" type="Globals">
+                                    <param id="0" name="Instance variable">StartTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="943071831702513">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="342487783209723" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="546410233544586" type="Globals">
+                                    <param id="0" name="Instance variable">PerLevel</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="813963509029242" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="992581271602993" type="Globals">
+                                    <param id="0" name="Instance variable">hardReset</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="817812932397469">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="504471931909322" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="812529449912139" type="Globals">
+                                    <param id="0" name="Instance variable">InSection</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="804626161861954" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level &quot; &amp; Globals.StartSection</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="439252165343312" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="600469641925766" type="Globals">
+                                    <param id="0" name="Instance variable">StartTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="362073651254561">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="773699210911176" type="System" />
+                                <condition id="-8" name="Compare two values" sid="428809421294412" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="630362494080530" type="Globals">
+                                    <param id="0" name="Instance variable">StartTime</param>
+                                    <param id="1" name="Value">time</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="250939408592139">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="399780599321661" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="563520432472547" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="737744374833260" type="Globals">
+                            <param id="0" name="Instance variable">StartTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="603136682992150">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="199663942168572" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="361882916609205" type="TimerText">
+                            <param id="0" name="Text">TR_ClockParser.MMSS(time - Globals.StartTime + (round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100) = 100))  &amp; &quot;:&quot; &amp; zeropad(round(((time - Globals.StartTime) - floor(time - Globals.StartTime)) * 100)% 100, 2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="384765354261598" title="Pause">
+            <sub-events>
+                <event-block sid="610730821509938">
+                    <conditions />
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="602467676495717" type="HTML_Div_Pode">
+                            <param id="0" name="Layer">&quot;Banner&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="630063847573074">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="368270944119686" type="System" />
+                                <condition id="16" name="Is portrait/landscape" sid="627460471506454" type="Browser">
+                                    <param id="0" name="Orientation">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="936130871616309" type="HTML_Div_Pode">
+                                    <param id="0" name="X">((ViewportRight(0) - ViewportLeft(0)) - (CanvasToLayerX(0, 320, 0) - CanvasToLayerX(0, 0, 0)))/2 - ((ViewportRight(0) - ViewportLeft(0)) - OriginalWindowWidth)/2</param>
+                                    <param id="1" name="Y">BannerContainer.Y</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="953801069232090" type="HTML_Div_Pode">
+                                    <param id="0" name="Width">Self.smallWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="723963684658375">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="929948538602613" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="616366021521937" type="HTML_Div_Pode">
+                                    <param id="0" name="X">((ViewportRight(0) - ViewportLeft(0)) - (CanvasToLayerX(0, 728, 0) - CanvasToLayerX(0, 0, 0)))/2 - ((ViewportRight(0) - ViewportLeft(0)) - OriginalWindowWidth)/2</param>
+                                    <param id="1" name="Y">BannerContainer.Y</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="702345075222413" type="HTML_Div_Pode">
+                                    <param id="0" name="Width">Self.bigWidth</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="522195407738835">
+                    <conditions>
+                        <condition behavior="Dialog" id="0" name="On Dialog Opened" sid="383305005686616" type="PauseDialog" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="207582269060861" type="HTML_Div_Pode">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="827273086995556" type="System">
+                            <param id="0" name="Object">HTML_Div_Pode</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="481154358681698" type="HTML_Div_Pode">
+                            <param id="0" name="Tag">&quot;reloadBanner&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="795250891913259" type="HTML_Div_Pode">
+                            <param id="0" name="Duration">0.1</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;reloadBanner&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="150771120437358">
+                    <conditions>
+                        <condition behavior="Dialog" id="1" name="On Dialog Closed" sid="514730990499604" type="PauseDialog" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="420164042761338" type="HTML_Div_Pode">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="970022356723960">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="778869142896610" type="HTML_Div_Pode">
+                            <param id="0" name="Tag">&quot;reloadBanner&quot;</param>
+                        </condition>
+                        <condition behavior="Dialog" id="2" name="Is Dialog Opened" sid="662719918481399" type="PauseDialog" />
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="374898824547148" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyCreateBanner(&apos;banner-container&apos;);&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="330547537461034" type="HTML_Div_Pode">
+                            <param id="0" name="Duration">35</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;reloadBanner&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="452267350406719">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="511089652215093" type="Keyboard">
+                            <param id="0" name="Key">27</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="945057948798189" type="Keyboard">
+                            <param id="0" name="Key">80</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="977311094832537" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; Pause&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="490520238677286">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="781919767139096" type="System">
+                                    <param id="0" name="First value">timescale</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Dialog" id="1" name="Close" sid="706132062197292" type="PauseDialog" />
+                                <action id="17" name="Execute Javascript" sid="533291697437421" type="Browser">
+                                    <param id="0" name="Javascript">&quot;crazyGameplayStart();&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="859828450866567">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="635432268951636" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Dialog" id="0" name="Open" sid="722950342322390" type="PauseDialog">
+                                    <param id="0" name="Target X">0</param>
+                                    <param id="1" name="Target Y">0</param>
+                                    <param id="2" name="Center">1</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="898465298779173" type="Browser">
+                                    <param id="0" name="Javascript">&quot;crazyGameplayStop();&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="944043991060676" title="Mobile UI">
+            <sub-events>
+                <event-block sid="762628016594779">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="493786824767456" type="System" />
+                        <condition id="-20" inverted="1" name="Is on mobile device" sid="811631262577511" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="748666092008041" type="System">
+                            <param id="0" name="Layer">&quot;UI&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="490733862298427" type="UIDirectionBtn" />
+                        <action id="-16" name="Wait" sid="833537948328169" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="452409791188089" type="UIDirectionBtn">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="756024822518035" title="Advanced Mode">
+            <sub-events>
+                <event-block sid="702663697454685">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="569181878349590" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Release file" sid="227434280226239" type="FileChooser">
+                            <param id="0" name="File URL">FileChooser.FileURLAt(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="688230009925224">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="562697511910891" type="MenuButton">
+                                    <param id="0" name="Instance variable">AdvancedOnly</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="541152964737233">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="510497958893991" type="Globals">
+                                            <param id="0" name="Instance variable">AdvancedMode</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="446224066903101" type="MenuButton" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="226486766558580">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="575661192879641" type="Globals">
+                                            <param id="0" name="Instance variable">AdvancedMode</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="248692080150757" type="Globals">
+                                            <param id="0" name="Instance variable">PerLevel</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="698128574231214" type="MenuButton">
+                                            <param id="0" name="Instance variable">PerLevel</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="323333555991468" type="MenuButton" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="233048542541466">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="477142756543700" type="Globals">
+                                    <param id="0" name="Instance variable">Replaying</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="261206594640894" type="Globals">
+                                    <param id="0" name="Instance variable">hardReset</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set size" sid="744259601429197" type="PlayerReplay">
+                                    <param id="0" name="Width">0</param>
+                                    <param id="1" name="Height">6</param>
+                                    <param id="2" name="Depth">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="490320274181563">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="367496974877386" type="Globals">
+                            <param id="0" name="Instance variable">AdvancedMode</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="767445192037113" type="Globals">
+                            <param id="0" name="Instance variable">PerLevel</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="706014771812973" type="Collider">
+                            <param id="0" name="Instance variable">Replaying</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="totdt" sid="319679141936885" static="1" type="number">0</variable>
+                        <event-block sid="271890834233288">
+                            <conditions />
+                            <actions>
+                                <action id="-10" name="Add to" sid="415115657405282" type="System">
+                                    <param id="0" name="Variable">totdt</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="962140809185321">
+                            <conditions>
+                                <condition id="-23" name="While" sid="704626674064172" type="System" />
+                                <condition id="-14" name="Compare variable" sid="590659835489616" type="System">
+                                    <param id="0" name="Variable">totdt</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">1/60</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="945549537160498" type="System">
+                                    <param id="0" name="Variable">totdt</param>
+                                    <param id="1" name="Value">1/60</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="529200358711974">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="240218461033037" type="Collider">
+                                            <param id="0" name="Instance variable">Ghost</param>
+                                        </condition>
+                                        <condition id="-6" name="Every X seconds" sid="450417494803050" type="System">
+                                            <param id="0" name="Interval (seconds)">1/60</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="681270245883362" type="System">
+                                            <param id="0" name="First value">timescale</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="247687114747868" type="PlayerReplay">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">0</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="404264710748038" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">0</param>
+                                            <param id="2" name="Value">round(Collider.X * 100)/100</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="706656863325808" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">round(Collider.Y * 100)/100</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="610565351411549" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">2</param>
+                                            <param id="2" name="Value">round(Collider.Angle*100)/100</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="642765732392315" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">3</param>
+                                            <param id="2" name="Value">Collider.State</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="339214591279330" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">4</param>
+                                            <param id="2" name="Value">Collider.AnimationFrame</param>
+                                        </action>
+                                        <action id="3" name="Set at XY" sid="465342308519391" type="PlayerReplay">
+                                            <param id="0" name="X">PlayerReplay.Width-1</param>
+                                            <param id="1" name="Y">5</param>
+                                            <param id="2" name="Value">Collider.Side</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block any="1" sid="929529790085761">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="563029101708564" type="Collider">
+                                                    <param id="0" name="Object">EndFlag</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="729280623741012" type="PlayerReplay">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Value">0</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="785413972240910" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">round(Collider.X * 100)/100</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="979314577543949" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">round(Collider.Y * 100)/100</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set at XY" sid="310833494866448" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">EndFlag.X</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set at XY" sid="660338342865773" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">EndFlag.Y</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="634081725701366" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Value">round(Collider.Angle*100)/100</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="515981605277238" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">Collider.State</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="386193070638092" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">Collider.AnimationFrame</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="546383906389528" type="PlayerReplay">
+                                                    <param id="0" name="X">PlayerReplay.Width-1</param>
+                                                    <param id="1" name="Y">5</param>
+                                                    <param id="2" name="Value">Collider.Side</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <variable constant="0" name="CompressingReplay" sid="443629980533071" static="1" type="number">0</variable>
+                <event-block sid="737551028557660">
+                    <conditions>
+                        <condition id="0" name="On function" sid="534258974263435" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; DownloadReplay&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="221969088095474">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="938070281396012" type="System">
+                                    <param id="0" name="Variable">CompressingReplay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="290124616410457" type="System">
+                                    <param id="0" name="Variable">CompressingReplay</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Call function" sid="186754630317475" type="ValerypopoffJS">
+                                    <param id="0" name="Expression">&quot;compressReplay&quot;</param>
+                                    <param id="1" name="Parameter {n}">PlayerReplay.AsJSON</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="467448427145843">
+                    <conditions>
+                        <condition id="0" name="On function" sid="700625786752757" type="Function">
+                            <param id="0" name="Name">&quot;replayCompressed&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="989557552733529" type="System">
+                            <param id="0" name="Variable">CompressingReplay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="20" name="Invoke download of string" sid="420935782283809" type="Browser">
+                            <param id="0" name="String">Function.Param(0)</param>
+                            <param id="1" name="MIME type">&quot;application/json&quot;</param>
+                            <param id="2" name="Filename">LayoutName &amp;&quot;-replay.ovo&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="705647126113581" type="System">
+                            <param id="0" name="Variable">CompressingReplay</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="428536203781779">
+                    <conditions>
+                        <condition id="0" name="On function" sid="427396613077287" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; LoadReplay&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="557890820377806" type="Browser">
+                            <param id="0" name="Javascript">&quot;document.getElementById(&apos;file&apos;).click()&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="212525123458025">
+                    <conditions>
+                        <condition id="0" name="On changed" sid="747782818557750" type="FileChooser" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Request URL" sid="416266104086454" type="AJAX">
+                            <param id="0" name="Tag">&quot;replay&quot;</param>
+                            <param id="1" name="URL">FileChooser.FileURLAt(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="DecompressingReplay" sid="546390088495646" static="1" type="number">0</variable>
+                <event-block sid="348024747088678">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="847085133630149" type="AJAX">
+                            <param id="0" name="Tag">&quot;replay&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Call function" sid="698142658878674" type="ValerypopoffJS">
+                            <param id="0" name="Expression">&quot;decompressReplay&quot;</param>
+                            <param id="1" name="Parameter {n}">AJAX.LastData</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="646682265622261" type="System">
+                            <param id="0" name="Variable">DecompressingReplay</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="287299998197608">
+                    <conditions>
+                        <condition id="0" name="On function" sid="160844781746182" type="Function">
+                            <param id="0" name="Name">&quot;replayDecompressed&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="637927529975069" type="System">
+                            <param id="0" name="Variable">DecompressingReplay</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Load" sid="428574112945022" type="PlayerReplay">
+                            <param id="0" name="JSON">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="959622092840206" type="Globals">
+                            <param id="0" name="Instance variable">StartTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="2" name="Release file" sid="421953675194102" type="FileChooser">
+                            <param id="0" name="File URL">FileChooser.FileURLAt(0)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="631227268184782" type="Function">
+                            <param id="0" name="Name">&quot;Menu &gt; Pause&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="943362930342364" type="Globals">
+                            <param id="0" name="Instance variable">Replaying</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="460681541541529" type="System">
+                            <param id="0" name="Variable">DecompressingReplay</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="496164623229478" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-45" name="Reset persisted objects" sid="798047723886223" type="System" />
+                        <action id="-26" name="Restart layout" sid="968828132749675" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

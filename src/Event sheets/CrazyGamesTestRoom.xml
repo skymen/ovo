@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>CrazyGamesTestRoom</name>
+    <events>
+        <event-block sid="472227846830765">
+            <conditions>
+                <condition id="0" name="On clicked" sid="586915765840766" type="CrazyGamesTestButton" />
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="183986116920925" type="Browser">
+                    <param id="0" name="Javascript">CrazyGamesTestButton.js</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="759760246612910">
+            <conditions>
+                <condition id="0" name="On clicked" sid="365574838395710" type="CrazyGamesTestButton2" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="142955799569368" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

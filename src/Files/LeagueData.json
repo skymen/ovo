@@ -1,0 +1,64 @@
+{ 
+    "league" : [
+        {
+            "Wood" : {
+                "threshold" : 0,
+                "multiplier" : 1,
+                "divbonus" : {}
+            }
+        },
+        {   
+            "Bronze" : {
+                "threshold" : 200,
+                "multiplier" : 2,
+                "divbonus" : {
+                     "200" : "Bulb x2",
+                     "2500" : "Power-up x1"
+                }
+            }
+        },
+        {
+            "Silver" : {
+                "threshold" : 9000,
+                "multiplier" : 5,
+                "divbonus" : {
+                    "9000" : "Bulb x3 + Power-up x1",
+                    "20000" : "Bulb x3",
+                    "35000" : "Power-up x1"
+                }
+            }
+        },
+        {
+            "Gold" : {
+                "threshold" : 50000,
+                "multiplier" : 10,
+                "divbonus" : {
+                    "50000" : "Bulb x4 + Power-up x1",
+                    "80000" : "Bulb x5",
+                    "100000" : "Power-up x1"
+                }
+            }
+        },
+        {
+            "Diamond" : {
+                "threshold" : 125000,
+                "multiplier" : 17,
+                "divbonus" : {
+                    "125000" :"Bulb x5 + Power-up x2",
+                    "200000" : "Bulb x5",
+                    "275000" : "Power-up x1"
+                }
+            }
+        },
+        {
+            "Master" : {
+                "threshold" : 350000,
+                "multiplier" : 26,
+                "divbonus" : {
+                    "350000" : "Bulb x10 + Power-up x1"
+                }
+            }
+        }
+]
+
+}

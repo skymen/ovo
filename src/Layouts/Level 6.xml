@@ -1,0 +1,1982 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2layout>
+    <name>Level 6</name>
+    <sid>110385768031900</sid>
+    <event-sheet>Levels</event-sheet>
+    <size>
+        <width>3600</width>
+        <height>640</height>
+    </size>
+    <margins>
+        <horizontal>500</horizontal>
+        <vertical>500</vertical>
+    </margins>
+    <unbounded-scrolling>1</unbounded-scrolling>
+    <layers>
+        <layer name="Layer 0" sid="464281797429263">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Solid" uid="280">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>24</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>307</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightArm" uid="281">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>0</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>rightarm</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-37</x>
+                        <y>166</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightHand" uid="282">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>1</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>righthand</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-37</x>
+                        <y>174</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Body" uid="283">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>2</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>body</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-41</x>
+                        <y>171</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightFoot" uid="284">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>4</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>rightfoot</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-41</x>
+                        <y>187</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightLeg" uid="285">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>3</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>rightleg</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-41</x>
+                        <y>179</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftFoot" uid="286">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>6</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>leftfoot</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-45</x>
+                        <y>187</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftLeg" uid="287">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>5</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>leftleg</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-45</x>
+                        <y>179</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Head" uid="288">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>7</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>head</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-41</x>
+                        <y>163</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftArm" uid="289">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>8</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>leftarm</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-45</x>
+                        <y>166</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftHand" uid="290">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Zordering>9</Zordering>
+                        <OX>0</OX>
+                        <OY>0</OY>
+                        <an>0</an>
+                        <dist>0</dist>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>200</speed>
+                                <acceleration>-400</acceleration>
+                                <gravity>1500</gravity>
+                                <bounce-off-solids>Yes</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Skin">
+                            <properties>
+                                <skin-base-tag>main</skin-base-tag>
+                                <skin-tag>skin4</skin-tag>
+                                <sub-skin-tag>lefthand</sub-skin-tag>
+                                <sync-mode>No Sync</sync-mode>
+                                <use-default-skin>No</use-default-skin>
+                                <hide-default-skin>Yes</hide-default-skin>
+                                <pin-image-point>0</pin-image-point>
+                                <sync-z-order>No</sync-z-order>
+                                <size-sync-mode>Sync scale percentage</size-sync-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-45</x>
+                        <y>174</y>
+                        <z>0</z>
+                        <width>4</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Collider" uid="291">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <State>run</State>
+                        <Walljump>false</Walljump>
+                        <Side>1</Side>
+                        <CanSlide>true</CanSlide>
+                        <Sliding>false</Sliding>
+                        <SlideTime>0.8</SlideTime>
+                        <SlideRefresh>0.5</SlideRefresh>
+                        <Plunge>false</Plunge>
+                        <Pound>true</Pound>
+                        <Stun>false</Stun>
+                        <LongJump>false</LongJump>
+                        <Falling>false</Falling>
+                        <Skin></Skin>
+                        <HitBuffer>2</HitBuffer>
+                        <HitBufferCount>0</HitBufferCount>
+                        <Slipping>false</Slipping>
+                        <Ghost>false</Ghost>
+                        <GhostData></GhostData>
+                        <Replaying>false</Replaying>
+                        <ColBuffer>3</ColBuffer>
+                        <ColBufferCount>0</ColBufferCount>
+                        <WaveDash>false</WaveDash>
+                        <Dancing>false</Dancing>
+                        <CanWaveDash>false</CanWaveDash>
+                        <ConsecutiveNormalJumps>0</ConsecutiveNormalJumps>
+                        <lastLandedTime>0</lastLandedTime>
+                        <TripleJump>false</TripleJump>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="PushOutSolid">
+                            <properties>
+                                <activated>No</activated>
+                                <obstacles>Solids</obstacles>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>10000</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>88</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFontDeluxe" uid="293">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ÄäÀàÂâÁáÃãÅåÆæÈèÊêÉéÇçĞğÎîÍíİıÑñÖöÒòÔôÓóÕõŒœØøŞşÜüÙùÛûÚúŸÿ¿¡ß</character-set>
+                        <text>Now dive again</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>50</horizontal-alignment>
+                        <vertical-alignment>0</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json></char-width-json>
+                        <space-char-width>-1</space-char-width>
+                        <clamp-alignement>Yes</clamp-alignement>
+                    </properties>
+                    <instance-variables>
+                        <autoTranslate>true</autoTranslate>
+                        <autoFindKey>true</autoFindKey>
+                        <key></key>
+                        <default>en-us</default>
+                        <keepSpritefont>false</keepSpritefont>
+                        <onlyHideText>false</onlyHideText>
+                        <noTranslate>false</noTranslate>
+                        <metadata></metadata>
+                        <scaleText>false</scaleText>
+                        <syncOpacity>true</syncOpacity>
+                        <initScale>0</initScale>
+                        <initSize>0</initSize>
+                        <isWhite>0</isWhite>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>After Events (default)</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="GameObject">
+                            <properties>
+                                <name></name>
+                                <parent-name></parent-name>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160</x>
+                        <y>408</y>
+                        <z>0</z>
+                        <width>293</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="294">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>992</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>352</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="295">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>596</x>
+                        <y>512</y>
+                        <z>0</z>
+                        <width>135</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LayoutNameHolder" uid="1413">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <levelName>Impossible</levelName>
+                        <GhostData>{&quot;c2array&quot;:true,&quot;size&quot;:[253,6,1],&quot;data&quot;:[[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[241.74607820350303],[479.9430528635005],[0],[&quot;idle&quot;],[0],[1]],[[242.16381221950348],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[242.99575405300396],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[244.24347989800322],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[245.9021706820042],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[247.98014080450506],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[250.4702000545054],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[253.38183493450353],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[256.70530885450347],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[260.4453654520045],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[264.60677398900395],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[269.1803208100034],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[274.15384835800313],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[279.54920149600446],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[285.0489814960036],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[296.0234614960064],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[301.51433149600496],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[307.0124614960074],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[312.5138914960033],[479.9430528635005],[0],[&quot;run&quot;],[0],[1]],[[317.98925149600467],[469.15825286349775],[0],[&quot;jump&quot;],[0],[1]],[[323.4801214960032],[458.7581873450004],[0],[&quot;jump&quot;],[0],[1]],[[328.9680214960048],[448.7785825499976],[0],[&quot;jump&quot;],[0],[1]],[[334.4912314960075],[439.1549581829931],[0],[&quot;jump&quot;],[0],[1]],[[339.9517414960047],[430.05128691949784],[0],[&quot;jump&quot;],[0],[1]],[[345.4406314960052],[421.315286026497],[0],[&quot;plunge&quot;],[1],[1]],[[349.3034134960039],[412.95197839049973],[0],[&quot;plunge&quot;],[1],[1]],[[356.9920174960072],[405.0441160404964],[0],[&quot;plunge&quot;],[1],[1]],[[364.6547494960052],[397.5755065844983],[0],[&quot;plunge&quot;],[1],[1]],[[372.3687634960053],[390.4750989859983],[0],[&quot;plunge&quot;],[1],[1]],[[380.0444314960059],[383.8240246729977],[0],[&quot;plunge&quot;],[1],[1]],[[387.7330354960092],[377.57717537999525],[0],[&quot;plunge&quot;],[1],[1]],[[395.3851414960067],[371.77147949399716],[0],[&quot;plunge&quot;],[1],[1]],[[403.1014654960089],[366.3354962559958],[0],[&quot;plunge&quot;],[1],[1]],[[410.7738994960039],[361.34412124649896],[0],[&quot;plunge&quot;],[1],[1]],[[418.45834549600465],[356.7599167494984],[0],[&quot;plunge&quot;],[1],[1]],[[426.1538794960077],[352.58528110999686],[0],[&quot;plunge&quot;],[1],[1]],[[433.85264749600964],[348.8254244499961],[0],[&quot;plunge&quot;],[1],[1]],[[441.51999949600525],[345.494051283998],[0],[&quot;plunge&quot;],[1],[1]],[[449.22846949600415],[342.5623966739983],[0],[&quot;plunge&quot;],[1],[1]],[[456.8981314960086],[340.058891169497],[0],[&quot;plunge&quot;],[1],[1]],[[464.5835014960062],[337.96534314949764],[0],[&quot;plunge&quot;],[1],[1]],[[472.28226949600815],[336.28467876549735],[0],[&quot;plunge&quot;],[1],[1]],[[480.0406354960038],[335.01401123099794],[0],[&quot;plunge&quot;],[1],[1]],[[487.65439549600865],[334.17441291099755],[0],[&quot;plunge&quot;],[1],[1]],[[495.3494674960099],[333.7419815109977],[0],[&quot;plunge&quot;],[1],[1]],[[503.0828854960038],[333.7276864049976],[0],[&quot;plunge&quot;],[1],[1]],[[510.71420149600885],[334.122846518998],[0],[&quot;plunge&quot;],[1],[1]],[[518.3880214960092],[334.9340456989982],[0],[&quot;plunge&quot;],[1],[1]],[[526.1071174960085],[336.16876689899823],[0],[&quot;plunge&quot;],[1],[1]],[[533.7721594960087],[337.8077337204984],[0],[&quot;plunge&quot;],[1],[1]],[[541.4695414960054],[339.86999897849745],[0],[&quot;plunge&quot;],[1],[1]],[[549.1539874960062],[342.34378348599773],[0],[&quot;plunge&quot;],[1],[1]],[[556.8416674960059],[345.23394348599766],[0],[&quot;plunge&quot;],[1],[1]],[[564.5201074960038],[348.5349663359966],[0],[&quot;plunge&quot;],[1],[1]],[[572.248443496005],[352.2771788519972],[0],[&quot;plunge&quot;],[1],[1]],[[579.8945434960063],[356.3904248269979],[0],[&quot;plunge&quot;],[1],[1]],[[587.6141014960075],[360.96197380899866],[0],[&quot;plunge&quot;],[1],[1]],[[595.3073254960084],[365.93386136099934],[0],[&quot;plunge&quot;],[1],[1]],[[602.9788354960065],[371.3053048784981],[0],[&quot;plunge&quot;],[1],[1]],[[610.6692874960034],[377.10564519349566],[0],[&quot;plunge&quot;],[1],[1]],[[618.366207496005],[383.3271972434969],[0],[&quot;plunge&quot;],[1],[1]],[[626.0460334960081],[389.9494181144998],[0],[&quot;plunge&quot;],[1],[1]],[[633.7364854960051],[396.99643563049693],[0],[&quot;plunge&quot;],[1],[1]],[[641.3909014960047],[404.4221800944966],[0],[&quot;plunge&quot;],[1],[1]],[[649.0998334960054],[412.3184458164973],[0],[&quot;plunge&quot;],[1],[1]],[[656.7759634960079],[420.595199759],[0],[&quot;plunge&quot;],[1],[1]],[[664.4950594960072],[429.3370175009994],[0],[&quot;plunge&quot;],[1],[1]],[[672.1513234960073],[438.4196252549996],[0],[&quot;plunge&quot;],[1],[1]],[[679.8588694960094],[447.9805524570024],[0],[&quot;plunge&quot;],[1],[1]],[[687.5220634960092],[457.8991554885023],[0],[&quot;plunge&quot;],[1],[1]],[[695.2268374960074],[468.28875971849993],[0],[&quot;plunge&quot;],[1],[1]],[[702.8978854960037],[479.04642490249466],[0],[&quot;plunge&quot;],[1],[1]],[[710.5911094960046],[479.98392490249466],[0],[&quot;plunge&quot;],[1],[1]],[[716.0935294960043],[472.3972549024951],[0],[&quot;jump&quot;],[0],[1]],[[727.0713094960054],[465.24422493599445],[0],[&quot;jump&quot;],[0],[1]],[[738.0504094960115],[458.50541970599096],[0],[&quot;jump&quot;],[0],[1]],[[749.0592094960069],[452.1657186659937],[0],[&quot;jump&quot;],[0],[1]],[[760.0475494960101],[446.2535838454922],[0],[&quot;jump&quot;],[0],[1]],[[770.9962894960053],[440.7755476764946],[0],[&quot;jump&quot;],[0],[1]],[[781.9529494960117],[435.70693865699195],[0],[&quot;jump&quot;],[0],[1]],[[792.9762694960052],[431.02592757399475],[0],[&quot;jump&quot;],[0],[1]],[[803.9388694960056],[426.7845391589947],[0],[&quot;jump&quot;],[0],[1]],[[814.9318294960074],[422.94753807899417],[0],[&quot;jump&quot;],[0],[1]],[[825.9016894960068],[419.5329863229944],[0],[&quot;jump&quot;],[0],[1]],[[836.8814494960059],[416.53048777099474],[0],[&quot;jump&quot;],[0],[1]],[[847.8810094960041],[413.93920809299516],[0],[&quot;jump&quot;],[0],[1]],[[858.8541694960066],[411.76878354899475],[0],[&quot;jump&quot;],[0],[1]],[[869.8253494960112],[410.0132368304943],[0],[&quot;jump&quot;],[0],[1]],[[880.8321694960085],[408.6691706924948],[0],[&quot;jump&quot;],[0],[1]],[[891.798069496012],[407.7441887199948],[0],[&quot;jump&quot;],[0],[1]],[[902.7837694960051],[407.23312063999515],[0],[&quot;jump&quot;],[0],[1]],[[913.7879494960116],[407.1381762414954],[0],[&quot;jump&quot;],[0],[1]],[[924.7479094960114],[407.45725222849563],[0],[&quot;fall&quot;],[0],[1]],[[935.7250294960099],[408.19176292849573],[0],[&quot;fall&quot;],[0],[1]],[[946.7061094960045],[409.3417731694952],[0],[&quot;fall&quot;],[0],[1]],[[957.6805894960121],[410.90582779149656],[0],[&quot;fall&quot;],[0],[1]],[[968.6788294960053],[412.8898019714954],[0],[&quot;fall&quot;],[0],[1]],[[979.6506694960027],[415.2835499154948],[0],[&quot;fall&quot;],[0],[1]],[[990.6561694960046],[418.1017249654953],[0],[&quot;fall&quot;],[0],[1]],[[1001.6095294960079],[421.3196893654964],[0],[&quot;fall&quot;],[0],[1]],[[1012.5985294960041],[424.96395811549513],[0],[&quot;fall&quot;],[0],[1]],[[1023.5809294960037],[429.021372515495],[0],[&quot;fall&quot;],[0],[1]],[[1034.576529496006],[433.499997015496],[0],[&quot;fall&quot;],[0],[1]],[[1045.5602494960108],[438.3892169114983],[0],[&quot;fall&quot;],[0],[1]],[[1056.5479294960114],[443.6959333914989],[0],[&quot;fall&quot;],[0],[1]],[[1067.5144894960079],[449.40658673549717],[0],[&quot;fall&quot;],[0],[1]],[[1078.5160294960042],[455.5522386729951],[0],[&quot;fall&quot;],[0],[1]],[[1089.468729496005],[462.0836987729956],[0],[&quot;fall&quot;],[0],[1]],[[1100.4597094960086],[469.05397012649814],[0],[&quot;fall&quot;],[0],[1]],[[1111.4421094960082],[476.43413460649805],[0],[&quot;fall&quot;],[0],[1]],[[1122.4251694960103],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1133.3904094960112],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1138.908339496008],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1143.9685159120088],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1148.641926014508],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1152.8733510265076],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1156.7146567090088],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1160.1287269900097],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1163.1276069910098],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1165.7126754190085],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1167.8827312090077],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1169.6344167730085],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1170.9764930530084],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1171.8992448235083],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1172.406275222508],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;idle&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;idle&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;idle&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;idle&quot;],[0],[1]],[[1172.4984141625077],[479.98012692749984],[0],[&quot;idle&quot;],[0],[1]],[[1172.915547626508],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1173.7487642605079],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1174.9897262230077],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1176.655258573008],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1178.7350266690084],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1181.220443629007],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1184.1309796930075],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1187.459896531007],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1191.187972183008],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1195.341540821509],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1199.9320671055057],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1204.891270895507],[479.98012692749984],[0],[&quot;run&quot;],[0],[1]],[[1210.2847780795055],[462.5249269275039],[0],[&quot;jump&quot;],[0],[1]],[[1215.801388079507],[445.3912640609997],[0],[&quot;jump&quot;],[0],[1]],[[1221.2787280795064],[428.7928076160016],[0],[&quot;jump&quot;],[0],[1]],[[1226.7801580795071],[412.53823252499967],[0],[&quot;jump&quot;],[0],[1]],[[1232.2558480795099],[396.77270054549234],[0],[&quot;jump&quot;],[0],[1]],[[1237.7579380795082],[381.34814143949694],[0],[&quot;jump&quot;],[0],[1]],[[1243.2412180795063],[366.39045147150193],[0],[&quot;jump&quot;],[0],[1]],[[1248.7446280795098],[351.795032918993],[0],[&quot;jump&quot;],[0],[1]],[[1254.2358280795095],[337.6473305189938],[0],[&quot;jump&quot;],[0],[1]],[[1259.7184480795052],[323.9357713980046],[0],[&quot;jump&quot;],[0],[1]],[[1265.207668079507],[310.6227411810003],[0],[&quot;jump&quot;],[0],[1]],[[1270.706458079507],[297.7029841530001],[0],[&quot;jump&quot;],[0],[1]],[[1276.183468079505],[285.24759123450434],[0],[&quot;jump&quot;],[0],[1]],[[1281.7020580795092],[273.11712838649544],[0],[&quot;jump&quot;],[0],[1]],[[1287.172468079506],[261.50476582800235],[0],[&quot;jump&quot;],[0],[1]],[[1292.656738079508],[250.27726856999845],[0],[&quot;jump&quot;],[0],[1]],[[1298.1472780795052],[239.45216982000383],[0],[&quot;jump&quot;],[0],[1]],[[1303.649698079505],[229.0206819840044],[0],[&quot;jump&quot;],[0],[1]],[[1309.142218079505],[219.02349667200423],[0],[&quot;jump&quot;],[0],[1]],[[1314.6261580795058],[209.45616509400298],[0],[&quot;jump&quot;],[0],[1]],[[1320.125938079505],[200.27783224200437],[0],[&quot;jump&quot;],[0],[1]],[[1325.6187880795064],[191.5266485895023],[0],[&quot;jump&quot;],[0],[1]],[[1331.0981080795086],[183.2105600954992],[0],[&quot;jump&quot;],[0],[1]],[[1336.6054780795082],[175.26968356050014],[0],[&quot;jump&quot;],[0],[1]],[[1342.101628079508],[167.76106827300083],[0],[&quot;jump&quot;],[0],[1]],[[1347.570388079508],[160.70181885900095],[0],[&quot;jump&quot;],[0],[1]],[[1353.0757780795093],[154.0127700089994],[0],[&quot;jump&quot;],[0],[1]],[[1358.581168079506],[147.74120489250322],[0],[&quot;jump&quot;],[0],[1]],[[1364.0433280795094],[141.92983907249982],[0],[&quot;jump&quot;],[0],[1]],[[1369.5473980795057],[136.49116743150338],[0],[&quot;jump&quot;],[0],[1]],[[1375.0432180795087],[131.47668133950077],[0],[&quot;jump&quot;],[0],[1]],[[1380.5377180795067],[126.8792333895025],[0],[&quot;jump&quot;],[0],[1]],[[1386.005818079509],[122.71572262950104],[0],[&quot;jump&quot;],[0],[1]],[[1391.5092280795077],[118.94250968700214],[0],[&quot;jump&quot;],[0],[1]],[[1396.9928380795072],[115.59705892800264],[0],[&quot;jump&quot;],[0],[1]],[[1402.497238079505],[112.65625816800386],[0],[&quot;jump&quot;],[0],[1]],[[1407.9778780795075],[110.1418900080029],[0],[&quot;jump&quot;],[0],[1]],[[1413.4822780795052],[108.03395500800379],[0],[&quot;jump&quot;],[0],[1]],[[1418.954668079505],[106.35077221650388],[0],[&quot;jump&quot;],[0],[1]],[[1424.454448079509],[105.07579821750323],[0],[&quot;jump&quot;],[0],[1]],[[1429.9496080795095],[104.21782889550346],[0],[&quot;jump&quot;],[0],[1]],[[1435.4285980795057],[103.7758736385038],[0],[&quot;jump&quot;],[0],[1]],[[1440.9455380795084],[103.75009448250401],[0],[&quot;jump&quot;],[0],[1]],[[1446.0059947420061],[104.13711375000383],[0],[&quot;fall&quot;],[0],[1]],[[1450.6701954430075],[104.9414102910042],[0],[&quot;fall&quot;],[0],[1]],[[1454.9275879390063],[106.16532489900382],[0],[&quot;fall&quot;],[0],[1]],[[1458.7590418990067],[107.80203972300396],[0],[&quot;fall&quot;],[0],[1]],[[1462.156546400508],[109.83952974750487],[0],[&quot;fall&quot;],[0],[1]],[[1465.1671305505076],[112.31419419750455],[0],[&quot;fall&quot;],[0],[1]],[[1467.7469995855072],[115.18837025250384],[0],[&quot;fall&quot;],[0],[1]],[[1469.9161283935086],[118.4821549005066],[0],[&quot;fall&quot;],[0],[1]],[[1471.6720123870077],[122.19608198100472],[0],[&quot;fall&quot;],[0],[1]],[[1473.0117463120084],[126.3251737560072],[0],[&quot;fall&quot;],[0],[1]],[[1473.9347603050082],[130.86146018100726],[0],[&quot;fall&quot;],[0],[1]],[[1474.4434048330081],[135.8131014450063],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[141.19666917300617],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[146.97900211050634],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[153.17751174750683],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[159.81151980750698],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[166.83724143900682],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[174.28113014400736],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[182.14975555050998],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[190.4472298335098],[0],[&quot;fall&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]],[[1474.536545797008],[191.9858189145052],[0],[&quot;idle&quot;],[0],[1]]]}</GhostData>
+                        <needSlope>false</needSlope>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-133</x>
+                        <y>29</y>
+                        <z>0</z>
+                        <width>60.934391022</width>
+                        <height>60.934391022</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFontDeluxe" uid="178">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ÄäÀàÂâÁáÃãÅåÆæÈèÊêÉéÇçĞğÎîÍíİıÑñÖöÒòÔôÓóÕõŒœØøŞşÜüÙùÛûÚúŸÿ¿¡ß</character-set>
+                        <text>And Jump!</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>50</horizontal-alignment>
+                        <vertical-alignment>0</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json></char-width-json>
+                        <space-char-width>-1</space-char-width>
+                        <clamp-alignement>Yes</clamp-alignement>
+                    </properties>
+                    <instance-variables>
+                        <autoTranslate>true</autoTranslate>
+                        <autoFindKey>true</autoFindKey>
+                        <key></key>
+                        <default>en-us</default>
+                        <keepSpritefont>false</keepSpritefont>
+                        <onlyHideText>false</onlyHideText>
+                        <noTranslate>false</noTranslate>
+                        <metadata></metadata>
+                        <scaleText>false</scaleText>
+                        <syncOpacity>true</syncOpacity>
+                        <initScale>0</initScale>
+                        <initSize>0</initSize>
+                        <isWhite>0</isWhite>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>After Events (default)</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="GameObject">
+                            <properties>
+                                <name></name>
+                                <parent-name></parent-name>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>592</x>
+                        <y>528</y>
+                        <z>0</z>
+                        <width>152</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LayoutNumber" uid="5602">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>1</text>
+                        <scale>7</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>55</horizontal-alignment>
+                        <vertical-alignment>0</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json></char-width-json>
+                        <space-char-width>-1</space-char-width>
+                        <clamp-alignement>Yes</clamp-alignement>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>After Events (default)</update-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Difference" />
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-42</x>
+                        <y>226</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>117</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1432</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>215</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="JumpBoost" uid="3118">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Force>0.7</Force>
+                        <Decel>false</Decel>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1224</x>
+                        <y>496</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFontDeluxe" uid="3119">
+                    <properties>
+                        <character-width>16</character-width>
+                        <character-height>16</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;ÄäÀàÂâÁáÃãÅåÆæÈèÊêÉéÇçĞğÎîÍíİıÑñÖöÒòÔôÓóÕõŒœØøŞşÜüÙùÛûÚúŸÿ¿¡ß</character-set>
+                        <text>Those are Good guys</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>50</horizontal-alignment>
+                        <vertical-alignment>0</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                        <char-width-json></char-width-json>
+                        <space-char-width>-1</space-char-width>
+                        <clamp-alignement>Yes</clamp-alignement>
+                    </properties>
+                    <instance-variables>
+                        <autoTranslate>true</autoTranslate>
+                        <autoFindKey>false</autoFindKey>
+                        <key>lvltxt6-3</key>
+                        <default>en-us</default>
+                        <keepSpritefont>false</keepSpritefont>
+                        <onlyHideText>false</onlyHideText>
+                        <noTranslate>false</noTranslate>
+                        <metadata></metadata>
+                        <scaleText>false</scaleText>
+                        <syncOpacity>true</syncOpacity>
+                        <initScale>0</initScale>
+                        <initSize>0</initSize>
+                        <isWhite>0</isWhite>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>After Events (default)</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="GameObject">
+                            <properties>
+                                <name></name>
+                                <parent-name></parent-name>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1096</x>
+                        <y>440</y>
+                        <z>0</z>
+                        <width>249</width>
+                        <height>52</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="248">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1640</x>
+                        <y>544</y>
+                        <z>0</z>
+                        <width>307</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3008">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2440</x>
+                        <y>336</y>
+                        <z>0</z>
+                        <width>232</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="JumpBoost" uid="3120">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Force>0.7</Force>
+                        <Decel>false</Decel>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1928</x>
+                        <y>528</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3121">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1864</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>202</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1648</x>
+                        <y>227</y>
+                        <z>0</z>
+                        <width>320</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Coin" uid="3123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <CoinID>level6</CoinID>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>After Events (default)</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>-200</acceleration>
+                                <gravity>800</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1912</x>
+                        <y>288</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="292">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2664</x>
+                        <y>552</y>
+                        <z>0</z>
+                        <width>307</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="EndFlag" uid="3125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3560</x>
+                        <y>248</y>
+                        <z>0</z>
+                        <width>97</width>
+                        <height>199</height>
+                        <depth>0</depth>
+                        <hotspotX>0.525773168</hotspotX>
+                        <hotspotY>0.497487426</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3126">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3291.480224609</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>291.519775391</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="JumpBoost" uid="3127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Force>0.7</Force>
+                        <Decel>false</Decel>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2952</x>
+                        <y>536</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2888</x>
+                        <y>48</y>
+                        <z>0</z>
+                        <width>453.084564209</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3136</x>
+                        <y>160</y>
+                        <z>0</z>
+                        <width>172</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="3130">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2672</x>
+                        <y>344</y>
+                        <z>0</z>
+                        <width>216</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="2445">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2880.3828125</x>
+                        <y>-0.843902588</y>
+                        <z>0</z>
+                        <width>671.500610352</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="10058">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>340</x>
+                        <y>501</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Solid" uid="10069">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="SkymenPin">
+                            <properties>
+                                <update-mode>Before Events</update-mode>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="ShadowCaster">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                                <height>100</height>
+                                <tag></tag>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>992</x>
+                        <y>501</y>
+                        <z>0</z>
+                        <width>20</width>
+                        <height>9</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="UI" sid="148719711589301">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="End Card" sid="129302139324865">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Pause" sid="778292008094265">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Overlay" sid="173593751727407">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="End Game" sid="796778414036311">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Banner" sid="455109579727925">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>0</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="AdPlaying" sid="365038848570753">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+    </layers>
+    <nonworld-instances />
+    <effects />
+</c2layout>

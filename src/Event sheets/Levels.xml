@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Levels</name>
+    <events>
+        <include>Save</include>
+        <include>Player</include>
+        <include>Gameplay</include>
+        <event-block sid="262908404654682">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="589220378013624" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="774160630736170" type="LayoutNumber">
+                    <param id="0" name="Text">tokenat(LayoutName, 1, &quot; &quot;)</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="795698966170694" type="LayoutNumber" />
+                <action id="-16" name="Set opacity" sid="163176830842861" type="LayoutNumber">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+                <action behavior="Platform" disabled="1" id="5" name="Set gravity" sid="641445292000066" type="Collider">
+                    <param id="0" name="Gravity">Self.Platform.Gravity/2</param>
+                </action>
+                <action behavior="Platform" id="13" name="Set double-jump" sid="901418482868617" type="Collider">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="8" name="Add progression event" sid="169946351745214" type="GameAnalytics">
+                    <param id="0" name="Progression status">1</param>
+                    <param id="1" name="Progression 01">LayoutName</param>
+                    <param id="2" name="Progression 02">&quot;&quot;</param>
+                    <param id="3" name="Progression 03">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="1" name="HITBUFFERPLAYER" sid="368957611672813" static="0" type="number">3</variable>
+                <event-block sid="292246417486018">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="723796179807074" type="Collider">
+                            <param id="0" name="Instance variable">HitBuffer</param>
+                            <param id="1" name="Value">HITBUFFERPLAYER</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="541709556999178">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="515180332198595" type="System">
+                            <param id="0" name="First value">LayoutSubtitle.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="728293240153042" type="System">
+                            <param id="0" name="Object to create">LayoutSubtitle</param>
+                            <param id="1" name="Layer">LayoutNumber.LayerName</param>
+                            <param id="2" name="X">LayoutNumber.X</param>
+                            <param id="3" name="Y">LayoutNumber.BBoxBottom</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="413965636560135" type="LayoutSubtitle">
+                            <param id="0" name="Width">LayoutNumber.Width</param>
+                            <param id="1" name="Height">32</param>
+                        </action>
+                        <action id="0" name="Set text" sid="615122999535352" type="LayoutSubtitle">
+                            <param id="0" name="Text">LayoutNameHolder.levelName</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="788771448138871" type="LayoutSubtitle" />
+                        <action id="-16" name="Set opacity" sid="990055935706722" type="LayoutSubtitle">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="184101312825057">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="127240278689503" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="499381353888391" type="LayoutSubtitle">
+                            <param id="0" name="X">LayoutNumber.X</param>
+                            <param id="1" name="Y">LayoutNumber.BBoxBottom</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="702574908217420" type="LayoutSubtitle">
+                            <param id="0" name="Layer">LayoutNumber.LayerName</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="823717993044235" type="LayoutSubtitle">
+                            <param id="0" name="Width">LayoutNumber.Width</param>
+                            <param id="1" name="Height">32</param>
+                        </action>
+                        <action id="0" name="Set text" sid="574559299285381" type="LayoutSubtitle">
+                            <param id="0" name="Text">LayoutNameHolder.levelName</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="235132433381054" type="LayoutSubtitle" />
+                        <action id="-16" name="Set opacity" sid="764804378526256" type="LayoutSubtitle">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="877496133759601">
+                    <conditions>
+                        <condition id="-12" name="Repeat" sid="373122532260116" type="System">
+                            <param id="0" name="Count">20000</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="820466446308402" type="System">
+                            <param id="0" name="Object to create">Decor</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="113707415691807" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Destroy" sid="489123081049880" type="Decor" />
+                    </actions>
+                </event-block>
+                <event-block sid="930312386417511">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="498543424255809" type="LayoutNameHolder">
+                            <param id="0" name="Instance variable">needSlope</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="476278821268681" type="System">
+                            <param id="0" name="Group name">&quot;Player &gt; Slopes&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838511017271359">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="275124377753458" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="598990600681202" type="System">
+                            <param id="0" name="Group name">&quot;Player &gt; Slopes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="605622329332106">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="486563526629710" type="Globals">
+                            <param id="0" name="Instance variable">EasyMode</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="995742463265474" type="Spike">
+                            <param id="0" name="Instance variable">hardOnly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="604927661472600" type="Spike" />
+                    </actions>
+                </event-block>
+                <variable constant="1" name="BORDERWIDTH" sid="491504855197634" static="0" type="number">84</variable>
+                <variable constant="1" name="BORDEROPA" sid="192410600212223" static="0" type="number">100</variable>
+                <event-block sid="408314256473983">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="897488327121572" type="System">
+                            <param id="0" name="Object to create">Border</param>
+                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="171231945393289" type="Border">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">BORDERWIDTH</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="517361504234956" type="Border" />
+                        <action id="-16" name="Set opacity" sid="956882151014981" type="Border">
+                            <param id="0" name="Opacity">BORDEROPA</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="697973847926467" type="System">
+                            <param id="0" name="Object to create">Border</param>
+                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="905355207578911" type="Border">
+                            <param id="0" name="Width">LayoutHeight</param>
+                            <param id="1" name="Height">BORDERWIDTH</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="839795677040754" type="Border">
+                            <param id="0" name="Angle">-90</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="772517694725741" type="Border" />
+                        <action id="-16" name="Set opacity" sid="619018822697129" type="Border">
+                            <param id="0" name="Opacity">BORDEROPA</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="989765526010275" type="System">
+                            <param id="0" name="Object to create">Border</param>
+                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                            <param id="2" name="X">LayoutWidth</param>
+                            <param id="3" name="Y">LayoutHeight</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="239235109666779" type="Border">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">BORDERWIDTH</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="957355156742143" type="Border">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="837009412628728" type="Border" />
+                        <action id="-16" name="Set opacity" sid="639907003733091" type="Border">
+                            <param id="0" name="Opacity">BORDEROPA</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="387682335182584" type="System">
+                            <param id="0" name="Object to create">Border</param>
+                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                            <param id="2" name="X">LayoutWidth</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="192791144557089" type="Border">
+                            <param id="0" name="Width">LayoutHeight</param>
+                            <param id="1" name="Height">BORDERWIDTH</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="636827519284473" type="Border">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="430707196999115" type="Border" />
+                        <action id="-16" name="Set opacity" sid="890086847538060" type="Border">
+                            <param id="0" name="Opacity">BORDEROPA</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="674276796813212">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="450281059871531" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;dedragames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="423023376792552" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;www.dedragames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="778259619911084" type="System">
+                            <param id="0" name="First value">ValerypopoffJS.JSCodeValue(&quot;WebSdkWrapper.hasAds()&quot;)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="612995517924246" type="System">
+                            <param id="0" name="First value">time - lastAdTime</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">AD_DELAY</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Has item" sid="403460055054987" type="SyncStorage">
+                            <param id="0" name="Item">&quot;RemoveAds&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="771517267186538" type="System">
+                            <param id="0" name="Variable">lastAdTime</param>
+                            <param id="1" name="Value">time</param>
+                        </action>
+                        <action id="17" name="Execute Javascript" sid="833963919892525" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyMidRoll();&quot;</param>
+                        </action>
+                        <action behavior="Dialog" disabled="1" id="0" name="Open" sid="194032468592201" type="AdPlayingMenu">
+                            <param id="0" name="Target X">0</param>
+                            <param id="1" name="Target Y">0</param>
+                            <param id="2" name="Center">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="311471831130356">
+            <conditions>
+                <condition id="-18" name="Is in preview" sid="359203702169628" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="735896009839655">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="280548311442316" type="Keyboard">
+                            <param id="0" name="Key">78</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="522339314675040" type="Collider">
+                            <param id="0" name="X">EndFlag.X</param>
+                            <param id="1" name="Y">EndFlag.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>walljump is bad; should be lower and mixed with normal jump&#x0D;&#x0A;JumpStrong should be lower&#x0D;&#x0A;SuperJump should be a tiny bit lower&#x0D;&#x0A;Slide Recover should be a bit lower&#x0D;&#x0A;Return should be a bit higher&#x0D;&#x0A;Both death sounds should be lower&#x0D;&#x0A;Transition should be lower&#x0D;&#x0A;Long Jump should have its own sound&#x0D;&#x0A;JumpBoost should be lower&#x0D;&#x0A;Steps should be lower&#x0D;&#x0A;Dancing should have its own step sounds&#x0D;&#x0A;After images should have their own sounds&#x0D;&#x0A;Hurting da head should have a new sound&#x0D;&#x0A;Notifications should have their own sound&#x0D;&#x0A;Buttons should have their own sound&#x0D;&#x0A;Rockets should have their own sound&#x0D;&#x0A;Portals should have their own sound&#x0D;&#x0A;Touching the flag should have its own sound&#x0D;&#x0A;The game lags a lot after a while</comment>
+        <event-block sid="214537880863723">
+            <conditions>
+                <condition id="-18" name="On created" sid="212267908535824" type="LayoutNameHolder" />
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="358755628340514" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Holder created&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="894282060244766" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="368128153038400">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="721439231547725" type="System">
+                            <param id="0" name="First value">LayoutSubtitle.Count</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="406635898438827" type="System">
+                            <param id="0" name="Object to create">LayoutSubtitle</param>
+                            <param id="1" name="Layer">LayoutNumber.LayerName</param>
+                            <param id="2" name="X">LayoutNumber.X</param>
+                            <param id="3" name="Y">LayoutNumber.BBoxBottom</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="458158632377996" type="LayoutSubtitle">
+                            <param id="0" name="Width">LayoutNumber.Width</param>
+                            <param id="1" name="Height">32</param>
+                        </action>
+                        <action id="0" name="Set text" sid="429980605158832" type="LayoutSubtitle">
+                            <param id="0" name="Text">LayoutNameHolder.levelName</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="688045167791770" type="LayoutSubtitle" />
+                        <action id="-16" name="Set opacity" sid="237193273671393" type="LayoutSubtitle">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="816392361464306">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="373622157820225" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="188046464135325" type="LayoutSubtitle">
+                            <param id="0" name="X">LayoutNumber.X</param>
+                            <param id="1" name="Y">LayoutNumber.BBoxBottom</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="759793431232091" type="LayoutSubtitle">
+                            <param id="0" name="Layer">LayoutNumber.LayerName</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="453035530977899" type="LayoutSubtitle">
+                            <param id="0" name="Width">LayoutNumber.Width</param>
+                            <param id="1" name="Height">32</param>
+                        </action>
+                        <action id="0" name="Set text" sid="270409476140090" type="LayoutSubtitle">
+                            <param id="0" name="Text">LayoutNameHolder.levelName</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="971974720662683" type="LayoutSubtitle" />
+                        <action id="-16" name="Set opacity" sid="156455814576076" type="LayoutSubtitle">
+                            <param id="0" name="Opacity">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302212852917173">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="261855841731533" type="LayoutNameHolder">
+                            <param id="0" name="Instance variable">needSlope</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="222009221071306" type="System">
+                            <param id="0" name="Group name">&quot;Player &gt; Slopes&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="290269601901096">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="996250735157930" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="331615982806334" type="System">
+                            <param id="0" name="Group name">&quot;Player &gt; Slopes&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="227905464368115">
+            <conditions>
+                <condition id="-18" name="On created" sid="818207833571058" type="LayoutSubtitle" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="246386053767738" type="LayoutSubtitle">
+                    <param id="0" name="X">LayoutNumber.X</param>
+                    <param id="1" name="Y">LayoutNumber.BBoxBottom</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="132584561274895" type="LayoutSubtitle">
+                    <param id="0" name="Layer">LayoutNumber.LayerName</param>
+                </action>
+                <action id="-7" name="Set size" sid="973812351604511" type="LayoutSubtitle">
+                    <param id="0" name="Width">LayoutNumber.Width</param>
+                    <param id="1" name="Height">32</param>
+                </action>
+                <action id="0" name="Set text" sid="844586756395713" type="LayoutSubtitle">
+                    <param id="0" name="Text">LayoutNameHolder.levelName</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="685794639281360" type="LayoutSubtitle" />
+                <action id="-16" name="Set opacity" sid="692739331250691" type="LayoutSubtitle">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="478195429964133">
+            <conditions>
+                <condition id="-18" name="On created" sid="352088386681585" type="LayoutNumber" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="948706222487066" type="LayoutNumber">
+                    <param id="0" name="Text">tokenat(LayoutName, 1, &quot; &quot;)</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="868471312716269" type="LayoutNumber" />
+                <action id="-16" name="Set opacity" sid="966817285739053" type="LayoutNumber">
+                    <param id="0" name="Opacity">30</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

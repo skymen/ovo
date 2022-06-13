@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Parse Auth</name>
+    <events>
+        <include>Common Menus</include>
+        <event-group description="" sid="938319982019981" title="Parse Auth">
+            <sub-events>
+                <event-group description="" sid="490618339457944" title="Parse Auth &gt; Mobile Control">
+                    <sub-events>
+                        <variable constant="0" name="id" sid="930356198715420" static="1" type="number">0</variable>
+                        <event-block sid="656075754915147">
+                            <conditions>
+                                <condition id="-20" name="Is on mobile device" sid="432909794693673" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="970232525842123">
+                                    <conditions>
+                                        <condition id="2" name="On clicked" sid="371593609943967" type="TextBox" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="12" name="Vibrate" sid="164804904924638" type="Browser">
+                                            <param id="0" name="Pattern">VibratePtrn</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="946880704265881" type="System">
+                                            <param id="0" name="Variable">id</param>
+                                            <param id="1" name="Value">TextBox.id</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="377397707670656" type="System">
+                                            <param id="0" name="Seconds">0.1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="121768104283290">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="406084915404440" type="System">
+                                            <param id="0" name="Object">TextBox</param>
+                                            <param id="1" name="Expression">TextBox.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">id</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set unfocused" sid="184029817474397" type="TextBox" />
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="164593161255620">
+                                    <conditions>
+                                        <condition id="-33" name="Pick by comparison" sid="862857973615176" type="System">
+                                            <param id="0" name="Object">TextBox</param>
+                                            <param id="1" name="Expression">TextBox.id</param>
+                                            <param id="2" name="Comparison">0</param>
+                                            <param id="3" name="Value">id</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="8" name="Set unfocused" sid="565863949972161" type="TextBox" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="777350050317882" title="Parse Auth &gt; UI">
+                    <sub-events>
+                        <event-block sid="325164430899891">
+                            <conditions>
+                                <condition id="0" name="On clicked" sid="688653122013436" type="Button" />
+                            </conditions>
+                            <actions>
+                                <action id="12" name="Vibrate" sid="409567906831354" type="Browser">
+                                    <param id="0" name="Pattern">VibratePtrn</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="373962641970671">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="314541005325907" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;login&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="login" sid="306592330102427" static="0" type="text"></variable>
+                                        <variable constant="0" name="pass" sid="203696354472961" static="0" type="text"></variable>
+                                        <event-block sid="525185847667686">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="131133488181352" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="220378479709399" type="System">
+                                                    <param id="0" name="Variable">login</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="524456115434329">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="575634213536008" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="261312307986330" type="System">
+                                                    <param id="0" name="Variable">pass</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="111663849865898">
+                                            <conditions>
+                                                <condition id="-19" name="Pick all" sid="207805715677266" type="System">
+                                                    <param id="0" name="Object">Button</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="234775825673310" type="Button">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;rememberme&quot;</param>
+                                                </condition>
+                                                <condition id="1" name="Is checked" sid="996112414648860" type="Button" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="8" name="Append" sid="975040269559345" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;login&quot;</param>
+                                                    <param id="1" name="Value">login</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="250631402608892">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="163597238093450" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;register&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="login" sid="236089636504177" static="0" type="text"></variable>
+                                        <variable constant="0" name="mail" sid="174124755549006" static="0" type="text"></variable>
+                                        <variable constant="0" name="pass" sid="878982572803662" static="0" type="text"></variable>
+                                        <event-block sid="878689297295570">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="435364979650098" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="274785278131063" type="System">
+                                                    <param id="0" name="Variable">login</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="224451900348724">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="517116402297316" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">4</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="108065644233963" type="System">
+                                                    <param id="0" name="Variable">mail</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="842065937347931">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="751474500991484" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="550366854852467" type="System">
+                                                    <param id="0" name="Variable">pass</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="848900101905271">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="418153116775083" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;forgotpass&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <variable constant="0" name="mail" sid="892021480793412" static="0" type="text"></variable>
+                                        <event-block sid="635434711364300">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="797569108187421" type="TextBox">
+                                                    <param id="0" name="Instance variable">id</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">10</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="324402066505479" type="System">
+                                                    <param id="0" name="Variable">mail</param>
+                                                    <param id="1" name="Value">TextBox.Text</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="553643444156102">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="399023609108781" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;logout&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="608381143468429" type="System">
+                                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="978461652012299" type="System">
+                                            <param id="0" name="Layer">&quot;AccountInfo&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="597402758429809">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="994279573123952" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;tologin&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="597369093939400" type="System">
+                                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="587950048890640" type="System">
+                                            <param id="0" name="Layer">&quot;Register&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="851647392870629" type="System">
+                                            <param id="0" name="Layer">&quot;ForgotPass&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="307735466157324">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="774985103507320" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;toregister&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="342331086035015" type="System">
+                                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="476573231574714" type="System">
+                                            <param id="0" name="Layer">&quot;Register&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="619220202915592">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="498157888548870" type="Button">
+                                            <param id="0" name="Instance variable">id</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;toforgotpass&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set layer visible" sid="967726436367735" type="System">
+                                            <param id="0" name="Layer">&quot;Login&quot;</param>
+                                            <param id="1" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="818304287430006" type="System">
+                                            <param id="0" name="Layer">&quot;ForgotPass&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="603324730029772">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="762314668204334" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="444144243800721" type="System">
+                                    <param id="0" name="Layer">&quot;Login&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="391306290624365" type="System">
+                                    <param id="0" name="Layer">&quot;Register&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="426406917722780" type="System">
+                                    <param id="0" name="Layer">&quot;AccountInfo&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="157355335286566" type="System">
+                                    <param id="0" name="Layer">&quot;ForgotPass&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="708492434835837">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="355493799904189" type="System">
+                                    <param id="0" name="Layer">&quot;Login&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="416072506484792" type="System">
+                                    <param id="0" name="Layer">&quot;Register&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="578634310093013" type="System">
+                                    <param id="0" name="Layer">&quot;AccountInfo&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="369302331813121">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="189902842559831" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="316404766277072">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="267926207186309" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="593223391921000">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="268504594490043" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="980629092195927" type="System">
+                                    <param id="0" name="Layer">&quot;Login&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="778105273882369" type="System">
+                                    <param id="0" name="Layer">&quot;Register&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="136908876465697" type="System">
+                                    <param id="0" name="Layer">&quot;AccountInfo&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="838062951259625">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="737137068815603" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block sid="994817287411739">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="652729876757702" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="254820234957831">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="978214292533185" type="System">
+                                    <param id="0" name="Layer">&quot;Login&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="856767007749434" type="System">
+                                    <param id="0" name="Layer">&quot;Register&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="326869331855173" type="System">
+                                    <param id="0" name="Layer">&quot;ForgotPass&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="584682457644238">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="694280588115998" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">42</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="209895124907966" type="AccountInfo">
+                                            <param id="0" name="Text">&quot;Account created successfully. You can now login.&#x0D;&#x0A;Please confirm your e-mail by clicking the link sent to you.&quot;</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="668115639041394" type="AccountInfo" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="813790454244975" type="AccountInfo" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="912533299362477">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="886893227796656" type="System">
+                                    <param id="0" name="Layer">&quot;Login&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="448461105187826" type="System">
+                                    <param id="0" name="Layer">&quot;Register&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="367784944666706" type="System">
+                                    <param id="0" name="Layer">&quot;ForgotPass&quot;</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="609721185822270">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="922997982932238" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">42</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="139128244376972" type="AccountInfo">
+                                            <param id="0" name="Text">&quot;Password reset email sent successfully. Please reset your password and try again.&quot;</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="763072400587138" type="AccountInfo" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="576645180464267" type="AccountInfo" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="512372470844586">
+                            <conditions />
+                            <actions />
+                            <sub-events>
+                                <event-block sid="511362377349429">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="770271267607841" type="AccountInfo">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">42</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="279597098982053" type="AccountInfo" />
+                                        <action behavior="Fade" id="0" name="Restart fade" sid="890846873148560" type="AccountInfo" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

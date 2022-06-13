@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader Layout</name>
+    <events>
+        <include>Save</include>
+        <event-block any="1" sid="172604443187469">
+            <conditions>
+                <condition behavior="EaseTween" id="4" name="On tween end" sid="219968594118213" type="Loader" />
+                <condition id="-2" name="On start of layout" sid="723553996651328" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="114977476587676">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="294135792309180" type="Loader">
+                            <param id="0" name="Instance variable">type</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="EaseTween" id="26" name="Parameter set" sid="430611167625989" type="Loader">
+                            <param id="0" name="Tweened property">6</param>
+                            <param id="1" name="Playback Mode">0</param>
+                            <param id="2" name="Function">13</param>
+                            <param id="3" name="Initial">&quot;0&quot;</param>
+                            <param id="4" name="Target">str(Self.mag)</param>
+                            <param id="5" name="Duration">Self.dur</param>
+                            <param id="6" name="Wait">Self.w</param>
+                            <param id="7" name="Mode">0</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="322022356928160" type="Loader" />
+                        <action id="-13" name="Set boolean" sid="547144578735101" type="Loader">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543602937347673">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="275898706173064" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="EaseTween" id="26" name="Parameter set" sid="898555503215365" type="Loader">
+                            <param id="0" name="Tweened property">6</param>
+                            <param id="1" name="Playback Mode">0</param>
+                            <param id="2" name="Function">14</param>
+                            <param id="3" name="Initial">&quot;-&quot; &amp; Self.mag</param>
+                            <param id="4" name="Target">&quot;0&quot;</param>
+                            <param id="5" name="Duration">self.dur</param>
+                            <param id="6" name="Wait">&quot;0&quot;</param>
+                            <param id="7" name="Mode">0</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="264579291167251" type="Loader" />
+                        <action id="-13" name="Set boolean" sid="831579325634411" type="Loader">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="536184983670284">
+            <conditions>
+                <condition id="-10" name="For" sid="859707618959199" type="System">
+                    <param id="0" name="Name">&quot;&quot;</param>
+                    <param id="1" name="Start index">9</param>
+                    <param id="2" name="End index">0</param>
+                </condition>
+                <condition disabled="1" id="-8" name="Compare two values" sid="673059534916182" type="System">
+                    <param id="0" name="First value">tickcount%2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set at XY" sid="739408580514149" type="LoadingAnimArray">
+                    <param id="0" name="X">loopindex</param>
+                    <param id="1" name="Y">1</param>
+                    <param id="2" name="Value">loopindex = 0? Loader.EaseTween.isPaused? Loader.EaseTween.Target : Loader.EaseTween.Value: LoadingAnimArray.At(loopindex - 1, 1)</param>
+                </action>
+                <action id="3" name="Set at XY" sid="385588319635101" type="LoadingAnimArray">
+                    <param id="0" name="X">loopindex</param>
+                    <param id="1" name="Y">3</param>
+                    <param id="2" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="180842766192473">
+            <conditions>
+                <condition disabled="1" id="-8" name="Compare two values" sid="713902387617581" type="System">
+                    <param id="0" name="First value">tickcount%2</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="12" name="Set character position array" sid="288840687636997" type="Loader">
+                    <param id="0" name="Array">LoadingAnimArray.AsJSON</param>
+                </action>
+                <action id="13" name="Redraw" sid="442141424108791" type="Loader" />
+            </actions>
+        </event-block>
+        <event-block sid="680851502079058">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="303608666662352" type="System">
+                    <param id="0" name="First value">loadingprogress</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+                <condition id="2" name="Is ready" sid="612566744292900" type="SyncStorage" />
+                <condition id="-4" name="Trigger once while true" sid="365050150719613" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Prepare Transition" sid="231401092725418" type="LayoutTransitionV2" />
+            </actions>
+        </event-block>
+        <event-block sid="518881779701184">
+            <conditions />
+            <actions>
+                <action id="-16" name="Set opacity" sid="343459979727448" type="Solid2">
+                    <param id="0" name="Opacity">lerp(Self.Opacity, loadingprogress*100, 0.08)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="964387216768268">
+            <conditions>
+                <condition id="0" name="Is transition ready" sid="454545693890281" type="LayoutTransitionV2" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-2" name="Go to layout" sid="514438034416241" type="System">
+                    <param id="0" name="Layout">CrazyGamesTestRoom</param>
+                </action>
+                <action disabled="1" id="-2" name="Go to layout" sid="757918842805685" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="423059370734425">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="225155216001108" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;dedragames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="318023318675017" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;www.dedragames.com&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-2" name="Go to layout" sid="272511035627455" type="System">
+                            <param id="0" name="Layout">Splash Screen</param>
+                        </action>
+                        <action disabled="1" id="17" name="Execute Javascript" sid="520051482434056" type="Browser">
+                            <param id="0" name="Javascript">&quot;crazyMidRoll();&quot;</param>
+                        </action>
+                        <action id="1" name="Start Transition" sid="791396186030700" type="LayoutTransitionV2">
+                            <param id="0" name="Transition Name">11</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="721070308108867" type="System">
+                            <param id="0" name="Layout">Main Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="212103367939701">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="516767840218917" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Start Transition" sid="289312963477614" type="LayoutTransitionV2">
+                            <param id="0" name="Transition Name">11</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="416814006312717" type="System">
+                            <param id="0" name="Layout">Main Menu</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="356035100327959" type="HTML_Div_Pode" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="758170150875373">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="844956461695841" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="458149258124210" type="TranslatedTextObjects">
+                    <param id="0" name="Family name">&quot;Retron2000&quot;</param>
+                    <param id="1" name="CSS URL">&quot;fonts.css&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="931518010612236">
+                    <conditions>
+                        <condition id="-20" name="Is on mobile device" sid="321813423442539" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set position" sid="662525821550658" type="Notifications">
+                            <param id="0" name="Position">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="835610698228949">
+            <conditions>
+                <condition id="0" name="On function" sid="740523573613849" type="Function">
+                    <param id="0" name="Name">&quot;adOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Start Transition" sid="646358102788126" type="LayoutTransitionV2">
+                    <param id="0" name="Transition Name">11</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="175244415341168" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="271756214194986">
+            <conditions>
+                <condition id="0" name="On function" sid="524016067421044" type="Function">
+                    <param id="0" name="Name">&quot;adOverFail&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Start Transition" sid="705616470452365" type="LayoutTransitionV2">
+                    <param id="0" name="Transition Name">11</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="650675620169841" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="229512994278737">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="733164962388256" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Initialize SDK" sid="211800323940459" type="GameAnalytics" />
+            </actions>
+        </event-block>
+        <event-block sid="404691065901241">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="343667532260802" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set visible" sid="753028473999684" type="HTML_Div_Pode">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

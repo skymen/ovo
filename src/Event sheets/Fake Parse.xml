@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Fake Parse</name>
+    <events>
+        <event-block sid="121776726056867">
+            <conditions>
+                <condition id="2" name="Did transition finish" sid="596615379085960" type="LayoutTransitionV2" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="357083002627547" type="System">
+                    <param id="0" name="Layout">Parse Auth</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="714635458547112">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="635853819999608" type="System" />
+                <condition id="-20" name="Is on mobile device" sid="329369560984325" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="912440557028818" type="System">
+                    <param id="0" name="Layout">Parse Auth</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

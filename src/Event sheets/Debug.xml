@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Debug</name>
+    <events>
+        <event-group description="" sid="813440597276459" title="Debug">
+            <sub-events>
+                <event-block sid="632250327199747">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="245847810881614" type="System">
+                            <param id="0" name="First value">Collider.Count </param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="596038451878668">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="421353368635517" type="Globals">
+                                    <param id="0" name="Instance variable">Record</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="990750887089517">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="281382204567400" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set size" sid="749786969183214" type="RecordedPlayer">
+                                            <param id="0" name="Width">0</param>
+                                            <param id="1" name="Height">6</param>
+                                            <param id="2" name="Depth">1</param>
+                                        </action>
+                                        <action id="16" name="Set title" sid="368314107846358" type="NWjs">
+                                            <param id="0" name="Title">&quot;Record Mode&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <variable constant="0" name="totdt" sid="654895333309259" static="1" type="number">0</variable>
+                                <event-block sid="586756905995509">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="468280866907796" type="System">
+                                            <param id="0" name="Variable">totdt</param>
+                                            <param id="1" name="Value">dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="985387535932122">
+                                    <conditions>
+                                        <condition id="-23" name="While" sid="281860481998255" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="510825611028930" type="System">
+                                            <param id="0" name="Variable">totdt</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">1/60</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="857852363562297" type="System">
+                                            <param id="0" name="Variable">totdt</param>
+                                            <param id="1" name="Value">1/60</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="732973374709271">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="496856804396213" type="Collider">
+                                                    <param id="0" name="Instance variable">Ghost</param>
+                                                </condition>
+                                                <condition id="-8" name="Compare two values" sid="676492706390776" type="System">
+                                                    <param id="0" name="First value">timescale</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Second value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Push" sid="444046242678374" type="RecordedPlayer">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Value">0</param>
+                                                    <param id="2" name="Axis">0</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="419920161819661" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">0</param>
+                                                    <param id="2" name="Value">Collider.X</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="787795009440555" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">1</param>
+                                                    <param id="2" name="Value">Collider.Y</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="809549689249459" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">2</param>
+                                                    <param id="2" name="Value">Collider.Angle</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="165244712193070" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">3</param>
+                                                    <param id="2" name="Value">Collider.State</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="822257236929168" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">4</param>
+                                                    <param id="2" name="Value">Collider.AnimationFrame</param>
+                                                </action>
+                                                <action id="3" name="Set at XY" sid="335238393612995" type="RecordedPlayer">
+                                                    <param id="0" name="X">RecordedPlayer.Width-1</param>
+                                                    <param id="1" name="Y">5</param>
+                                                    <param id="2" name="Value">Collider.Side</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="927683696777362">
+                                                    <conditions>
+                                                        <condition id="-18" name="Is in preview" sid="289226740728722" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="323343641955910">
+                                                            <conditions>
+                                                                <condition id="1" name="Is overlapping another object" sid="748099233587083" type="Collider">
+                                                                    <param id="0" name="Object">EndFlag</param>
+                                                                </condition>
+                                                                <condition id="0" name="On key pressed" sid="830665489318166" type="Keyboard">
+                                                                    <param id="0" name="Key">114</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="27" name="Set clipboard text" sid="471567428864770" type="NWjs">
+                                                                    <param id="0" name="Text">RecordedPlayer.AsJSON</param>
+                                                                </action>
+                                                                <action id="14" name="Log" sid="111943643378143" type="Browser">
+                                                                    <param id="0" name="Type">0</param>
+                                                                    <param id="1" name="Message">RecordedPlayer.AsJSON</param>
+                                                                </action>
+                                                                <action id="-16" name="Wait" sid="208887955285562" type="System">
+                                                                    <param id="0" name="Seconds">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="585287826670849" type="Globals">
+                                                                    <param id="0" name="Instance variable">Record</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="338490241344082" type="System">
+                                                                    <param id="0" name="Object to create">Collider</param>
+                                                                    <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                                                                    <param id="2" name="X">0</param>
+                                                                    <param id="3" name="Y">0</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="246019208801216" type="Collider">
+                                                                    <param id="0" name="Instance variable">Ghost</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="204463017906433" type="Collider">
+                                                                    <param id="0" name="Instance variable">GhostData</param>
+                                                                    <param id="1" name="Value">RecordedPlayer.AsJSON</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="460948409870986">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="354907195321572" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="376983480439962">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="276933341178219" type="Keyboard">
+                                            <param id="0" name="Key">114</param>
+                                        </condition>
+                                        <condition id="-18" name="Is in preview" sid="305831643556225" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="113592672746499" type="Globals">
+                                            <param id="0" name="Instance variable">Record</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="146032293692647">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="338763278213161" type="Collider">
+                                                    <param id="0" name="Instance variable">Ghost</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="422308607766162" type="Collider" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="175812837868736">
+                                    <conditions>
+                                        <condition id="-2" name="On start of layout" sid="869107967170271" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="266604103302309" type="System">
+                                            <param id="0" name="First value">LayoutNameHolder.Count</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="433237901021406" type="System">
+                                            <param id="0" name="First value">LayoutNameHolder.GhostData</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="347117999349066" type="System">
+                                            <param id="0" name="Object to create">Collider</param>
+                                            <param id="1" name="Layer">&quot;Layer 0&quot;</param>
+                                            <param id="2" name="X">0</param>
+                                            <param id="3" name="Y">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="478114353506939" type="Collider">
+                                            <param id="0" name="Instance variable">Ghost</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="547864873726972" type="Collider">
+                                            <param id="0" name="Instance variable">GhostData</param>
+                                            <param id="1" name="Value">LayoutNameHolder.GhostData</param>
+                                        </action>
+                                        <action id="11" name="Load" sid="209981098593543" type="RecordedPlayer">
+                                            <param id="0" name="JSON">LayoutNameHolder.GhostData</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="459999210434512">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="818332651015038" type="Globals">
+                                                    <param id="0" name="Instance variable">DebugMode</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="424948554755554" type="Collider">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="945262331040864">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="763585543909220" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="726880264464520" type="Collider">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="257770542104024">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="875132791627644" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="16" name="Set title" sid="992612393090745" type="NWjs">
+                                            <param id="0" name="Title">&quot;Record Stopped&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="413253338281855">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="908129784258038" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="142074069528551">
+                            <conditions>
+                                <condition id="4" name="Compare item" sid="495587417085400" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Levels&quot;</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">int(tokenat(LayoutName,1,&quot; &quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="265410935144573" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Levels&quot;</param>
+                                    <param id="1" name="Value">int(tokenat(LayoutName,1,&quot; &quot;))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913383672412579">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="294904323149369" type="Globals">
+                                    <param id="0" name="Instance variable">DebugMode</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="524920240050461" type="Collider">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="499590493462937" type="MoveArea">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="365779814782971">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="781195870052483" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="360878440508636" type="Collider">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="351670528894151" type="MoveArea">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="494299256462245">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="907387576574166" type="Globals">
+                                    <param id="0" name="Instance variable">RandomSkin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="756608187659490" type="Globals">
+                                    <param id="0" name="Instance variable">Skin</param>
+                                    <param id="1" name="Value">SkinGroup.RandomSkin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="652330158058176">
+                    <conditions>
+                        <condition id="-3" name="On end of layout" sid="644897008873232" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="661438683872999" type="Globals">
+                            <param id="0" name="Instance variable">LastLayout</param>
+                            <param id="1" name="Value">LayoutName</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="269990095759579">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="242446502649053" type="Keyboard">
+                            <param id="0" name="Key">113</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="491166406462066" type="Function">
+                            <param id="0" name="Name">&quot;Debug &gt; Toggle&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="115244191650001" type="Globals">
+                            <param id="0" name="Instance variable">DebugMode</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="755800405424005">
+                            <conditions>
+                                <condition id="-18" name="Is in preview" sid="246053107262549" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="134911279887466" type="Globals">
+                                    <param id="0" name="Instance variable">AdvancedMode</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="328687968126779">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="746289422138022" type="Globals">
+                                            <param id="0" name="Instance variable">DebugMode</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="176052176655598" type="Collider">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="814389902251056" type="MoveArea">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="717568070679781">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="708227983205618" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="838324858754224" type="Collider">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="974975799852560" type="MoveArea">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="500706021325726">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="509317388830441" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Collider</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="130791241035565">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="169298398442389" type="Keyboard">
+                                    <param id="0" name="Key">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="918125024295215" type="Collider">
+                                    <param id="0" name="Instance variable">Skin</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Skin" id="3" name="Use Default" sid="243447046870595" type="Head" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="899282151337878" type="Body" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="543663242363290" type="LeftArm" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="816308865901159" type="LeftFoot" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="190762853110819" type="LeftHand" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="491608474733915" type="LeftLeg" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="336273510588694" type="RightArm" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="717819984285081" type="RightFoot" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="348751095270564" type="RightHand" />
+                                <action behavior="Skin" id="3" name="Use Default" sid="937990925622977" type="RightLeg" />
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="194623637665929">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="273417084431641" type="System" />
+                                <condition id="2" name="Key is down" sid="326819957215255" type="Keyboard">
+                                    <param id="0" name="Key">17</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="123130452718741" type="Collider">
+                                    <param id="0" name="Instance variable">Skin</param>
+                                    <param id="1" name="Value">SkinGroup.RandomSkin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="332659723300350" type="Head">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="145585687516852" type="Body">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="572165451634262" type="LeftArm">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="948532022976662" type="LeftFoot">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="353302829857930" type="LeftHand">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="743449368153880" type="LeftLeg">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="448619676337624" type="RightArm">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="280543773601805" type="RightFoot">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="668977218594284" type="RightHand">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                                <action behavior="Skin" id="0" name="Set Skin" sid="853460813237246" type="RightLeg">
+                                    <param id="0" name="Skin tag">Collider.Skin</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="501015244627881">
+            <conditions>
+                <condition id="0" name="On function" sid="785234951731818" type="Function">
+                    <param id="0" name="Name">&quot;dumpSave&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="658876563589455" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">SyncStorage.AsString</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="342694615633387">
+            <conditions>
+                <condition id="0" name="On function" sid="483482124333366" type="Function">
+                    <param id="0" name="Name">&quot;execCode&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="395901901059497" type="Browser">
+                    <param id="0" name="Javascript">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

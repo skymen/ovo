@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Site Locking</name>
+    <events>
+        <event-block sid="991267865365791">
+            <conditions>
+                <condition id="0" name="On clicked" sid="715878288029738" type="Button" />
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="662493788859011" type="Browser">
+                    <param id="0" name="URL">&quot;https://www.coolmath-games.com&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

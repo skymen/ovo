@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Skins</name>
+    <events>
+        <include>Notification</include>
+        <event-group description="" sid="614092635124522" title="Skins">
+            <sub-events>
+                <event-group description="" sid="704566812623910" title="Skins &gt; Init">
+                    <sub-events>
+                        <event-block sid="935040084500943">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="607503337999100" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="978863040146073" type="Globals">
+                                    <param id="0" name="Instance variable">StartOfGame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add skin" sid="957202151983317" type="SkinGroup">
+                                    <param id="0" name="Object">Skin1</param>
+                                    <param id="1" name="Skin tag">&quot;frank&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="167957046520860" type="SkinGroup">
+                                    <param id="0" name="Object">Skin2</param>
+                                    <param id="1" name="Skin tag">&quot;pole&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="462686161866882" type="SkinGroup">
+                                    <param id="0" name="Object">Skin3</param>
+                                    <param id="1" name="Skin tag">&quot;elec&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Add skin" sid="977367863205395" type="SkinGroup">
+                                    <param id="0" name="Object">Skin4</param>
+                                    <param id="1" name="Skin tag">&quot;skin4&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="937198788019089" type="SkinGroup">
+                                    <param id="0" name="Object">Skin5</param>
+                                    <param id="1" name="Skin tag">&quot;knight&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="921578374259943" type="SkinGroup">
+                                    <param id="0" name="Object">Skin6</param>
+                                    <param id="1" name="Skin tag">&quot;batter&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="438921503939528" type="SkinGroup">
+                                    <param id="0" name="Object">Skin7</param>
+                                    <param id="1" name="Skin tag">&quot;erigato&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="442010896421776" type="SkinGroup">
+                                    <param id="0" name="Object">Skin8</param>
+                                    <param id="1" name="Skin tag">&quot;dknight&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="764685043295537" type="SkinGroup">
+                                    <param id="0" name="Object">Skin9</param>
+                                    <param id="1" name="Skin tag">&quot;lknight&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="957136155525858" type="SkinGroup">
+                                    <param id="0" name="Object">Skin10</param>
+                                    <param id="1" name="Skin tag">&quot;astronaut&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="778613802836099" type="SkinGroup">
+                                    <param id="0" name="Object">Skin11</param>
+                                    <param id="1" name="Skin tag">&quot;alien&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="380707045808223" type="SkinGroup">
+                                    <param id="0" name="Object">Skin12</param>
+                                    <param id="1" name="Skin tag">&quot;ovo+&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="462994461297597" type="SkinGroup">
+                                    <param id="0" name="Object">Skin13</param>
+                                    <param id="1" name="Skin tag">&quot;ada&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="213160910915358" type="SkinGroup">
+                                    <param id="0" name="Object">Skin14</param>
+                                    <param id="1" name="Skin tag">&quot;thefall&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="590255259682902" type="SkinGroup">
+                                    <param id="0" name="Object">Pulse</param>
+                                    <param id="1" name="Skin tag">&quot;pulse&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="323586210617996" type="SkinGroup">
+                                    <param id="0" name="Object">MaterWelon</param>
+                                    <param id="1" name="Skin tag">&quot;materwelon&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="972058289351422" type="SkinGroup">
+                                    <param id="0" name="Object">Skin17</param>
+                                    <param id="1" name="Skin tag">&quot;fl1ckd&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="583892214228627" type="SkinGroup">
+                                    <param id="0" name="Object">Skin18</param>
+                                    <param id="1" name="Skin tag">&quot;theliljoker&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="374425036740744" type="SkinGroup">
+                                    <param id="0" name="Object">Skin19</param>
+                                    <param id="1" name="Skin tag">&quot;amongus&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="916734055037470" type="SkinGroup">
+                                    <param id="0" name="Object">Skin20</param>
+                                    <param id="1" name="Skin tag">&quot;french&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="538856964222463" type="SkinGroup">
+                                    <param id="0" name="Object">Skin21</param>
+                                    <param id="1" name="Skin tag">&quot;english&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="283409576567506" type="SkinGroup">
+                                    <param id="0" name="Object">Skin22</param>
+                                    <param id="1" name="Skin tag">&quot;spanish&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="509968611087976" type="SkinGroup">
+                                    <param id="0" name="Object">Skin23</param>
+                                    <param id="1" name="Skin tag">&quot;brazilian&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="402782407942150" type="SkinGroup">
+                                    <param id="0" name="Object">CMGSkin</param>
+                                    <param id="1" name="Skin tag">&quot;cmg&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add skin" sid="661155537936358" type="SkinGroup">
+                                    <param id="0" name="Object">Skin24</param>
+                                    <param id="1" name="Skin tag">&quot;shyguy&quot;</param>
+                                    <param id="2" name="Mode">0</param>
+                                    <param id="3" name="Animation name">&quot;&quot;</param>
+                                    <param id="4" name="Sub Skin tag">&quot;&quot;</param>
+                                </action>
+                                <action id="4" name="Initial skin setup" sid="195489443870218" type="SkinGroup" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="886910214133860">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="339296582875753" type="System" />
+                                <condition id="70" name="Is Empty" sid="895407816162829" type="Skins">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Request project file" sid="621907758193215" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Skins&quot;</param>
+                                    <param id="1" name="File">skins.json</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="581757901361853">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="713278767466190" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Skins&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="293028301736217" type="Skins">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                                <action id="9" name="Set JSON" sid="206536568341537" type="Model">
+                                    <param id="0" name="Key string">&quot;Skins&quot;</param>
+                                    <param id="1" name="JSON">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="285000074836405" title="Skins &gt; API">
+                    <sub-events>
+                        <event-block sid="265038762949972">
+                            <conditions>
+                                <condition id="0" name="On function" sid="611177692844586" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Unlock&quot;</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has item" sid="593970920920356" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Skin&quot;&amp;Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="875546572351476" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Skin&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                                <action id="8" name="Add progression event" sid="912163420874407" type="GameAnalytics">
+                                    <param id="0" name="Progression status">2</param>
+                                    <param id="1" name="Progression 01">&quot;Skin&quot;</param>
+                                    <param id="2" name="Progression 02">Function.Call(&quot;Skin &gt; Name&quot;, Function.Param(0))</param>
+                                    <param id="3" name="Progression 03">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="title" sid="396542816640720" static="0" type="text"></variable>
+                                <event-block sid="896983731152935">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="352121968551891" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;skinunlocked&quot;{###}&quot;text&quot;{###}&quot;Skin Unlocked !&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="168486059068200" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="559191272743731" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;findLanguageKey&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;en-us&quot;{###}Function.Call(&quot;Skins &gt; Name&quot;, Function.Param(0))</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="444858633259840" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}ValerypopoffJS.StoredReturnValue{###}&quot;text&quot;{###}Function.Call(&quot;Skins &gt; Name&quot;, Function.Param(0)){###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="708890456718975" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Image&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}ValerypopoffJS.StoredReturnValue{###}Function.Call(&quot;Skins &gt; Icon&quot;, Function.Param(0))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="765731176690143">
+                            <conditions>
+                                <condition id="0" name="On function" sid="599004354885987" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Gold&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="title" sid="156462875847915" static="0" type="text"></variable>
+                                <event-block sid="676242058575065">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="476635613116064" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;goldearned&quot;{###}&quot;text&quot;{###}&quot;Gold earned !&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="370163394363156" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="235692096420232" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;xgoldearned&quot;{###}&quot;text&quot;{###}&quot;{0} Gold earned&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="917036652494424" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;processString&quot;</param>
+                                            <param id="1" name="Parameter {n}">ValerypopoffJS.StoredReturnValue{###}Function.Param(0)</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="399188959344877" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Add" sid="254099650132872" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Gold&quot;</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="961924603234818">
+                            <conditions>
+                                <condition id="0" name="On function" sid="666749949568765" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="732494785459614" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="357337817854501">
+                            <conditions>
+                                <condition id="0" name="On function" sid="387851312576378" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Skin&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="694356799901475" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;skin&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="597881569013600">
+                            <conditions>
+                                <condition id="0" name="On function" sid="151415681783390" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Lang&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="632900343506526" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;lang&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="326974436814308">
+                            <conditions>
+                                <condition id="0" name="On function" sid="100926794921003" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Icon&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="944562018446259" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;icon&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="836871499560619">
+                            <conditions>
+                                <condition id="0" name="On function" sid="760885007200923" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Hidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="639867336014152" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;hidden&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="141108112417058">
+                            <conditions>
+                                <condition id="0" name="On function" sid="710513841676231" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Buyable&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="383464589548573" type="Function">
+                                    <param id="0" name="Value">clamp((Skins.Value(0,Function.Param(0), &quot;price&quot;) &gt; 0) + (Skins.Value(0,Function.Param(0), &quot;achievement&quot;) &lt; 0), 0, 1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="533039341729705">
+                            <conditions>
+                                <condition id="0" name="On function" sid="540813695749347" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Price&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="378258192968555" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;price&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185232306242911">
+                            <conditions>
+                                <condition id="0" name="On function" sid="999707528379246" type="Function">
+                                    <param id="0" name="Name">&quot;Skins &gt; Achievement&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="110383138784748" type="Function">
+                                    <param id="0" name="Value">Skins.Value(0,Function.Param(0), &quot;achievement&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

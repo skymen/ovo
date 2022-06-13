@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Inputs</name>
+    <events>
+        <event-group description="" sid="396453782658897" title="Inputs">
+            <sub-events>
+                <event-group description="" sid="898890600748449" title="Inputs &gt; Listen">
+                    <sub-events>
+                        <event-block sid="472919093318492">
+                            <conditions>
+                                <condition id="1" name="On any key pressed" sid="983474172434210" type="Keyboard" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="507089535810307" type="Inputs">
+                                    <param id="0" name="Instance variable">Listening</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="184540799660959" type="Function">
+                                    <param id="0" name="Name">&quot;Inputs &gt; Set Input&quot;</param>
+                                    <param id="1" name="Parameter {n}">Inputs.Next{###}Keyboard.LastKeyCode</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="446914502717137" title="Inputs &gt; API">
+                    <sub-events>
+                        <event-block sid="504456828454720">
+                            <conditions>
+                                <condition id="0" name="On function" sid="533441397409408" type="Function">
+                                    <param id="0" name="Name">&quot;Inputs &gt; Listen&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="Next" sid="886207361980074" static="0" type="number">0</variable>
+                                <event-block sid="994024371780197">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="635909119075089" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="381912579286486" type="Inputs">
+                                            <param id="0" name="Instance variable">Next</param>
+                                            <param id="1" name="Value">Next</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="598046752322292" type="Inputs">
+                                            <param id="0" name="Instance variable">Listening</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="345290290605776">
+                            <conditions>
+                                <condition id="0" name="On function" sid="236622341323652" type="Function">
+                                    <param id="0" name="Name">&quot;Inputs &gt; Listen Stop&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="974098017361629" type="Inputs">
+                                    <param id="0" name="Instance variable">Listening</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="132437173187846">
+                            <conditions>
+                                <condition id="0" name="On function" sid="204499990796128" type="Function">
+                                    <param id="0" name="Name">&quot;Inputs &gt; Set Input&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="864386309026991" type="Inputs">
+                                    <param id="0" name="Instance variable">Listening</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="Next" sid="242117534566788" static="0" type="number">0</variable>
+                                <variable constant="0" name="Value" sid="316765615675353" static="0" type="number">0</variable>
+                                <event-block sid="954866613547619">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="925460098365563" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="281188270593060" type="System">
+                                            <param id="0" name="Variable">Value</param>
+                                            <param id="1" name="Value">Function.Param(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="277267330848150">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="142654927405640" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="792154857902448" type="Inputs">
+                                            <param id="0" name="Instance variable">LeftInput</param>
+                                            <param id="1" name="Value">Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="996175268269768">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="842352030365841" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="107193480529298" type="Inputs">
+                                            <param id="0" name="Instance variable">UpInput</param>
+                                            <param id="1" name="Value">Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="844490852075328">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="979545257605818" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="816563376411410" type="Inputs">
+                                            <param id="0" name="Instance variable">RightInput</param>
+                                            <param id="1" name="Value">Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="237945038156421">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="625350773318108" type="System">
+                                            <param id="0" name="Variable">Next</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="773651811526191" type="Inputs">
+                                            <param id="0" name="Instance variable">DownInput</param>
+                                            <param id="1" name="Value">Value</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

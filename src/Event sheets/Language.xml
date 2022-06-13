@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Language</name>
+    <events>
+        <variable constant="1" name="languageLoadedSignal" sid="508018423785804" static="0" type="text">languageLoaded</variable>
+        <event-group description="" sid="575826132229970" title="Language">
+            <sub-events>
+                <variable constant="1" name="DEFAULTLOCALE" sid="864047399338267" static="0" type="text">en-us</variable>
+                <event-group description="" sid="844956328180398" title="Language &gt; Init">
+                    <sub-events>
+                        <event-block sid="369080485177415">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="550199406713766" type="TranslatedTextObjects" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="603025662346772" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initFontSize</param>
+                                    <param id="1" name="Value">Self.FaceSize</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="162017488276494" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initScale</param>
+                                    <param id="1" name="Value">Self.Width</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="153088980502832" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initHeight</param>
+                                    <param id="1" name="Value">Self.Height</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="894555992850907" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="805991577208538" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initFontSize</param>
+                                    <param id="1" name="Value">Self.FaceSize</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="642153567971719" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initScale</param>
+                                    <param id="1" name="Value">Self.Width</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="289466827736745" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">initHeight</param>
+                                    <param id="1" name="Value">Self.Height</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="785541423343277">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="279080402233857" type="MenuButton">
+                                            <param id="0" name="Unique ID">TranslatedTextObjects.parent</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="555421727687602" type="TranslatedTextObjects">
+                                            <param id="0" name="Instance variable">OffsetX</param>
+                                            <param id="1" name="Value">Self.X - MenuButton.ImagePointX(&quot;topLeft&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="279153232037999" type="TranslatedTextObjects">
+                                            <param id="0" name="Instance variable">OffsetY</param>
+                                            <param id="1" name="Value">Self.Y - MenuButton.ImagePointY(&quot;topLeft&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="818734807615522">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="203882572846089" type="SpritefontDeluxeTexts">
+                                            <param id="0" name="Unique ID">TranslatedTextObjects.parent</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="151519245026065" type="TranslatedTextObjects">
+                                            <param id="0" name="Instance variable">OffsetX</param>
+                                            <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;) - Self.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="998986646135210" type="TranslatedTextObjects">
+                                            <param id="0" name="Instance variable">OffsetY</param>
+                                            <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;) - Self.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="318983577018271">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="613779832376752" type="SpritefontDeluxeTexts" />
+                                <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="527813812122996" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">scaleText</param>
+                                </condition>
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="846211319710090" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">autoTranslate</param>
+                                </condition>
+                                <condition disabled="1" id="-8" inverted="1" name="Is boolean instance variable set" sid="792858975753791" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">noTranslate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="889401952173541" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">initScale</param>
+                                    <param id="1" name="Value">Self.CharacterScale</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="172749770877060" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">initSize</param>
+                                    <param id="1" name="Value">Self.Width</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="894230206206485" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="867660515773385" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">initScale</param>
+                                    <param id="1" name="Value">Self.CharacterScale</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="236349027417754" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">initSize</param>
+                                    <param id="1" name="Value">Self.Width</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="699870053441279">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="230241754549063" type="TextToTranslate" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set web font" sid="374832665715014" type="TextToTranslate">
+                                    <param id="0" name="Family name">&quot;Retron2000&quot;</param>
+                                    <param id="1" name="CSS URL">&quot;./fonts.css&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="634239899722242">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="888362438246238" type="SpritefontDeluxeTexts" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="key" sid="823997613086452" static="0" type="text"></variable>
+                                <variable constant="0" name="text" sid="557467623667490" static="0" type="text"></variable>
+                                <variable constant="0" name="visible" sid="482322649205085" static="1" type="number">0</variable>
+                                <event-block sid="315549600256296">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="110505542546119" type="SpritefontDeluxeTexts">
+                                            <param id="0" name="Instance variable">keepSpritefont</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="346306962497900" type="System">
+                                            <param id="0" name="Variable">visible</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="461713170669751">
+                                            <conditions>
+                                                <condition id="-9" name="Is visible" sid="777993046702803" type="SpritefontDeluxeTexts" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="929584913962627" type="System">
+                                                    <param id="0" name="Variable">visible</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="544782775545390">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-15" name="Set visible" sid="510984092564987" type="SpritefontDeluxeTexts">
+                                                    <param id="0" name="Visibility">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="957840732643647">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="246146295958677" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="371157992775356">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="167396097898496" type="SpritefontDeluxeTexts">
+                                                    <param id="0" name="Instance variable">autoTranslate</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="453966682906081">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-41" name="Wait for signal" sid="749390059838264" type="System">
+                                                            <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                                        </action>
+                                                        <action id="6" name="Call function" sid="533841441625750" type="ValerypopoffJS">
+                                                            <param id="0" name="Expression">&quot;languageKeyExists&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Language.locale{###}SpritefontDeluxeTexts.key</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="836548159751192">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="779776502003711" type="Language">
+                                                                    <param id="0" name="Instance variable">locale</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="994389686494623" type="Language">
+                                                                    <param id="0" name="Instance variable">locale</param>
+                                                                    <param id="1" name="Value">DEFAULTLOCALE</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="599641785895105">
+                                                            <conditions>
+                                                                <condition id="2" name="Compare Stored Return value" sid="687937521445502" type="ValerypopoffJS">
+                                                                    <param id="0" name="Comparison">0</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="978198078890522" type="System">
+                                                                    <param id="0" name="Variable">key</param>
+                                                                    <param id="1" name="Value">SpritefontDeluxeTexts.key</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="190978376870664">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="709631506800963" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="641372729491575">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="342350753032494" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">autoFindKey</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="6" name="Call function" sid="475204315348265" type="ValerypopoffJS">
+                                                                            <param id="0" name="Expression">&quot;findLanguageKey&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">SpritefontDeluxeTexts.default{###}SpritefontDeluxeTexts.Text</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block disabled="1" sid="103543676688557">
+                                                                            <conditions>
+                                                                                <condition id="2" name="Compare Stored Return value" sid="608350112651189" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Comparison">0</param>
+                                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="0" name="Alert" sid="749169312741608" type="Browser">
+                                                                                    <param id="0" name="Message">&quot;Could not find any matching key for text &quot;&quot;&quot; &amp; SpritefontDeluxeTexts.Text &amp; &quot;&quot;&quot;&quot;</param>
+                                                                                </action>
+                                                                                <action id="-9" name="Set value" sid="170428024854730" type="System">
+                                                                                    <param id="0" name="Variable">key</param>
+                                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="103432151075862">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action id="-9" name="Set value" sid="974191450616625" type="System">
+                                                                                    <param id="0" name="Variable">key</param>
+                                                                                    <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                        <event-block sid="832795022761256">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="122573884317728" type="System">
+                                                                    <param id="0" name="Variable">key</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="6" name="Call function" sid="620032844696784" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;text&quot;{###}&quot;&quot;{###}&quot;&quot;</param>
+                                                                </action>
+                                                                <action id="-9" name="Set value" sid="254908300606110" type="System">
+                                                                    <param id="0" name="Variable">text</param>
+                                                                    <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="949334064893367">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="904210815175077" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-9" name="Set value" sid="936358933795019" type="System">
+                                                                    <param id="0" name="Variable">text</param>
+                                                                    <param id="1" name="Value">&quot;&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="549618371074241">
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="318991260835468" type="System">
+                                                                    <param id="0" name="Variable">text</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="142796115563107">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="652527794368672" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">keepSpritefont</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Set text" sid="294599826197870" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Text">text</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="448610269358034">
+                                                                            <conditions>
+                                                                                <condition id="-14" name="Compare variable" sid="743645054115125" type="System">
+                                                                                    <param id="0" name="Variable">visible</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">1</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-16" name="Wait" sid="681289090352849" type="System">
+                                                                                    <param id="0" name="Seconds">0</param>
+                                                                                </action>
+                                                                                <action id="-15" name="Set visible" sid="138508873415146" type="SpritefontDeluxeTexts">
+                                                                                    <param id="0" name="Visibility">1</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="160933505643518">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="763457703910603" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block any="1" sid="809648797373849">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Is boolean instance variable set" sid="238530657141104" type="SpritefontDeluxeTexts">
+                                                                                    <param id="0" name="Instance variable">onlyHideText</param>
+                                                                                </condition>
+                                                                                <condition id="1" name="Is overlapping another object" sid="519683283359330" type="MoveArea">
+                                                                                    <param id="0" name="Object">SpritefontDeluxeTexts</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-15" name="Set visible" sid="586376612704721" type="SpritefontDeluxeTexts">
+                                                                                    <param id="0" name="Visibility">0</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                            <sub-events>
+                                                                                <event-block sid="836826884819087">
+                                                                                    <conditions>
+                                                                                        <condition id="-14" name="Compare variable" sid="865754363099781" type="System">
+                                                                                            <param id="0" name="Variable">text</param>
+                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                            <param id="2" name="Value">&quot;&quot;</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="0" name="Set text" sid="911823439624393" type="SpritefontDeluxeTexts">
+                                                                                            <param id="0" name="Text">text</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                        <event-block sid="272432374120391">
+                                                                            <conditions />
+                                                                            <actions>
+                                                                                <action id="-3" name="Create object" sid="843683073717859" type="System">
+                                                                                    <param id="0" name="Object to create">TextAlign</param>
+                                                                                    <param id="1" name="Layer">SpritefontDeluxeTexts.LayerNumber</param>
+                                                                                    <param id="2" name="X">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;)</param>
+                                                                                    <param id="3" name="Y">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;)</param>
+                                                                                </action>
+                                                                                <action id="-7" name="Set size" sid="934915272399031" type="TextAlign">
+                                                                                    <param id="0" name="Width">SpritefontDeluxeTexts.Width</param>
+                                                                                    <param id="1" name="Height">SpritefontDeluxeTexts.Height</param>
+                                                                                </action>
+                                                                                <action id="0" name="Set text" sid="709746241580125" type="TextAlign">
+                                                                                    <param id="0" name="Text">text</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="969313823587941" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;font&quot;{###}&quot;Retron2000&quot;{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="5" name="Set web font" sid="456082965188214" type="TextAlign">
+                                                                                    <param id="0" name="Family name">ValerypopoffJS.StoredReturnValue</param>
+                                                                                    <param id="1" name="CSS URL">&quot;./fonts.css&quot;</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="756335884767794" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;size&quot;{###}TextAlign.FaceSize * SpritefontDeluxeTexts.CharacterScale{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="3" name="Set font size" sid="379837971830285" type="TextAlign">
+                                                                                    <param id="0" name="Size (pt)">ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="328429411638418" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;alignX&quot;{###}50{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="7" name="Set Horizontal Alignment" sid="960783378347078" type="TextAlign">
+                                                                                    <param id="0" name="Horizontal Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="964436958900776" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;alignY&quot;{###}50{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="8" name="Set Vertical Alignment" sid="132617689026344" type="TextAlign">
+                                                                                    <param id="0" name="Vertical Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="647262725589459" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;top&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="-6" name="Set height" sid="866963936269755" type="TextAlign">
+                                                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="-2" name="Set Y" sid="508296042503267" type="TextAlign">
+                                                                                    <param id="0" name="Y">Self.Y + ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="181125024909109" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;bottom&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="-6" name="Set height" sid="692273201542214" type="TextAlign">
+                                                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action disabled="1" id="-2" name="Set Y" sid="674405502361649" type="TextAlign">
+                                                                                    <param id="0" name="Y">Self.Y - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="162668851248881" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;left&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="-5" name="Set width" sid="648711135397107" type="TextAlign">
+                                                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="-1" name="Set X" sid="528652978370207" type="TextAlign">
+                                                                                    <param id="0" name="X">Self.X + ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="6" name="Call function" sid="606462503687601" type="ValerypopoffJS">
+                                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;right&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                                </action>
+                                                                                <action id="-5" name="Set width" sid="406985792267085" type="TextAlign">
+                                                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action disabled="1" id="-1" name="Set X" sid="383144945534382" type="TextAlign">
+                                                                                    <param id="0" name="X">Self.X - ValerypopoffJS.StoredReturnValue</param>
+                                                                                </action>
+                                                                                <action id="-8" name="Set angle" sid="709070469299684" type="TextAlign">
+                                                                                    <param id="0" name="Angle">SpritefontDeluxeTexts.Angle</param>
+                                                                                </action>
+                                                                                <action id="-16" name="Set opacity" sid="685562414768690" type="TextAlign">
+                                                                                    <param id="0" name="Opacity">SpritefontDeluxeTexts.Opacity</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="622605241738035" type="TextAlign">
+                                                                                    <param id="0" name="Instance variable">OffsetX</param>
+                                                                                    <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;) - Self.X</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="104198120670459" type="TextAlign">
+                                                                                    <param id="0" name="Instance variable">OffsetY</param>
+                                                                                    <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;) - Self.Y</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="559502555841758" type="TextAlign">
+                                                                                    <param id="0" name="Instance variable">initHeight</param>
+                                                                                    <param id="1" name="Value">Self.Height</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="824070214833886" type="TextAlign">
+                                                                                    <param id="0" name="Instance variable">initScale</param>
+                                                                                    <param id="1" name="Value">Self.Width</param>
+                                                                                </action>
+                                                                                <action id="-29" name="Move to object" sid="968584453230777" type="TextAlign">
+                                                                                    <param id="0" name="Where">0</param>
+                                                                                    <param id="1" name="Object">SpritefontDeluxeTexts</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                            <sub-events>
+                                                                                <event-block sid="332330875826467">
+                                                                                    <conditions>
+                                                                                        <condition id="-7" name="Compare instance variable" sid="664812046728523" type="SpritefontDeluxeTexts">
+                                                                                            <param id="0" name="Instance variable">isWhite</param>
+                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                            <param id="2" name="Value">0</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="4" name="Set font color" sid="335347907358347" type="TextAlign">
+                                                                                            <param id="0" name="Color">rgb(255,255,255)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="128952622387918">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="938943482930038" type="SpritefontDeluxeTexts">
+                                                                                            <param id="0" name="Instance variable">syncOpacity</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-16" name="Set opacity" sid="690201103513764" type="TextAlign">
+                                                                                            <param id="0" name="Opacity">SpritefontDeluxeTexts.Opacity</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block any="1" sid="496471196438987">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="631446714754344" type="SpritefontDeluxeTexts">
+                                                                                            <param id="0" name="Instance variable">onlyHideText</param>
+                                                                                        </condition>
+                                                                                        <condition id="1" name="Is overlapping another object" sid="172352878021793" type="MoveArea">
+                                                                                            <param id="0" name="Object">SpritefontDeluxeTexts</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-13" name="Set boolean" sid="302118873556914" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">update</param>
+                                                                                            <param id="1" name="Value">1</param>
+                                                                                        </action>
+                                                                                        <action id="-10" name="Set value" sid="205119254037388" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">parent</param>
+                                                                                            <param id="1" name="Value">SpritefontDeluxeTexts.UID</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="363733787258513">
+                                                                                    <conditions>
+                                                                                        <condition id="-22" name="Else" sid="989463764231518" type="System" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-9" name="Destroy" sid="479415111679602" type="SpritefontDeluxeTexts" />
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="871628886325528">
+                                                                                    <conditions>
+                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="460861454349913" type="SpritefontDeluxeTexts">
+                                                                                            <param id="0" name="Instance variable">scaleText</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-13" name="Set boolean" sid="840953465341722" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">autoScaleText</param>
+                                                                                            <param id="1" name="Value">1</param>
+                                                                                        </action>
+                                                                                        <action id="-10" name="Set value" sid="440665576640353" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">initFontSize</param>
+                                                                                            <param id="1" name="Value">Self.FaceSize</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="738038033785974">
+                                                                                    <conditions>
+                                                                                        <condition id="-22" name="Else" sid="901095830567372" type="System" />
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-13" name="Set boolean" sid="506913698737014" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">autoScaleText</param>
+                                                                                            <param id="1" name="Value">0</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                                <event-block sid="804279600815158">
+                                                                                    <conditions />
+                                                                                    <actions>
+                                                                                        <action id="-10" name="Set value" sid="808832391540180" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">initFontSize</param>
+                                                                                            <param id="1" name="Value">Self.FaceSize</param>
+                                                                                        </action>
+                                                                                        <action id="-10" name="Set value" sid="347298810519908" type="TextAlign">
+                                                                                            <param id="0" name="Instance variable">initScale</param>
+                                                                                            <param id="1" name="Value">Self.Width</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="477738532975087">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="954117952061446" type="Language">
+                                                            <param id="0" name="Instance variable">languageLoaded</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-42" name="Signal" sid="595723795694252" type="System">
+                                                            <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="410265638911304">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="683162925381490" type="System" />
+                                                <condition id="-8" name="Is boolean instance variable set" sid="821972197570691" type="SpritefontDeluxeTexts">
+                                                    <param id="0" name="Instance variable">noTranslate</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="14" name="Log" sid="275159054979362" type="Browser">
+                                                    <param id="0" name="Type">0</param>
+                                                    <param id="1" name="Message">&quot;Spritefont created&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="193179727073420">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="464627342852121" type="SpritefontDeluxeTexts">
+                                                            <param id="0" name="Instance variable">keepSpritefont</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Set text" sid="276810034930109" type="SpritefontDeluxeTexts">
+                                                            <param id="0" name="Text">text</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="389729289585626">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="559628721122058" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="565354280113831">
+                                                            <conditions>
+                                                                <condition id="-8" name="Is boolean instance variable set" sid="651628281517898" type="SpritefontDeluxeTexts">
+                                                                    <param id="0" name="Instance variable">onlyHideText</param>
+                                                                </condition>
+                                                                <condition id="1" name="Is overlapping another object" sid="619166649272005" type="MoveArea">
+                                                                    <param id="0" name="Object">SpritefontDeluxeTexts</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-15" name="Set visible" sid="843823204391645" type="SpritefontDeluxeTexts">
+                                                                    <param id="0" name="Visibility">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="163869270760944">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="353572004388988" type="System">
+                                                                    <param id="0" name="Object to create">TextAlign</param>
+                                                                    <param id="1" name="Layer">SpritefontDeluxeTexts.LayerNumber</param>
+                                                                    <param id="2" name="X">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;)</param>
+                                                                    <param id="3" name="Y">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;)</param>
+                                                                </action>
+                                                                <action id="-7" name="Set size" sid="396336910279006" type="TextAlign">
+                                                                    <param id="0" name="Width">SpritefontDeluxeTexts.Width</param>
+                                                                    <param id="1" name="Height">SpritefontDeluxeTexts.Height</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="530194068031087" type="TextAlign">
+                                                                    <param id="0" name="Text">SpritefontDeluxeTexts.Text</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="671921222163978" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}&quot;&quot;{###}&quot;font&quot;{###}&quot;Retron2000&quot;{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="5" name="Set web font" sid="456055287170334" type="TextAlign">
+                                                                    <param id="0" name="Family name">ValerypopoffJS.StoredReturnValue</param>
+                                                                    <param id="1" name="CSS URL">&quot;./fonts.css&quot;</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="840299126161007" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}&quot;&quot;{###}&quot;size&quot;{###}TextAlign.FaceSize * SpritefontDeluxeTexts.CharacterScale{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="3" name="Set font size" sid="396928817642211" type="TextAlign">
+                                                                    <param id="0" name="Size (pt)">ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="165058274082760" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}&quot;&quot;{###}&quot;alignX&quot;{###}50{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="7" name="Set Horizontal Alignment" sid="917406863107284" type="TextAlign">
+                                                                    <param id="0" name="Horizontal Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="828022007659409" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}&quot;&quot;{###}&quot;alignY&quot;{###}50{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="8" name="Set Vertical Alignment" sid="872691304815308" type="TextAlign">
+                                                                    <param id="0" name="Vertical Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="850038062688926" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;top&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="-6" name="Set height" sid="821186242728759" type="TextAlign">
+                                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="-2" name="Set Y" sid="138839615473396" type="TextAlign">
+                                                                    <param id="0" name="Y">Self.Y + ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="216072369363469" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;bottom&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="-6" name="Set height" sid="824914008393998" type="TextAlign">
+                                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action disabled="1" id="-2" name="Set Y" sid="145785285793417" type="TextAlign">
+                                                                    <param id="0" name="Y">Self.Y - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="921324553438892" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;left&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="-5" name="Set width" sid="498690603929753" type="TextAlign">
+                                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="-1" name="Set X" sid="639017933210442" type="TextAlign">
+                                                                    <param id="0" name="X">Self.X + ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="6" name="Call function" sid="178582447252034" type="ValerypopoffJS">
+                                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Language.locale{###}key{###}&quot;right&quot;{###}0{###}SpritefontDeluxeTexts.metadata</param>
+                                                                </action>
+                                                                <action id="-5" name="Set width" sid="961700060598394" type="TextAlign">
+                                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action disabled="1" id="-1" name="Set X" sid="487358456873755" type="TextAlign">
+                                                                    <param id="0" name="X">Self.X - ValerypopoffJS.StoredReturnValue</param>
+                                                                </action>
+                                                                <action id="-8" name="Set angle" sid="291826036683546" type="TextAlign">
+                                                                    <param id="0" name="Angle">SpritefontDeluxeTexts.Angle</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="398973563825070" type="TextAlign">
+                                                                    <param id="0" name="Opacity">SpritefontDeluxeTexts.Opacity</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="337151606863962" type="TextAlign">
+                                                                    <param id="0" name="Instance variable">OffsetX</param>
+                                                                    <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;) - Self.X</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="170481893895467" type="TextAlign">
+                                                                    <param id="0" name="Instance variable">OffsetY</param>
+                                                                    <param id="1" name="Value">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;) - Self.Y</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="139800907453280" type="TextAlign">
+                                                                    <param id="0" name="Instance variable">initHeight</param>
+                                                                    <param id="1" name="Value">Self.Height</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="450141157595918" type="TextAlign">
+                                                                    <param id="0" name="Instance variable">initScale</param>
+                                                                    <param id="1" name="Value">Self.Width</param>
+                                                                </action>
+                                                                <action id="-29" name="Move to object" sid="219969182193336" type="TextAlign">
+                                                                    <param id="0" name="Where">0</param>
+                                                                    <param id="1" name="Object">SpritefontDeluxeTexts</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="544270801666609">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="593211093554095" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">isWhite</param>
+                                                                            <param id="1" name="Comparison">1</param>
+                                                                            <param id="2" name="Value">0</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="4" name="Set font color" sid="905710450361462" type="TextAlign">
+                                                                            <param id="0" name="Color">rgb(255,255,255)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="419482521842862">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="430033120097134" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">syncOpacity</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-16" name="Set opacity" sid="370898850191911" type="TextAlign">
+                                                                            <param id="0" name="Opacity">SpritefontDeluxeTexts.Opacity</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block any="1" sid="535763610595617">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="416529345885879" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">onlyHideText</param>
+                                                                        </condition>
+                                                                        <condition id="1" name="Is overlapping another object" sid="660392939744504" type="MoveArea">
+                                                                            <param id="0" name="Object">SpritefontDeluxeTexts</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="231001803705317" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">update</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="762361818097329" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">parent</param>
+                                                                            <param id="1" name="Value">SpritefontDeluxeTexts.UID</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="681683392853122">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="210058200583126" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Destroy" sid="863254691757990" type="SpritefontDeluxeTexts" />
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="742954536179174">
+                                                                    <conditions>
+                                                                        <condition id="-8" name="Is boolean instance variable set" sid="248141426969685" type="SpritefontDeluxeTexts">
+                                                                            <param id="0" name="Instance variable">scaleText</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="422279271960951" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">autoScaleText</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="699209377186805" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">initFontSize</param>
+                                                                            <param id="1" name="Value">Self.FaceSize</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="379135922604961">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="785004512340771" type="System" />
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-13" name="Set boolean" sid="618476170478163" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">autoScaleText</param>
+                                                                            <param id="1" name="Value">0</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="551233378233070">
+                                                                    <conditions />
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="453476790908608" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">initFontSize</param>
+                                                                            <param id="1" name="Value">Self.FaceSize</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="377467013598304" type="TextAlign">
+                                                                            <param id="0" name="Instance variable">initScale</param>
+                                                                            <param id="1" name="Value">Self.Width</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="439819055026783">
+                                                    <conditions />
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="984956434506639">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="847445073384960" type="MenuButton" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="102824526990337">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="890629485060643" type="MenuButton">
+                                            <param id="0" name="Instance variable">translate</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-41" name="Wait for signal" sid="381019965336885" type="System">
+                                            <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="341902189413780" type="MenuButton">
+                                            <param id="0" name="Instance variable">initScale</param>
+                                            <param id="1" name="Value">Self.Width</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="304383899925464">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="805142336844398" type="MenuButton">
+                                                    <param id="0" name="Instance variable">key</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="247275153850567" type="MenuButton">
+                                                    <param id="0" name="Instance variable">key</param>
+                                                    <param id="1" name="Value">lowercase(Self.AnimationName)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="481736476724117">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="782549102705143" type="System">
+                                                    <param id="0" name="Object to create">TextAlign</param>
+                                                    <param id="1" name="Layer">MenuButton.LayerNumber</param>
+                                                    <param id="2" name="X">MenuButton.ImagePointX(&quot;topLeft&quot;)</param>
+                                                    <param id="3" name="Y">MenuButton.ImagePointY(&quot;topLeft&quot;)</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="124228957843109" type="TextAlign">
+                                                    <param id="0" name="X">MenuButton.ImagePointX(&quot;topLeft&quot;)</param>
+                                                    <param id="1" name="Y">MenuButton.ImagePointY(&quot;topLeft&quot;)</param>
+                                                </action>
+                                                <action id="-7" name="Set size" sid="115222391220120" type="TextAlign">
+                                                    <param id="0" name="Width">MenuButton.Width</param>
+                                                    <param id="1" name="Height">MenuButton.Height</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="503648542554742" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;text&quot;{###}&quot;&quot;{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="707648916405583" type="TextAlign">
+                                                    <param id="0" name="Text">ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="699985265230239" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;font&quot;{###}&quot;Retron2000&quot;{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="5" name="Set web font" sid="601230439256672" type="TextAlign">
+                                                    <param id="0" name="Family name">ValerypopoffJS.StoredReturnValue</param>
+                                                    <param id="1" name="CSS URL">&quot;./fonts.css&quot;</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="616792998538896" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;size&quot;{###}TextAlign.FaceSize * MenuButton.Width/MenuButton.ImageWidth * 2{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="3" name="Set font size" sid="201075968465572" type="TextAlign">
+                                                    <param id="0" name="Size (pt)">ValerypopoffJS.StoredReturnValue </param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="877029106455715" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;alignX&quot;{###}50{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="7" name="Set Horizontal Alignment" sid="686342762224026" type="TextAlign">
+                                                    <param id="0" name="Horizontal Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="838305454679030" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;alignY&quot;{###}65{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="8" name="Set Vertical Alignment" sid="873681540690847" type="TextAlign">
+                                                    <param id="0" name="Vertical Alignment">ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="920265667296077" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;top&quot;{###}0{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="409231671650955" type="TextAlign">
+                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="-2" name="Set Y" sid="469210638730005" type="TextAlign">
+                                                    <param id="0" name="Y">Self.Y + ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="670403125512183" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;bottom&quot;{###}0{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="501668002771666" type="TextAlign">
+                                                    <param id="0" name="Height">Self.Height - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action disabled="1" id="-2" name="Set Y" sid="766256318241566" type="TextAlign">
+                                                    <param id="0" name="Y">Self.Y - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="905153299967844" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;left&quot;{###}0{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="156614364569723" type="TextAlign">
+                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="-1" name="Set X" sid="303869392689642" type="TextAlign">
+                                                    <param id="0" name="X">Self.X + ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="6" name="Call function" sid="100004166958584" type="ValerypopoffJS">
+                                                    <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Language.locale{###}MenuButton.key{###}&quot;right&quot;{###}0{###}MenuButton.metadata</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="587110688008435" type="TextAlign">
+                                                    <param id="0" name="Width">Self.Width - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action disabled="1" id="-1" name="Set X" sid="733496434119609" type="TextAlign">
+                                                    <param id="0" name="X">Self.X - ValerypopoffJS.StoredReturnValue</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="358076711343530" type="TextAlign">
+                                                    <param id="0" name="Angle">MenuButton.GameObject.global(&quot;angle&quot;)</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="742964197508726" type="TextAlign">
+                                                    <param id="0" name="Opacity">MenuButton.Opacity</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="157672141890529" type="TextAlign">
+                                                    <param id="0" name="Instance variable">autoScaleText</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="502160340692753" type="TextAlign">
+                                                    <param id="0" name="Instance variable">initFontSize</param>
+                                                    <param id="1" name="Value">Self.FaceSize</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="910665930994168" type="TextAlign">
+                                                    <param id="0" name="Instance variable">OffsetX</param>
+                                                    <param id="1" name="Value">Self.X - MenuButton.ImagePointX(&quot;topLeft&quot;)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="939677007182946" type="TextAlign">
+                                                    <param id="0" name="Instance variable">OffsetY</param>
+                                                    <param id="1" name="Value">Self.Y - MenuButton.ImagePointY(&quot;topLeft&quot;)</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="833104042683267" type="TextAlign">
+                                                    <param id="0" name="Instance variable">initHeight</param>
+                                                    <param id="1" name="Value">Self.Height</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="715544927025847" type="TextAlign">
+                                                    <param id="0" name="Instance variable">initScale</param>
+                                                    <param id="1" name="Value">Self.Width</param>
+                                                </action>
+                                                <action id="-29" name="Move to object" sid="597318849179016" type="TextAlign">
+                                                    <param id="0" name="Where">0</param>
+                                                    <param id="1" name="Object">MenuButton</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="552095974192927">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="906249099435262" type="MenuButton">
+                                                            <param id="0" name="Instance variable">manualGameObject</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="189654896763986" type="MenuButton">
+                                                            <param id="0" name="Instance variable">childUID</param>
+                                                            <param id="1" name="Value">TextAlign.UID</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="307541979389146" type="TextAlign">
+                                                            <param id="0" name="Instance variable">parent</param>
+                                                            <param id="1" name="Value">MenuButton.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="732041159987484">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="359848482837584" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="GameObject" id="3" name="Add Children From type" sid="766601851141072" type="MenuButton">
+                                                            <param id="0" name="Type">TextAlign</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="543767077778716" type="TextAlign">
+                                                            <param id="0" name="Instance variable">parent</param>
+                                                            <param id="1" name="Value">MenuButton.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="143848199172205">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="-10" name="Set value" sid="885201771298416" type="TextAlign">
+                                                            <param id="0" name="Instance variable">initFontSize</param>
+                                                            <param id="1" name="Value">Self.FaceSize</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="921211153552635" type="TextAlign">
+                                                            <param id="0" name="Instance variable">initScale</param>
+                                                            <param id="1" name="Value">Self.Width</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="919948366549868">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="619362048187937" type="Language">
+                                            <param id="0" name="Instance variable">languageLoaded</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-42" name="Signal" sid="222490395679916" type="System">
+                                            <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="664206588230442">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="746844627841351">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="135685803121751" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">autoScaleText</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="416520335404672" type="TranslatedTextObjects">
+                                    <param id="0" name="Size (pt)">Self.initFontSize * Self.Width/Self.initScale</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="373831650562627">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="284363779183700" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">scaleText</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="736948545432924" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">autoTranslate</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="389474095832985" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Instance variable">noTranslate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set scale" sid="607509467615822" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Scale">Self.initScale * Self.Width/Self.initSize</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="585180466900201">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="305218895669468" type="TranslatedTextObjects">
+                                    <param id="0" name="Instance variable">update</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="712753611762968" type="System">
+                                    <param id="0" name="Object">TranslatedTextObjects</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="844156465134232" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Unique ID">TranslatedTextObjects.parent</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-16" name="Wait" sid="673658394992748" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="937245188116876" type="TranslatedTextObjects">
+                                    <param id="0" name="Text">SpritefontDeluxeTexts.Text</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="445019441609896" type="TranslatedTextObjects">
+                                    <param id="0" name="Angle">SpritefontDeluxeTexts.Angle</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="668854758594504" type="TranslatedTextObjects">
+                                    <param id="0" name="X">SpritefontDeluxeTexts.GameObject.global(&quot;x&quot;) + Self.OffsetX * SpritefontDeluxeTexts.Width / SpritefontDeluxeTexts.initSize</param>
+                                    <param id="1" name="Y">SpritefontDeluxeTexts.GameObject.global(&quot;y&quot;) + Self.OffsetY * SpritefontDeluxeTexts.Width / SpritefontDeluxeTexts.initSize</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="652268577610406" type="TranslatedTextObjects">
+                                    <param id="0" name="Width">Self.initScale * SpritefontDeluxeTexts.Width / SpritefontDeluxeTexts.initSize</param>
+                                    <param id="1" name="Height">Self.initHeight * SpritefontDeluxeTexts.Width / SpritefontDeluxeTexts.initSize</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="500426021826483" type="TranslatedTextObjects">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">SpritefontDeluxeTexts</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="323726144669593" type="SpritefontDeluxeTexts">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="988943499666460">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="303786570893425" type="SpritefontDeluxeTexts">
+                                            <param id="0" name="Instance variable">syncOpacity</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="323195556068877" type="TranslatedTextObjects">
+                                            <param id="0" name="Opacity">SpritefontDeluxeTexts.Opacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="154670315076541">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="187697297287063" type="MenuButton">
+                                    <param id="0" name="Instance variable">manualGameObject</param>
+                                </condition>
+                                <condition id="-11" name="For Each" sid="466782746305136" type="System">
+                                    <param id="0" name="Object">MenuButton</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="376497614557181" type="TranslatedTextObjects">
+                                    <param id="0" name="Unique ID">MenuButton.childUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="591415703422603" type="TranslatedTextObjects">
+                                    <param id="0" name="Angle">MenuButton.Angle</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="281677548611484" type="TranslatedTextObjects">
+                                    <param id="0" name="X">MenuButton.ImagePointX(&quot;topLeft&quot;) + Self.OffsetX * MenuButton.Width / MenuButton.initScale</param>
+                                    <param id="1" name="Y">MenuButton.ImagePointY(&quot;topLeft&quot;) + Self.OffsetY * MenuButton.Width / MenuButton.initScale</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="273280472975479" type="TranslatedTextObjects">
+                                    <param id="0" name="Width">Self.initScale * MenuButton.Width / MenuButton.initScale</param>
+                                    <param id="1" name="Height">Self.initHeight * MenuButton.Width / MenuButton.initScale</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="837623656868576" type="TranslatedTextObjects">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">MenuButton</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="510520860656034" title="Language &gt; API">
+                    <sub-events>
+                        <event-block sid="674558582218390">
+                            <conditions>
+                                <condition id="0" name="On function" sid="533011390234023" type="Function">
+                                    <param id="0" name="Name">&quot;Language &gt; LoadLanguageFile&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="157028846095447" type="Language">
+                                    <param id="0" name="Instance variable">json</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="690119569657180" type="Language">
+                                    <param id="0" name="Instance variable">languageLoaded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Load JSON" sid="240197877910975" type="Lang">
+                                    <param id="0" name="JSON string">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set" sid="199785119336597" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Language&quot;</param>
+                                    <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                </action>
+                                <action id="1" name="Save" sid="313017806596994" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="975427285954712">
+                            <conditions>
+                                <condition id="0" name="On function" sid="259615473472116" type="Function">
+                                    <param id="0" name="Name">&quot;Language &gt; SetLocale&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="789225842703134" type="Language">
+                                    <param id="0" name="Instance variable">locale</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Set" sid="982002688809825" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Language&quot;</param>
+                                    <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                </action>
+                                <action id="1" name="Save" sid="675422541823652" type="SyncStorage" />
+                                <action id="-16" name="Wait" sid="159175226932793" type="System">
+                                    <param id="0" name="Seconds">0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="221651384107092" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="629976361921088">
+                            <conditions>
+                                <condition id="0" name="On function" sid="736021682586338" type="Function">
+                                    <param id="0" name="Name">&quot;Language &gt; Loaded&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set value" sid="935652041669255" type="ValerypopoffJS">
+                                    <param id="0" name="Expression">&quot;tempLanguageJSON&quot;</param>
+                                    <param id="1" name="Value">Language.json</param>
+                                </action>
+                                <action id="6" name="Call function" sid="728781644794423" type="ValerypopoffJS">
+                                    <param id="0" name="Expression">&quot;setLanguageJSON&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="6" name="Call function" sid="727687466623165" type="ValerypopoffJS">
+                                    <param id="0" name="Expression">&quot;getTranslations&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-42" name="Signal" sid="314594678723976" type="System">
+                                    <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

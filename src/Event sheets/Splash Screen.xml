@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Splash Screen</name>
+    <events>
+        <event-block sid="660804202932930">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="467143283212669" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="881964374725619" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="0" name="Prepare Transition" sid="105958371472575" type="LayoutTransitionV2" />
+            </actions>
+        </event-block>
+        <event-block sid="395364802420621">
+            <conditions>
+                <condition id="0" name="Is transition ready" sid="727779824069967" type="LayoutTransitionV2" />
+            </conditions>
+            <actions>
+                <action id="1" name="Start Transition" sid="364252046981183" type="LayoutTransitionV2">
+                    <param id="0" name="Transition Name">11</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="598349098856747">
+                    <conditions>
+                        <condition id="-18" inverted="1" name="Is in preview" sid="593786698283101" type="System" />
+                        <condition id="-32" name="Is on platform" sid="708810607996130" type="System">
+                            <param id="0" name="Platform">0</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="896834382050898" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;dedragames.com&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="772161683244982" type="System">
+                            <param id="0" name="First value">Browser.Domain</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;www.dedragames.com&quot;</param>
+                        </condition>
+                        <condition id="0" name="Needs sitelocking" sid="551847635237813" type="skymen_siteLock" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="893640427194788" type="System">
+                            <param id="0" name="Layout">Site Locking</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869827969104852">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="116397526937243" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="667242298045487" type="System">
+                            <param id="0" name="Layout">Main Menu</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

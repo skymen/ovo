@@ -1,0 +1,1216 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Music</name>
+    <events>
+        <event-group description="" sid="834293298384805" title="Music">
+            <sub-events>
+                <variable constant="0" name="curMusicId" sid="646336600479377" static="1" type="text"></variable>
+                <comment>On start of layout&#x0D;&#x0A;check the music that should be played&#x0D;&#x0A;If it&apos;s not the right music, transition to music&#x0D;&#x0A;If no music is playing, play music</comment>
+                <event-block sid="783647158324180">
+                    <conditions>
+                        <condition id="9" name="On suspended" sid="733616083414813" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Execute JS code" sid="518618532302966" type="ValerypopoffJS">
+                            <param id="0" name="JS code">&quot;globalThis.adconfigStopAudioInBackground? HowlerAudioPlayer.setPaused(true) :  HowlerAudioPlayer.setLooping(true, &apos;music&apos;)&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="676418073052509">
+                    <conditions>
+                        <condition id="8" name="On resumed" sid="577004070147708" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Execute JS code" sid="865717760334432" type="ValerypopoffJS">
+                            <param id="0" name="JS code">&quot;HowlerAudioPlayer.setLooping(false, &apos;music&apos;)&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Execute JS code" sid="119545179086229" type="ValerypopoffJS">
+                            <param id="0" name="JS code">&quot;globalThis.adconfigStopAudioInBackground? HowlerAudioPlayer.setPaused(false) :  HowlerAudioPlayer.setLooping(false, &apos;music&apos;)&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665300087704953">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="810292481227460" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="482987919748899">
+                            <conditions>
+                                <condition disabled="1" id="5" inverted="1" name="Is tag playing" sid="277467676163317" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                </condition>
+                                <condition id="11" inverted="1" name="Is playing" sid="616145660037101" type="HowlerJS">
+                                    <param id="0" name="Group">&quot;music&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="920431604177404" type="System">
+                                    <param id="0" name="Variable">curMusicId</param>
+                                    <param id="1" name="Value">Function.Call(&quot;Music &gt; GetMusic&quot;)</param>
+                                </action>
+                                <action disabled="1" id="7" name="Play (by name)" sid="665463951710929" type="Audio">
+                                    <param id="0" name="Folder">1</param>
+                                    <param id="1" name="Audio file name">curMusicId</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="2" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                                <action id="1" name="Play (by name)" sid="970596391003589" type="HowlerJS">
+                                    <param id="0" name="Audio">curMusicId</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="161174416182653">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="726147648996942" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="musicThatShouldPlay" sid="991081929010896" static="0" type="text"></variable>
+                                <event-block sid="814946893421265">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="575985790288294" type="System">
+                                            <param id="0" name="Variable">musicThatShouldPlay</param>
+                                            <param id="1" name="Value">Function.Call(&quot;Music &gt; GetMusic&quot;, 1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="495918811048273">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="350353783169366" type="System">
+                                            <param id="0" name="Variable">curMusicId</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">musicThatShouldPlay</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="926837401466194" type="Function">
+                                            <param id="0" name="Name">&quot;Music &gt; TransitionTo&quot;</param>
+                                            <param id="1" name="Parameter {n}">musicThatShouldPlay</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="727313552336444">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="261561123998451" type="System">
+                                    <param id="0" name="First value">Function.Call(&quot;Music &gt; IsOnSafari&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Mute" sid="499900922879403" type="HowlerJS">
+                                    <param id="0" name="Group">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="297114545720289">
+                            <conditions>
+                                <condition id="2" name="Is ready" sid="815558439712984" type="SyncStorage" />
+                                <condition id="11" name="Is playing" sid="652208397461105" type="HowlerJS">
+                                    <param id="0" name="Group">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set linear volume" sid="465479829091412" type="HowlerJS">
+                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="7" name="Set linear volume" sid="929446297086971" type="HowlerJS">
+                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="1" name="Group">&quot;transition&quot;</param>
+                                </action>
+                                <action id="7" name="Set linear volume" sid="214198002417033" type="HowlerJS">
+                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                    <param id="1" name="Group">&quot;sounds&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="338333963773114">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="165240807364054" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Mute" sid="461162147282539" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;music&quot;</param>
+                                        </action>
+                                        <action id="3" name="Mute" sid="314504727764668" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;transition&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="831575944104728">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="907059571752751" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Unmute" sid="634320662227618" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;music&quot;</param>
+                                        </action>
+                                        <action id="4" name="Unmute" sid="931731974924461" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;transition&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="250844591970611">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="481177714032833" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Mute" sid="749767535398704" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;sounds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="287499860697504">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="623972875238483" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Unmute" sid="244095784429450" type="HowlerJS">
+                                            <param id="0" name="Group">&quot;sounds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="232534594814032">
+                    <conditions>
+                        <condition id="11" inverted="1" name="Is playing" sid="856581752035176" type="HowlerJS">
+                            <param id="0" name="Group">&quot;music&quot;</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="799346528093198" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="779668990063558" type="System">
+                            <param id="0" name="Variable">curMusicId</param>
+                            <param id="1" name="Value">Function.Call(&quot;Music &gt; GetMusic&quot;)</param>
+                        </action>
+                        <action id="1" name="Play (by name)" sid="326891436194415" type="HowlerJS">
+                            <param id="0" name="Audio">curMusicId</param>
+                            <param id="1" name="Group">&quot;music&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="189849960111386">
+                    <conditions>
+                        <condition id="0" name="On function" sid="819075979872075" type="Function">
+                            <param id="0" name="Name">&quot;Music &gt; GetMusic&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="1" name="Set return value" sid="426477649167977" type="Function">
+                            <param id="0" name="Value">choose(&quot;Heart Loop&quot;, &quot;IDontEvenKnow&quot;, &quot;TranseBeat 2&quot;, &quot;First Try&quot;, &quot;Sick of losing&quot;, &quot;Soulmates&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block any="1" sid="431635055479360">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="271064481686439" type="System">
+                                    <param id="0" name="First value">find(LayoutName, &quot;Menu&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="371918829059102" type="System">
+                                    <param id="0" name="First value">find(LayoutName, &quot;Level&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="152526323749773" type="Function">
+                                    <param id="0" name="Value">&quot;MenuTrack&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="585397886302142">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="758072015676112" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="ID" sid="438217808798611" static="0" type="number">0</variable>
+                                <variable constant="0" name="KeepCurrentIfPossible" sid="696101499980387" static="0" type="number">0</variable>
+                                <event-block sid="706073424231672">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="825583153468680" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Value">int(tokenat(LayoutName, 1, &quot; &quot;))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="923906175384407" type="System">
+                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                            <param id="1" name="Value">Function.Param(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Basics</comment>
+                                <event-block sid="305438840574910">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="759039851178346" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="506811607073390" type="Function">
+                                            <param id="0" name="Value">&quot;Track1&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Getting serious</comment>
+                                <event-block sid="986607817373479">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="699669545617792" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="862779031226782" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">16</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set return value" sid="356411930078803" type="Function">
+                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>Higher order</comment>
+                                <event-block sid="861705489111860">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="180126215025261" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="704252038312933" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">24</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="121202277153058">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="468218725805515" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="312099206395062">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="985620106627608" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="616597085767573" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="420917152488760">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="344328203896715" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="617270630487567" type="Function">
+                                                            <param id="0" name="Value">&quot;Track1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="251781043868993">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="708742972638011" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="436639753011074" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="178340194952577">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="239067577739569" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="862802428205008" type="Function">
+                                                            <param id="0" name="Value">&quot;Track1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="869781913786546">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="804142187748208" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="536062924804727" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="631137728442017">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="102852646797885" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="287233174744654" type="Function">
+                                                    <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Mechanics</comment>
+                                <event-block sid="178652708201988">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="636735901545949" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="576590375836157" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="966423895913848">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="738663328797994" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="138251430146716">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="782306379102525" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="498472484047858" type="Function">
+                                                            <param id="0" name="Value">&quot;Track3&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="870123655259361">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="720178433880187" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="741500737584953" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="175977263526627">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="884391991538303" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="950619687338150" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track3&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="466752165711104">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="458698935375697" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="629865451995769" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="304944795435889">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="303097741523470" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="772310323738699" type="Function">
+                                                            <param id="0" name="Value">&quot;Track3&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="842131136534110">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="520774770393677" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="905200187874063" type="Function">
+                                                    <param id="0" name="Value">choose(&quot;Track2&quot;, &quot;Track3&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>OvO Space Program</comment>
+                                <event-block sid="786281660073354">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="758847075844587" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="818491854634671" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="963526501528750">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="476968994810798" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track3&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="796595693638316">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="951450901648160" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="896029390697147" type="Function">
+                                                            <param id="0" name="Value">&quot;Track4&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="474544655176801">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="555224833619829" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="266607879961259" type="Function">
+                                                            <param id="0" name="Value">&quot;Track3&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="605255482930408">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="519205918997494" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="228919586841778" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="564189792863265">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="604113262894345" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="305421959526726" type="Function">
+                                                            <param id="0" name="Value">&quot;Track3&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="634446854009012">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="243096907530680" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="365595656071837" type="Function">
+                                                            <param id="0" name="Value">&quot;Track4&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="932176846936120">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="655870559310570" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="852677969515837" type="Function">
+                                                    <param id="0" name="Value">choose(&quot;Track3&quot;, &quot;Track4&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>JTTP</comment>
+                                <event-block sid="177849394190549">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="168359971652807" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="862930625360745" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">48</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="714266866700918">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="950405812599458" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="441594605052624">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="837896664522274" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="296781515951859" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track2&quot;, &quot;Track4&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="469262093508549">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="573366266316560" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="384336718739976" type="Function">
+                                                            <param id="0" name="Value">&quot;Track 1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="353518361255720">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="550785685925134" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="238204620847805" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="667179911093984">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="276725843425680" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="481704296821981" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track4&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="492069594968202">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="470475745217425" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="345333340003673" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="321557148408329">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="688274068030327" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="798919748601031" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="468325551365692">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="949101710688790" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="851920587271552" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="592928952920952">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="575289584688183" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="828645116980356" type="Function">
+                                                            <param id="0" name="Value">&quot;Track4&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="105041108848179">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="907456054920336" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="861494642637077" type="Function">
+                                                    <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;, &quot;Track4&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <comment>Community levels</comment>
+                                <event-block sid="479878533696056">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="574280972236386" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="231611330175091">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="456151069772991" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track1&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="729422115528030">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="480480262860007" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="548705738596285" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track2&quot;, &quot;Track3&quot;, &quot;Track4&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="661487869110645">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="294680838893290" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="935277142140368" type="Function">
+                                                            <param id="0" name="Value">&quot;Track 1&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="916973679410426">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="598164983987906" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="979887795034457" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track2&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="974215114179635">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="318933371146750" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="646967251457981" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track3&quot;, &quot;Track4&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="167712409398253">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="469452677702658" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="557373766742237" type="Function">
+                                                            <param id="0" name="Value">&quot;Track2&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="937480126629693">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="114698362681292" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="541645527197480" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track3&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="421721712412123">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="298894293112883" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="962498109447773" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;, &quot;Track4&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="435207725976235">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="194504752381395" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="492650247645207" type="Function">
+                                                            <param id="0" name="Value">&quot;Track3&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="692159109929300">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="564283304872376" type="System" />
+                                                <condition id="-14" name="Compare variable" sid="542479658855977" type="System">
+                                                    <param id="0" name="Variable">curMusicId</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Track4&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="123556355629641">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="674730872065042" type="System">
+                                                            <param id="0" name="Variable">KeepCurrentIfPossible</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="637268422688023" type="Function">
+                                                            <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;, &quot;Track3&quot;)</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="549320499529525">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="929002874023651" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="1" name="Set return value" sid="483037056834630" type="Function">
+                                                            <param id="0" name="Value">&quot;Track4&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="367476357913311">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="129310838557980" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set return value" sid="986726444308461" type="Function">
+                                                    <param id="0" name="Value">choose(&quot;Track1&quot;, &quot;Track2&quot;, &quot;Track3&quot;, &quot;Track4&quot;)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="560977516750594">
+                    <conditions>
+                        <condition id="0" name="On function" sid="604989033802839" type="Function">
+                            <param id="0" name="Name">&quot;Music &gt; TransitionTo&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="musicToTransitionTo" sid="660486003855271" static="1" type="text"></variable>
+                        <event-block sid="796035312368828">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="712376019852777" type="System">
+                                    <param id="0" name="Variable">musicToTransitionTo</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action disabled="1" id="7" name="Play (by name)" sid="631695849713918" type="Audio">
+                                    <param id="0" name="Folder">0</param>
+                                    <param id="1" name="Audio file name">&quot;Sfx_Transition-0&quot; &amp; str(floor(random(9)) + 1)</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="2" name="Tag (optional)">&quot;transition&quot;</param>
+                                </action>
+                                <action id="7" name="Set linear volume" sid="139254817052246" type="HowlerJS">
+                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="1" name="Group">&quot;transition&quot;</param>
+                                </action>
+                                <action id="1" name="Play (by name)" sid="646935262743982" type="HowlerJS">
+                                    <param id="0" name="Audio">&quot;Sfx_Transition-0&quot; &amp; str(floor(random(9)) + 1)</param>
+                                    <param id="1" name="Group">&quot;transition&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="559006776291973" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action disabled="1" id="6" name="Stop" sid="325041843924865" type="Audio">
+                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                </action>
+                                <action id="2" name="Stop" sid="670559398141388" type="HowlerJS">
+                                    <param id="0" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action disabled="1" id="7" name="Play (by name)" sid="543446799453076" type="Audio">
+                                    <param id="0" name="Folder">1</param>
+                                    <param id="1" name="Audio file name">musicToTransitionTo</param>
+                                    <param id="3" name="Loop">0</param>
+                                    <param id="4" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                    <param id="2" name="Tag (optional)">&quot;music&quot;</param>
+                                </action>
+                                <action id="1" name="Play (by name)" sid="208882259624150" type="HowlerJS">
+                                    <param id="0" name="Audio">musicToTransitionTo</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="170663011681904" type="System">
+                                    <param id="0" name="Variable">curMusicId</param>
+                                    <param id="1" name="Value">musicToTransitionTo</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="303447219955458">
+                    <conditions>
+                        <condition id="0" name="On function" sid="177748323790443" type="Function">
+                            <param id="0" name="Name">&quot;Music &gt; IsOnSafari&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="1" name="Set return value" sid="234604438797258" type="Function">
+                            <param id="0" name="Value">ValerypopoffJS.JSCodeValue(&quot;globalThis.__ovoIsSafari? 1:0&quot;)</param>
+                        </action>
+                        <action id="1" name="Set return value" sid="714560129493747" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="195246873340451" title="Sounds">
+            <sub-events>
+                <event-block sid="212243551230728">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="414447786138746" type="Collider" />
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="319416623148736" type="Collider">
+                            <param id="0" name="Instance variable">Walljump</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="390912347047063" type="Collider">
+                            <param id="0" name="Instance variable">Sliding</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="694353117514808" type="Collider">
+                            <param id="0" name="Instance variable">Plunge</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="450220836432058" type="Collider">
+                            <param id="0" name="Instance variable">Pound</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="248445886420719" type="Collider">
+                            <param id="0" name="Instance variable">Walljump</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="902050333520360" type="Collider">
+                            <param id="0" name="Side">0</param>
+                        </condition>
+                        <condition behavior="Platform" id="10" inverted="1" name="Is by wall" sid="487571116414741" type="Collider">
+                            <param id="0" name="Side">1</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="187004495056925" type="Collider">
+                            <param id="0" name="Instance variable">Ghost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Play" sid="345371874013175" type="Audio">
+                            <param id="0" name="Audio file">jump</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">Audio.Volume(&quot;sounds&quot;)</param>
+                            <param id="1" name="Tag (optional)">&quot;sounds&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="258727837531968">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="617832157580689" type="Collider">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;run&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="956163226781186" type="Collider">
+                            <param id="0" name="Instance variable">Ghost</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="106879508972673" type="System">
+                            <param id="0" name="First value">find(LayoutName, &quot;Menu&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="775164690120588">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="600797643040006" type="LeftFoot">
+                                    <param id="0" name="Within">80 +Collider.Angle</param>
+                                    <param id="1" name="Angle">100 +Collider.Angle</param>
+                                </condition>
+                                <condition id="-11" name="Is within angle" sid="534783724373821" type="RightFoot">
+                                    <param id="0" name="Within">80 +Collider.Angle</param>
+                                    <param id="1" name="Angle">100 +Collider.Angle</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="936784366299142">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="978160110375954" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="7" name="Play (by name)" sid="790208489353186" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;Footstep&quot;</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">Audio.Volume(&quot;sounds&quot;)</param>
+                                            <param id="2" name="Tag (optional)">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="7" name="Play (by name)" sid="431533188291125" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;step&quot; &amp; choose(&quot;&quot;, &quot;2&quot;, &quot;3&quot;)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">Audio.Volume(&quot;sounds&quot;)</param>
+                                            <param id="2" name="Tag (optional)">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action id="1" name="Play (by name)" sid="228712029554244" type="HowlerJS">
+                                            <param id="0" name="Audio">&quot;step&quot; &amp; choose(&quot;&quot;, &quot;2&quot;, &quot;3&quot;)</param>
+                                            <param id="1" name="Group">&quot;sounds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="497888976995997">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="167956916865618" type="Collider">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;dancing&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="176531096055768" type="Collider">
+                            <param id="0" name="Instance variable">Ghost</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="329926294906198" type="System">
+                            <param id="0" name="First value">find(LayoutName, &quot;Menu&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="330879669762533">
+                            <conditions>
+                                <condition id="-11" name="Is within angle" sid="526968249333871" type="LeftFoot">
+                                    <param id="0" name="Within">80 +Collider.Angle</param>
+                                    <param id="1" name="Angle">100 +Collider.Angle</param>
+                                </condition>
+                                <condition id="-11" name="Is within angle" sid="319993430921153" type="RightFoot">
+                                    <param id="0" name="Within">80 +Collider.Angle</param>
+                                    <param id="1" name="Angle">100 +Collider.Angle</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="742516946565625">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="228914304454531" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action disabled="1" id="7" name="Play (by name)" sid="169293255462857" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;Footstep&quot;</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">Audio.Volume(&quot;sounds&quot;)</param>
+                                            <param id="2" name="Tag (optional)">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="7" name="Play (by name)" sid="796065687156467" type="Audio">
+                                            <param id="0" name="Folder">0</param>
+                                            <param id="1" name="Audio file name">&quot;step&quot; &amp; choose(&quot;&quot;, &quot;2&quot;, &quot;3&quot;)</param>
+                                            <param id="3" name="Loop">0</param>
+                                            <param id="4" name="Volume">Audio.Volume(&quot;sounds&quot;)</param>
+                                            <param id="2" name="Tag (optional)">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action id="1" name="Play (by name)" sid="692343945014335" type="HowlerJS">
+                                            <param id="0" name="Audio">&quot;step&quot; &amp; choose(&quot;&quot;, &quot;2&quot;, &quot;3&quot;)</param>
+                                            <param id="1" name="Group">&quot;sounds&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="220117348155934">
+            <conditions>
+                <condition id="0" name="On function" sid="178170322315101" type="Function">
+                    <param id="0" name="Name">&quot;muteSounds&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="10" name="Set master volume" sid="480393536774116" type="Audio">
+                    <param id="0" name="dB">-1000</param>
+                </action>
+                <action disabled="1" id="3" name="Set volume" sid="155625709645715" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                    <param id="1" name="dB">-1000</param>
+                </action>
+                <action disabled="1" id="2" name="Set muted" sid="138701469709330" type="Audio">
+                    <param id="0" name="Tag">&quot;music&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action disabled="1" id="3" name="Set volume" sid="944257674181866" type="Audio">
+                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                    <param id="1" name="dB">-1000</param>
+                </action>
+                <action disabled="1" id="2" name="Set muted" sid="668033315357383" type="Audio">
+                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="3" name="Mute" sid="371082123435635" type="HowlerJS">
+                    <param id="0" name="Group">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="763780346262210">
+            <conditions>
+                <condition id="0" name="On function" sid="477604814916257" type="Function">
+                    <param id="0" name="Name">&quot;unmuteSounds&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="10" name="Set master volume" sid="580875013971941" type="Audio">
+                    <param id="0" name="dB">0</param>
+                </action>
+                <action id="4" name="Unmute" sid="585982494643615" type="HowlerJS">
+                    <param id="0" name="Group">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="934047002657278">
+                    <conditions>
+                        <condition id="4" name="Compare item" sid="123708730589395" type="SyncStorage">
+                            <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="734403894575693" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="709820645577944" type="Audio">
+                            <param id="0" name="Tag">&quot;music&quot;</param>
+                            <param id="1" name="dB">SyncStorage.Get(&quot;Music&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="396298654252687">
+                    <conditions>
+                        <condition id="4" name="Compare item" sid="661766165527254" type="SyncStorage">
+                            <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set muted" sid="651277768891265" type="Audio">
+                            <param id="0" name="Tag">&quot;sounds&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="314563504322630" type="Audio">
+                            <param id="0" name="Tag">&quot;sounds&quot;</param>
+                            <param id="1" name="dB">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

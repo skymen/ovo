@@ -1,0 +1,1601 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Save</name>
+    <events>
+        <include>Language</include>
+        <include>Skins</include>
+        <include>Inputs</include>
+        <include>Achievements</include>
+        <include>Notification</include>
+        <event-group description="" sid="162986568156015" title="Save">
+            <sub-events>
+                <event-group description="" sid="283165337029184" title="Save &gt; Init">
+                    <sub-events>
+                        <event-block sid="855870978712707">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="750078358650990" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="949644249988978" type="Globals">
+                                    <param id="0" name="Instance variable">StartOfGame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Request project file" sid="735985345045914" type="AJAX">
+                                    <param id="0" name="Tag">&quot;adconfig&quot;</param>
+                                    <param id="1" name="File">adconfig.json</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="418123747283769" type="Browser">
+                                    <param id="0" name="Javascript">&quot;globalThis.oldRuntimeMobileMode = this.runtime.isMobile&quot;</param>
+                                </action>
+                                <action id="2" name="Initialize (LocalStorage)" sid="211265669871254" type="SyncStorage" />
+                                <action id="10" name="Load" sid="481167027365172" type="HowlerJS">
+                                    <param id="0" name="Audio">MenuTrack</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="10" name="Load" sid="557488789583885" type="HowlerJS">
+                                    <param id="0" name="Audio">Track1</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="10" name="Load" sid="937435560220639" type="HowlerJS">
+                                    <param id="0" name="Audio">Track2</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="10" name="Load" sid="471424179541705" type="HowlerJS">
+                                    <param id="0" name="Audio">Track3</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                                <action id="10" name="Load" sid="109928488869888" type="HowlerJS">
+                                    <param id="0" name="Audio">Track4</param>
+                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="261757822495536">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-41" name="Wait for signal" sid="490693393652791" type="System">
+                                            <param id="0" name="Tag">LANGUAGELOADEDSIGNAL</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="851539001060242">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="700675995494868" type="Language">
+                                                    <param id="0" name="Instance variable">locale</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="434287948116961" type="Language">
+                                                    <param id="0" name="Instance variable">locale</param>
+                                                    <param id="1" name="Value">ValerypopoffJS.JSCodeValue(&quot;detectLanguage()&quot;)</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="817839074078626" type="System">
+                                                    <param id="0" name="Seconds">1.0</param>
+                                                </action>
+                                                <action id="0" name="Set" sid="268971112127220" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;Language&quot;</param>
+                                                    <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                                </action>
+                                                <action id="1" name="Save" sid="208638790552480" type="SyncStorage" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="851076218283539">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="176849822561145" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="474782993454946" type="Globals">
+                                            <param id="0" name="Instance variable">StartOfGame</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="1" name="Request project file" sid="912681795007652" type="AJAX">
+                                            <param id="0" name="Tag">&quot;language&quot;</param>
+                                            <param id="1" name="File">languages.json</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="910632506246077">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="636612072809910" type="AJAX">
+                                    <param id="0" name="Tag">&quot;language&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="600840665840540">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="532124893435554" type="Language">
+                                            <param id="0" name="Instance variable">json</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="597812878819622" type="Language">
+                                            <param id="0" name="Instance variable">json</param>
+                                            <param id="1" name="Value">AJAX.LastData</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="375112387838088" type="Language">
+                                            <param id="0" name="Instance variable">languageLoaded</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set" sid="662066397971048" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Language&quot;</param>
+                                            <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="292340083562544" type="Function">
+                                            <param id="0" name="Name">&quot;Language &gt; Loaded&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="289977059879069">
+                                            <conditions>
+                                                <condition id="2" name="Is ready" sid="278946890351023" type="SyncStorage" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Save" sid="244280892223327" type="SyncStorage" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="821190910100078">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="847283276673076" type="AJAX">
+                                    <param id="0" name="Tag">&quot;adconfig&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Alert" sid="300934301958263" type="Browser">
+                                    <param id="0" name="Message">&quot;adconfig&quot;</param>
+                                </action>
+                                <action id="5" name="Set value" sid="714329333861523" type="ValerypopoffJS">
+                                    <param id="0" name="Expression">&quot;adconfig&quot;</param>
+                                    <param id="1" name="Value">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="876661063980343">
+                                    <conditions>
+                                        <condition id="-18" name="Is in preview" sid="116302400862035" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Call function" sid="475413504738752" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;initWebSdkWrapper&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="248416363955669">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="624916031097691" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Call function" sid="307717019234091" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;initWebSdkWrapper&quot;</param>
+                                            <param id="1" name="Parameter {n}">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="611428631163515">
+                            <conditions>
+                                <condition id="1" name="On error" sid="331994346093878" type="AJAX">
+                                    <param id="0" name="Tag">&quot;adconfig&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="0" name="Alert" sid="288937356545410" type="Browser">
+                                    <param id="0" name="Message">&quot;adconfig fail&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Alert" sid="162451977811696" type="Browser">
+                                    <param id="0" name="Message">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="628981256945524">
+                                    <conditions>
+                                        <condition id="-18" name="Is in preview" sid="326614694055185" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Call function" sid="410949526367235" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;initWebSDKWrapper&quot;</param>
+                                            <param id="1" name="Parameter {n}">1{###}AJAX.LastData</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="920419701045902">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="599605884968008" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Call function" sid="555803193796826" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;initWebSDKWrapper&quot;</param>
+                                            <param id="1" name="Parameter {n}">0{###}AJAX.LastData</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="669131513933010">
+                            <conditions>
+                                <condition id="6" name="On init empty" sid="671529092966837" type="SyncStorage" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="803905557492758" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Levels&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="864311614878293" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Music&quot;</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                                <action id="0" name="Set" sid="464758699033225" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Sounds&quot;</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                                <action id="0" name="Set" sid="290639275637948" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;VolumeIsLinear&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="923381777766359" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Fullscreen&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="629676849342578" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;HardMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="768695733681222" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;AdvancedMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="284617585170439" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;LeftInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.LeftInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="253290119634447" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;RightInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.RightInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="271074527701897" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;UpInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.UpInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="754687278107088" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;DownInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.DownInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="571643322782463" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Gold&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="723145622788503" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Skin0&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="308993002650976" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="483688618875811" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;CurSkin&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set" sid="459260542656810" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="181995077996050" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="323841926399552" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Save" sid="287238616458505" type="SyncStorage" />
+                            </actions>
+                            <sub-events>
+                                <event-block sid="154382183721419">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="934526837180121" type="Language">
+                                            <param id="0" name="Instance variable">languageLoaded</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="661493644679138" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Language&quot;</param>
+                                            <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="333736026151571" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="165604402275530">
+                            <conditions>
+                                <condition id="0" name="On init succeeded" sid="775790404995832" type="SyncStorage" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="654032152308802">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="563107270537816" type="Globals">
+                                            <param id="0" name="Instance variable">BlowSave</param>
+                                        </condition>
+                                        <condition id="-18" name="Is in preview" sid="983942327988317" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="14" name="Log" sid="129268849388368" type="Browser">
+                                            <param id="0" name="Type">1</param>
+                                            <param id="1" name="Message">&quot;BLOW SAVE MODE: PLEASE DISABLE AFTER TESTING&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="121950783623740" type="Function">
+                                            <param id="0" name="Name">&quot;Save &gt; BlowSave&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="115706140179141">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="428571442928592" type="Globals">
+                                            <param id="0" name="Instance variable">TestMode</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="390430929672685" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Levels&quot;</param>
+                                            <param id="1" name="Value">Globals.NbLevels</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="690072598568067" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Test Mode Activated&quot;{###}&quot;This unlocks every level.&quot;</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="531292985869405" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="648721901291575">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="551057881912831" type="Globals">
+                                            <param id="0" name="Instance variable">RandomSkin</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="159980054600369" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;Random Skin Activated&quot;{###}&quot;This makes you try every skin in the game.&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="324154452321057">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="565616474010403" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Levels&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="240186018083704" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Levels&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="683932486412394" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="158440876070012">
+                                    <conditions>
+                                        <condition id="3" name="Has item" sid="633915784769280" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;besttime&quot;</param>
+                                        </condition>
+                                        <condition id="3" name="Has item" sid="178852042436420" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;besttimehard&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="247085273161368" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="567203571428331">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="194369843114659" type="System" />
+                                        <condition id="4" name="Compare item" sid="955018068061617" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Levels&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">Globals.NbLevels</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="348198921036705" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Levels&quot;</param>
+                                            <param id="1" name="Value">Globals.NbLevels</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="209534354796506" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="568274906586870">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="340665498869633" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;LeftInput&quot;</param>
+                                        </condition>
+                                        <condition id="4" name="Compare item" sid="256981955378935" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;LeftInput&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="449702388163239" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;LeftInput&quot;</param>
+                                            <param id="1" name="Value">Inputs.LeftInput</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="393749748047054">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="752071561619586" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;RightInput&quot;</param>
+                                        </condition>
+                                        <condition id="4" name="Compare item" sid="887157804206072" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;RightInput&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="253190104837749" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;RightInput&quot;</param>
+                                            <param id="1" name="Value">Inputs.RightInput</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="936714148639980">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="152634170491822" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;UpInput&quot;</param>
+                                        </condition>
+                                        <condition id="4" name="Compare item" sid="162040904732276" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;UpInput&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="268980869575249" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;UpInput&quot;</param>
+                                            <param id="1" name="Value">Inputs.UpInput</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="555653481807695">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="541389630555295" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;DownInput&quot;</param>
+                                        </condition>
+                                        <condition id="4" name="Compare item" sid="174487595292886" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;DownInput&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="344418674661205" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;DownInput&quot;</param>
+                                            <param id="1" name="Value">Inputs.DownInput</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="536767773635854">
+                                    <conditions>
+                                        <condition id="3" name="Has item" sid="496782941149315" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Language&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set value" sid="173046675829932" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;savedVars&quot;</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;Language&quot;)</param>
+                                        </action>
+                                        <action id="5" name="Set value" sid="690226434084932" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;curVars&quot;</param>
+                                            <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="375468426452456" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;mergeInstanceVars&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Load variables" sid="544977044764135" type="Language">
+                                            <param id="0" name="JSON">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="999405815840846" type="Function">
+                                            <param id="0" name="Name">&quot;Language &gt; Loaded&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="529950628875775">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="647352120456165" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="336061206078562" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="958414220108857">
+                                    <conditions>
+                                        <condition id="3" inverted="1" name="Has item" sid="473362993297200" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="824672939843699" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="488504661712040">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="689472132831626" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="975807535287343" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Language&quot;</param>
+                                            <param id="1" name="Value">Language.GetVariablesAsJSON</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="697465902245521">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="888498472278283" type="System">
+                                            <param id="0" name="Seconds">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="202800238877928" type="Inputs">
+                                            <param id="0" name="Instance variable">LeftInput</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;LeftInput&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="502322096114036" type="Inputs">
+                                            <param id="0" name="Instance variable">DownInput</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;DownInput&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="522447533155396" type="Inputs">
+                                            <param id="0" name="Instance variable">RightInput</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;RightInput&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="476775079206194" type="Inputs">
+                                            <param id="0" name="Instance variable">UpInput</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;UpInput&quot;)</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="624888217179466" type="Globals">
+                                            <param id="0" name="Instance variable">Skin</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;CurSkin&quot;)</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Play" sid="911012657180488" type="Audio">
+                                            <param id="0" name="Audio file">Click</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-60</param>
+                                            <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set volume" sid="623297744539697" type="Audio">
+                                            <param id="0" name="Tag">&quot;music&quot;</param>
+                                            <param id="1" name="dB">SyncStorage.Get(&quot;Music&quot;)</param>
+                                        </action>
+                                        <action disabled="1" id="0" name="Play" sid="583928279095326" type="Audio">
+                                            <param id="0" name="Audio file">Click</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-60</param>
+                                            <param id="1" name="Tag (optional)">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="3" name="Set volume" sid="248464527282936" type="Audio">
+                                            <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                            <param id="1" name="dB">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                        </action>
+                                        <action disabled="1" id="6" name="Stop" sid="979763425266368" type="Audio">
+                                            <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                        </action>
+                                        <action disabled="1" id="6" name="Stop" sid="508526159113078" type="Audio">
+                                            <param id="0" name="Tag">&quot;music&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="754756956427564">
+                                            <conditions>
+                                                <condition id="3" inverted="1" name="Has item" sid="568587465180406" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;VolumeIsLinear&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Set volume" sid="728410219618408" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                                </action>
+                                                <action id="6" name="Set volume" sid="253643581181864" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                                    <param id="1" name="Group">&quot;sounds&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set" sid="495508023041801" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;Music&quot;</param>
+                                                    <param id="1" name="Value">HowlerJS.LinearVolume(&quot;music&quot;)</param>
+                                                </action>
+                                                <action id="0" name="Set" sid="411468552827177" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;Sounds&quot;</param>
+                                                    <param id="1" name="Value">HowlerJS.LinearVolume(&quot;sounds&quot;)</param>
+                                                </action>
+                                                <action id="0" name="Set" sid="657237777880578" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;VolumeIsLinear&quot;</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="7" name="Set linear volume" sid="389019009004008" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set linear volume" sid="918035952247009" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                                    <param id="1" name="Group">&quot;sounds&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="248780237932463">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="946065334708927" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="7" name="Set linear volume" sid="412492798942209" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Music&quot;)</param>
+                                                    <param id="1" name="Group">&quot;music&quot;</param>
+                                                </action>
+                                                <action id="7" name="Set linear volume" sid="868227491645633" type="HowlerJS">
+                                                    <param id="0" name="Volume">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                                    <param id="1" name="Group">&quot;sounds&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="821531406954841">
+                                            <conditions>
+                                                <condition id="4" name="Compare item" sid="823673578277356" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;Fullscreen&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="10" name="Request fullscreen" sid="706353150222840" type="Browser">
+                                                    <param id="0" name="Mode">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="994603906770450">
+                                            <conditions>
+                                                <condition id="4" name="Compare item" sid="416597273766833" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;HardMode&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="107432619565177" type="Globals">
+                                                    <param id="0" name="Instance variable">EasyMode</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="543709717956369">
+                                            <conditions>
+                                                <condition id="4" name="Compare item" sid="191607024089398" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;AdvancedMode&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="390853691505709" type="Globals">
+                                                    <param id="0" name="Instance variable">AdvancedMode</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="372050391686339">
+                                            <conditions>
+                                                <condition id="4" name="Compare item" sid="547836138675055" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="3" name="Set volume" sid="883043455788808" type="Audio">
+                                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                                    <param id="1" name="dB">-1000</param>
+                                                </action>
+                                                <action disabled="1" id="2" name="Set muted" sid="720284276764824" type="Audio">
+                                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                                    <param id="1" name="State">0</param>
+                                                </action>
+                                                <action id="3" name="Mute" sid="292807829833409" type="HowlerJS">
+                                                    <param id="0" name="Group">&quot;music&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="926911077808948">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="401329858585438" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="2" name="Set muted" sid="774123372005766" type="Audio">
+                                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                                    <param id="1" name="State">1</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set volume" sid="875156436627739" type="Audio">
+                                                    <param id="0" name="Tag">&quot;music&quot;</param>
+                                                    <param id="1" name="dB">SyncStorage.Get(&quot;Music&quot;)</param>
+                                                </action>
+                                                <action id="4" name="Unmute" sid="198571554634384" type="HowlerJS">
+                                                    <param id="0" name="Group">&quot;music&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="336411234421061">
+                                            <conditions>
+                                                <condition id="4" name="Compare item" sid="676475051283773" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="3" name="Set volume" sid="698851378224779" type="Audio">
+                                                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                                    <param id="1" name="dB">-1000</param>
+                                                </action>
+                                                <action disabled="1" id="2" name="Set muted" sid="737268717561176" type="Audio">
+                                                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                                    <param id="1" name="State">0</param>
+                                                </action>
+                                                <action id="3" name="Mute" sid="140501162948391" type="HowlerJS">
+                                                    <param id="0" name="Group">&quot;sounds&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="728351105910189">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="342166235544418" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="2" name="Set muted" sid="642865487671576" type="Audio">
+                                                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                                    <param id="1" name="State">1</param>
+                                                </action>
+                                                <action disabled="1" id="3" name="Set volume" sid="538657112213660" type="Audio">
+                                                    <param id="0" name="Tag">&quot;sounds&quot;</param>
+                                                    <param id="1" name="dB">SyncStorage.Get(&quot;Sounds&quot;)</param>
+                                                </action>
+                                                <action id="4" name="Unmute" sid="418896621432117" type="HowlerJS">
+                                                    <param id="0" name="Group">&quot;sounds&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="764750905827966">
+                                            <conditions />
+                                            <actions>
+                                                <action id="0" name="Call function" sid="729203026031539" type="Function">
+                                                    <param id="0" name="Name">&quot;Options &gt; Update&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="292841523463166">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Call function" sid="383099674928518" type="Function">
+                                            <param id="0" name="Name">&quot;Save &gt; UpdateNbCoins&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="339181398740631" type="Function">
+                                            <param id="0" name="Name">&quot;Save &gt; UpdateLevelAchievements&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="831560700818737" type="Function">
+                                            <param id="0" name="Name">&quot;Save &gt; Update Mobile Mode&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="1" name="Save" sid="412027218432684" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="775355781556675">
+                            <conditions>
+                                <condition id="1" name="On init failed" sid="792201547156201" type="SyncStorage" />
+                            </conditions>
+                            <actions>
+                                <action id="14" name="Log" sid="855062792113850" type="Browser">
+                                    <param id="0" name="Type">2</param>
+                                    <param id="1" name="Message">&quot;SyncStorage: Init failed: &quot; &amp; SyncStorage.ErrorMsg</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="472664455482677">
+                            <conditions>
+                                <condition id="-3" name="On end of layout" sid="153060324119327" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="302578828316574" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="629196985939124" title="Save &gt; API">
+                    <sub-events>
+                        <event-block sid="266481799390422">
+                            <conditions>
+                                <condition id="0" name="On function" sid="785616536486651" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Save&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Save" sid="535781288900225" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="298471975688083">
+                            <conditions>
+                                <condition id="0" name="On function" sid="839479699918601" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Achievement&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="104072826878550" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Achievement&quot;&amp;Function.Param(0)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Save" sid="718484982641264" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="472399118101821">
+                            <conditions>
+                                <condition id="0" name="On function" sid="892193053467844" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Skin&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="368799202724134" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Skin&quot;&amp;Function.Param(0)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="1" name="Save" sid="334881200476443" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="682218786424573">
+                            <conditions>
+                                <condition id="0" name="On function" sid="867120449805977" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; BlowSave&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Clear" sid="584398412758930" type="SyncStorage" />
+                                <action id="0" name="Set" sid="945670827231365" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Levels&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="809734191189483" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Music&quot;</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                                <action id="0" name="Set" sid="757590849794366" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Sounds&quot;</param>
+                                    <param id="1" name="Value">0.5</param>
+                                </action>
+                                <action id="0" name="Set" sid="709553063595747" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;VolumeIsLinear&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="619112106225530" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Fullscreen&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="190208265624887" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;HardMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="488914781807004" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;AdvancedMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="989924001593810" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;LeftInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.LeftInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="599663057435475" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;RightInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.RightInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="435651200544452" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;UpInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.UpInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="593348250242490" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;DownInput&quot;</param>
+                                    <param id="1" name="Value">Inputs.DownInput</param>
+                                </action>
+                                <action id="0" name="Set" sid="102416547723878" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Gold&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="553107813630470" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Skin0&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set" sid="474132508373151" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="234039771356494" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;CurSkin&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set" sid="133438133741123" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="833274241556141" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;MusicMuted&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set" sid="301938068647116" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;SoundsMuted&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="1" name="Save" sid="318408467372715" type="SyncStorage" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="902690401653051">
+                            <conditions>
+                                <condition id="0" name="On function" sid="140530036800313" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; BlowCoins&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="230914432645613">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="207583546716044" type="System">
+                                            <param id="0" name="Name">&quot;coins&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Globals.NbLevels</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Remove item" sid="117098735207470" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Coinlevel&quot;&amp;loopindex</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="780466350557466">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set" sid="523432526039584" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="122346518941519" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="978560428414984">
+                            <conditions>
+                                <condition id="0" name="On function" sid="404787142079780" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Update Mobile Mode&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="852183798736470">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="522630216336123" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="237923126487022" type="Browser">
+                                            <param id="0" name="Javascript">&quot;this.runtime.isMobile = globalThis.oldRuntimeMobileMode&quot;</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="163502361535161" type="Browser">
+                                            <param id="0" name="Javascript">&quot;Object.values(this.runtime.types).find(x=&gt;x.plugin instanceof cr.plugins_.Touch).getFirstPicked().useMouseInput = false&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="519806167382668">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="208576371924283" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="429917408187916" type="Browser">
+                                            <param id="0" name="Javascript">&quot;this.runtime.isMobile = true&quot;</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="691044219666934" type="Browser">
+                                            <param id="0" name="Javascript">&quot;Object.values(this.runtime.types).find(x=&gt;x.plugin instanceof cr.plugins_.Touch).getFirstPicked().useMouseInput = true&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="278299695832948">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="819070389272493" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="17" name="Execute Javascript" sid="938502309507733" type="Browser">
+                                            <param id="0" name="Javascript">&quot;this.runtime.isMobile = false&quot;</param>
+                                        </action>
+                                        <action id="17" name="Execute Javascript" sid="158867633523096" type="Browser">
+                                            <param id="0" name="Javascript">&quot;Object.values(this.runtime.types).find(x=&gt;x.plugin instanceof cr.plugins_.Touch).getFirstPicked().useMouseInput = false&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="702266321569704">
+                            <conditions>
+                                <condition id="0" name="On function" sid="282687954329211" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Auto Update Mobile Mode&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="991852137867820">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="595420786684060" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="535999767134209" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;MobileMode&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="275851366194316" type="Function">
+                                            <param id="0" name="Name">&quot;Save &gt; Update Mobile Mode&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="1" name="Save" sid="537902442497986" type="SyncStorage" />
+                                        <action id="-26" name="Restart layout" sid="962313602842857" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="834568546328728">
+                            <conditions>
+                                <condition id="0" name="On function" sid="750219063786859" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; RemoveAds&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="773926798763573">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set" sid="566566119058730" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;RemoveAds&quot;</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="197294371871422" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="634640458555801">
+                            <conditions>
+                                <condition id="0" name="On function" sid="622100068772835" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; UpdateNbCoins&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="599179606311313" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="941963175750392">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="336145921439530" type="System">
+                                            <param id="0" name="Name">&quot;coins&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">Globals.NbLevels</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="264446812058616">
+                                            <conditions>
+                                                <condition id="3" name="Has item" sid="107529066904947" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;Coinlevel&quot;&amp;loopindex</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Add" sid="477501374214849" type="SyncStorage">
+                                                    <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="863848314175138">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="804969158269453" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="537698047388532" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">11</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="754971654642991">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="333568526431004" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="856823571571596" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">12</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="523438105169265">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="516501041858255" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="496751487363466" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">13</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="405836812773732">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="345263562304141" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">30</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="633834991098070" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">14</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="191797424226801">
+                                    <conditions>
+                                        <condition id="4" name="Compare item" sid="215393407556031" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;CollectedCoins&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="686524315266703" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">15</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="513761394801399">
+                                    <conditions>
+                                        <condition id="3" name="Has item" sid="986653751547226" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Coinlevel0&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="550541349833375" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="178133318848539">
+                                    <conditions />
+                                    <actions>
+                                        <action id="1" name="Save" sid="252936428017010" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="668393992317081">
+                            <conditions>
+                                <condition id="0" name="On function" sid="407807567130061" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; UpdateLevelAchievements&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="ID" sid="228403972980044" static="0" type="number">0</variable>
+                                <event-block sid="585519957949464">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="825615916600727" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Value">SyncStorage.Get(&quot;Levels&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="236290131357183">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="968032353244090" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="378911864007238" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="472705738793977" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="655193061685735">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="429645062872507" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">8</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="505669474781054" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">3</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="716170052799344" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="204914375506487">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="129671292058132" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">16</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="988061602834500" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="711124813252035" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="523590150714604">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="431094348155173" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">24</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="966655867056828" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="616074959739551" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="987987435254797">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="648459904536917" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">32</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="439877578874949" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">6</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="563114090511195" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="479711864948118">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="469321637204963" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="333242360882637" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">7</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="814462906437476" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="262987617247746">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="171831558230016" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">48</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="103851592049807" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">8</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="545942785566804" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="425909562539820">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="759810191050362" type="System">
+                                            <param id="0" name="Variable">ID</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">52</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="461557791587036" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">9</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="969658485857231" type="Function">
+                                            <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                            <param id="1" name="Parameter {n}">UnlockAchievement</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="646674763594272">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="146670175156889" type="System">
+                                            <param id="0" name="Variable">UnlockAchievement</param>
+                                            <param id="1" name="Value">-1</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="501789778357215" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="781606348755903">
+                            <conditions>
+                                <condition id="0" name="On function" sid="940066756813248" type="Function">
+                                    <param id="0" name="Name">&quot;unlockAllLevels&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set" sid="172358039965542" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Levels&quot;</param>
+                                    <param id="1" name="Value">Globals.NbLevels</param>
+                                </action>
+                                <action id="0" name="Call function" sid="447509840047522" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; UpdateLevelAchievements&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="title" sid="742950872914267" static="0" type="text"></variable>
+                                <variable constant="0" name="desc" sid="289072199951973" static="0" type="text"></variable>
+                                <event-block sid="717653655856565">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="774025148586657" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;likemagic&quot;{###}&quot;text&quot;{###}&quot;Like magic&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="216912865597812" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="758845161080633" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;unlockall&quot;{###}&quot;text&quot;{###}&quot;You unlocked every level !&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="122580228780298" type="System">
+                                            <param id="0" name="Variable">desc</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="292096691684984" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Alert&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}desc</param>
+                                        </action>
+                                        <action id="1" name="Save" sid="445780415643247" type="SyncStorage" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="356245705215911">
+                                    <conditions>
+                                        <condition id="-10" name="For" sid="652246325324648" type="System">
+                                            <param id="0" name="Name">&quot;coins&quot;</param>
+                                            <param id="1" name="Start index">0</param>
+                                            <param id="2" name="End index">99</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set" sid="142567777906449" type="SyncStorage">
+                                            <param id="0" name="Item">&quot;Skin&quot;&amp;loopindex</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="377149048561755">
+                            <conditions>
+                                <condition id="0" name="On function" sid="180987727482198" type="Function">
+                                    <param id="0" name="Name">&quot;websdk &gt; pause&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="129722835012198">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="803605467999775" type="System">
+                                            <param id="0" name="First value">timescale</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="506872008245474" type="System">
+                                            <param id="0" name="First value">find(LayoutName, &quot;Level&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="102659525108368" type="Function">
+                                            <param id="0" name="Name">&quot;Menu &gt; Pause&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="121718778769536">
+                            <conditions>
+                                <condition id="0" name="On function" sid="374070008963150" type="Function">
+                                    <param id="0" name="Name">&quot;websdk &gt; resume&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="305396824438823">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="747991156746038" type="System">
+                                            <param id="0" name="First value">timescale</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="422589199541815" type="System">
+                                            <param id="0" name="First value">find(LayoutName, &quot;Level&quot;)</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="805325000770054" type="Function">
+                                            <param id="0" name="Name">&quot;Menu &gt; Pause&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="661549912589126">
+            <conditions>
+                <condition id="0" name="On function" sid="263626190925141" type="Function">
+                    <param id="0" name="Name">&quot;adOver&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="486453223990955" type="Function">
+                    <param id="0" name="Name">&quot;unmuteSounds&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="982750771900489">
+            <conditions>
+                <condition id="0" name="On function" sid="209315474564397" type="Function">
+                    <param id="0" name="Name">&quot;adOverFail&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="794270267174170" type="Function">
+                    <param id="0" name="Name">&quot;unmuteSounds&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="849342344090202">
+            <conditions>
+                <condition id="0" name="On function" sid="610755531464544" type="Function">
+                    <param id="0" name="Name">&quot;getSaveValue&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="165239135400277" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">SyncStorage.Get(Function.Param(0))</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

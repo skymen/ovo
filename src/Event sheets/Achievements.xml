@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Achievements</name>
+    <events>
+        <include>Skins</include>
+        <event-group description="" sid="911999944091335" title="Achievements">
+            <sub-events>
+                <event-group description="" sid="310144369309424" title="Achievements &gt; Init">
+                    <sub-events>
+                        <event-block sid="423825310968724">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="977938436828895" type="System" />
+                                <condition id="70" name="Is Empty" sid="211396064576267" type="Achievements">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}"></param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Request project file" sid="164821358810043" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Achievements&quot;</param>
+                                    <param id="1" name="File">achievements.json</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="868493747045833">
+                            <conditions>
+                                <condition id="0" name="On completed" sid="390904824076330" type="AJAX">
+                                    <param id="0" name="Tag">&quot;Achievements&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="60" name="LoadJSON" sid="556523142549276" type="Achievements">
+                                    <param id="0" name="JSON">AJAX.LastData</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                                <action id="9" name="Set JSON" sid="232051643448702" type="Model">
+                                    <param id="0" name="Key string">&quot;Achievements&quot;</param>
+                                    <param id="1" name="JSON">AJAX.LastData</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="875317090437606" title="Achievements &gt; API">
+                    <sub-events>
+                        <event-block sid="631631509947933">
+                            <conditions>
+                                <condition id="0" name="On function" sid="866448631875583" type="Function">
+                                    <param id="0" name="Name">&quot;Achievements &gt; Unlock&quot;</param>
+                                </condition>
+                                <condition id="3" inverted="1" name="Has item" sid="405889323207027" type="SyncStorage">
+                                    <param id="0" name="Item">&quot;Achievement&quot;&amp;Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="897191250055948" type="Function">
+                                    <param id="0" name="Name">&quot;Save &gt; Achievement&quot;</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0)</param>
+                                </action>
+                                <action id="0" name="Callback" sid="461019997212428" type="FunctionCallback">
+                                    <param id="0" name="Function">Achievements.Value(0,Function.Param(0), &quot;callback&quot;)</param>
+                                    <param id="1" name="Divider">Achievements.Value(0,Function.Param(0), &quot;divider&quot;)</param>
+                                    <param id="2" name="Params">Achievements.Value(0,Function.Param(0), &quot;params&quot;)</param>
+                                    <param id="3" name="Types">Achievements.Value(0,Function.Param(0), &quot;type&quot;)</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="103432079846720" type="Browser">
+                                    <param id="0" name="Javascript">&quot;globalThis.WebSdkWrapper.happyTime()&quot;</param>
+                                </action>
+                                <action id="8" name="Add progression event" sid="942384658801085" type="GameAnalytics">
+                                    <param id="0" name="Progression status">2</param>
+                                    <param id="1" name="Progression 01">&quot;Achievement&quot;</param>
+                                    <param id="2" name="Progression 02">Function.Call(&quot;Achievements &gt; Name&quot;, Function.Param(0))</param>
+                                    <param id="3" name="Progression 03">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <variable constant="0" name="title" sid="423816191629674" static="0" type="text"></variable>
+                                <variable constant="0" name="achname" sid="947064063943985" static="0" type="text"></variable>
+                                <variable constant="0" name="achdesc" sid="639244663161052" static="0" type="text"></variable>
+                                <event-block sid="865331059773374">
+                                    <conditions />
+                                    <actions>
+                                        <action id="6" name="Call function" sid="192932419445655" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}&quot;achievementunlocked&quot;{###}&quot;text&quot;{###}&quot;Achievement Unlocked !&quot;{###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="433293757159875" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="436157484553193" type="System">
+                                            <param id="0" name="Variable">title</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="905432434575781" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;findLanguageKey&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;en-us&quot;{###}Function.Call(&quot;Achievements &gt; Name&quot;, Function.Param(0))</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="197180075876222" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}ValerypopoffJS.StoredReturnValue{###}&quot;text&quot;{###}Function.Call(&quot;Achievements &gt; Name&quot;, Function.Param(0)){###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="408214947868636" type="System">
+                                            <param id="0" name="Variable">achname</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="907046479136857" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;findLanguageKey&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;en-us&quot;{###}Function.Call(&quot;Achievements &gt; Description&quot;, Function.Param(0))</param>
+                                        </action>
+                                        <action id="6" name="Call function" sid="949056557778947" type="ValerypopoffJS">
+                                            <param id="0" name="Expression">&quot;getLanguageValue&quot;</param>
+                                            <param id="1" name="Parameter {n}">Language.locale{###}ValerypopoffJS.StoredReturnValue{###}&quot;text&quot;{###}Function.Call(&quot;Achievements &gt; Description&quot;, Function.Param(0)) {###}&quot;&quot;</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="102536389370750" type="System">
+                                            <param id="0" name="Variable">achdesc</param>
+                                            <param id="1" name="Value">ValerypopoffJS.StoredReturnValue</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="432830210793400" type="Function">
+                                            <param id="0" name="Name">&quot;Notification &gt; Image&quot;</param>
+                                            <param id="1" name="Parameter {n}">title{###}achname &amp;&quot;: &quot; &amp; achdesc{###}Function.Call(&quot;Achievements &gt; Icon&quot;, Function.Param(0))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="769715116212284">
+                            <conditions>
+                                <condition id="0" name="On function" sid="662877008481550" type="Function">
+                                    <param id="0" name="Name">&quot;Achievements &gt; Name&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="964172676212825" type="Function">
+                                    <param id="0" name="Value">Achievements.Value(0,Function.Param(0), &quot;name&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="707996213756631">
+                            <conditions>
+                                <condition id="0" name="On function" sid="717227998776218" type="Function">
+                                    <param id="0" name="Name">&quot;Achievements &gt; Description&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="435353834842690" type="Function">
+                                    <param id="0" name="Value">Achievements.Value(0,Function.Param(0), &quot;description&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486845014960751">
+                            <conditions>
+                                <condition id="0" name="On function" sid="249187675882139" type="Function">
+                                    <param id="0" name="Name">&quot;Achievements &gt; Icon&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="521740548336253" type="Function">
+                                    <param id="0" name="Value">Achievements.Value(0,Function.Param(0), &quot;icon&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="992674309015349">
+                            <conditions>
+                                <condition id="0" name="On function" sid="876074760310401" type="Function">
+                                    <param id="0" name="Name">&quot;Achievements &gt; Hidden&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set return value" sid="728140719383226" type="Function">
+                                    <param id="0" name="Value">Achievements.Value(0,Function.Param(0), &quot;hidden&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
