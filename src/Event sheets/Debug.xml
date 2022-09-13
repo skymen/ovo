@@ -124,7 +124,7 @@
                                                                 <condition id="1" name="Is overlapping another object" sid="748099233587083" type="Collider">
                                                                     <param id="0" name="Object">EndFlag</param>
                                                                 </condition>
-                                                                <condition id="0" name="On key pressed" sid="830665489318166" type="Keyboard">
+                                                                <condition id="2" name="Key is down" sid="830665489318166" type="Keyboard">
                                                                     <param id="0" name="Key">114</param>
                                                                 </condition>
                                                             </conditions>
